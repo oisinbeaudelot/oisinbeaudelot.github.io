@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<script src="docs/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 750, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
+<title>Website 03.051</title>
+<style>
+body, html {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	background-color: black;
+	scroll-snap-type: y proximity;
+}
+
+	
+h1 {
+	color: black;
+	font-family: 'Permanent Marker', serif;
+	font-size: 40px;
+}
+h2 {
+	color: #353535;
+	font-size: 3vw;
+	font-family: 'Roboto', sans-serif;
+	padding: 0px;
+	margin: 0px;
+	text-align: left;
+	margin-left: 10px;
+}
+	
+h3 {
+	color: #353535;
+	font-size: 2vw;
+	font-family: 'Roboto', sans-serif;
+	padding: 0px;
+	margin: 0px;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 10px;
+	float: right;
+}
+	
+h6 {
+		color: black;
+  text-shadow:
+   -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+     1px 1px 0 #fff;
+	}
+	
+p {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 2vw;
+	margin: 20%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	}
+	
+h4 {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 3vw;
+	margin-bottom: 1em;
+	}
+A:link {
+	COLOR: black;
+	TEXT-DECORATION: none;
+	font-weight: bold
+}
+
+	a:visited {
+		COLOR: black;
+	TEXT-DECORATION: none;
+	font-weight: bold
+	}
+
+A:hover {
+	COLOR: red;
+	TEXT-DECORATION: none;
+	font-weight: bold
+}
+	
+/* Grain texture */
+.grain {
+  background: url(images/grain.png) repeat;
+}
+	
+.center {
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	scroll-snap-align: start;
+}
+	
+.bg {
+	/* The image used */
+	background-image: url("images/background2.jpg");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.bottom {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	transform: translate(-50%, -50%);
+	margin-top: 50px;
+	margin-left: -70px;
+}
+.top {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	transform: translate(-50%, -50%);
+	max-width: 1000px;
+}
+.home-text1 {
+	margin-top: -430px;
+	margin-left: -470px;
+	transform: rotate(0deg);
+}
+.home-text2 {
+	margin-top: -30px;
+	margin-left: -350px;
+	transform: rotate(0deg);
+}
+.home-text3 {
+	margin-top: -113px;
+	margin-left: 370px;
+	transform: rotate(10deg);
+}
+	
+.pf-center {
+		margin: 0;
+	text-align: center;
+	width: 100%;
+	
+	}
+	
+.pf-bg {
+	/* The image used */
+	background-image: url("images/VHS-Bottom.jpg");
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: repeat;
+	position: relative;
+}	
+	
+.pf-contents {
+	position: relative;
+	display: inline-block;
+	max-width: 1020px;
+	}
+	
+.pf-thumbs {
+	z-index: 1;
+	}
+
+.img__wrap {
+  position: relative;
+  width: 100%;
+	left: 50%;
+		transform: translateX(-50%);
+}
+
+	.pf_title {
+		position: absolute;
+	border-radius: 10px;
+	top: 35%;
+  left: 35%;
+		transform: translate(-50%, -50%);
+	transform: rotate(-45deg);
+
+  background: transparent;
+  color: #fff;
+	}	
+
+#projects {
+		font-family: "Helvetica Neue", Gotham, Helvetica, Arial, "sans-serif";
+		font-size: 2em;
+		line-height: 10px;
+		margin: 0px;
+	}
+	
+#portfolio {
+		font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+		font-size: 4em;
+		margin: 0px;
+	}
+	
+.img__description_layer {
+  position: absolute;
+	border-radius: 10px;
+	top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(20, 20, 20, 0.8);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img__description {
+	
+  transition: .2s;
+  transform: translateY(1em);
+	margin-top: 20%;
+	margin: 10%;
+}
+
+.img__wrap:hover .img__description {
+  transform: translateY(0);
+}
+	
+
+	
+.contact-bg {
+	/* The image used */
+	background-image: url("images/contact-tape3.png");
+	background-color: #555555;
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.tape {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+.tape-text {
+	display: inline-block;
+	margin-top: 5%;
+	
+}
+	
+.form-style {
+	display: inline-block;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	width: 40%;
+	min-width: 530px;
+	padding-top: 0%;
+	}
+ 	
+.form-title {
+	background-color: #ea4c46;
+	width: 100%;
+	border: none;
+	padding-top: 20px;
+	border-bottom: solid #333;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	}
+	
+input {
+	width: 100%;
+	margin: 0px;
+	margin-left: 0px;
+	font-size: 2.5vh;
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+	resize: both;
+	padding: 10px;
+	padding-top: 15px;
+	outline: none;
+	line-height: inherit;
+	border: none;
+	border-bottom: solid #333;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	outline: none;
+	}
+	
+
+	
+#message {
+	width: 100%;
+	resize: none;
+	padding: 0px;
+	padding-top: 15px;
+	padding-left: 10px;
+	background-color: #e5e2d8;
+	color: #333;
+	font-size: 2.5vh;
+	font-family: 'Roboto', sans-serif;
+	border: 0px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	outline: none;
+
+	}
+
+#submit-button {
+	width: 100%;
+	text-align: left;
+	border: none;
+	padding: 10px;
+	margin-top: -5px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-size: 3vh;
+	font-family: 'Roboto', sans-serif;
+	}
+	
+	
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #353535;
+	font-size: 2.5vh;
+	font-family: 'Roboto', sans-serif;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #353535;
+	font-size: 2.5vh;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #353535;
+	font-size: 2.5vh;
+}	
+	
+/* MEDIA QUERIES */
+ @media (max-width: 1156px) {
+	 
+	h2 {
+ font-size: 5vh;
+}
+	 h3 {
+ font-size: 3vh;
+}
+input {
+	font-size: 2.5vh;
+	}
+
+#message {
+	font-size: 2.5vh;
+	}
+
+#submit-button {
+	font-size: 3vh;
+	}
+	
+	
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	font-size: 2.5vh;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	font-size: 2.5vh;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+	font-size: 2.5vh;
+}
+ 
+}
+
+@media (max-width: 712px) {
+	.pf-contents{
+		left: 50%;
+	transform: translateX(-50%);
+	}
+	}
+	
+@media (max-width: 830px), (max-height: 812px) {
+h1 {
+	font-size: 28px;
+}
+.home-text1 {
+	margin-top: -300px;
+	margin-left: -320px;
+}
+.home-text2 {
+	margin-top: -20px;
+	margin-left: -240px;
+}
+.home-text3 {
+	margin-top: -80px;
+	margin-left: 260px;
+}
+.top {
+	width: 694px;
+	padding-left: 0px;
+}
+.bottom {
+	width: 485px;
+	margin-top: 40px;
+	padding-left: 50px;
+}
+	
+.pf-bg {
+	
+	background-image: url("images/VHS-Bottom-reduced.jpg");
+}	
+
+.pf-resize {
+	width: 712px;
+	}
+
+.img__wrap {
+  	width: 712px;
+}
+
+	.img__img {
+		width: 712px;
+	}
+}
+	
+@media (max-width: 640px) {
+		
+		.form-style {
+			width: 100%;
+				min-width: inherit;
+		}
+	}
+
+@media (max-width: 570px) {
+h1 {
+	font-size: 28px;
+}
+.home-text1 {
+	margin-top: -300px;
+	margin-left: -320px;
+}
+.home-text2 {
+	margin-top: -20px;
+	margin-left: -230px;
+}
+.home-text3 {
+	margin-top: -79px;
+	margin-left: 267px;
+}
+.top {
+	width: 694px;
+	padding-left: 95px;
+}
+.bottom {
+	width: 485px;
+	margin-top: 40px;
+	padding-left: 135px;
+}
+}
+</style>
+</head>
+<body>
+	
+<!––---------------HOME PAGE------------------>
+<div class="center" id="home">
+  <div class="bg" > <img src="images/tv-content.gif" class="bottom" alt="showreel gif"/> <img src="images/tv-cutout.png" class="top" alt="tv cutout" />
+    <div class="top">
+      <div class="home-text1">
+        <h1><a href="#port">Portfolio</a></h1>
+      </div>
+      <div class="home-text2">
+        <h1><a href="#resume">Resume</a></h1>
+      </div>
+      <div class="home-text3">
+        <h1><a href="#contact">Contact</a></h1>
+      </div>
+    </div>
+  </div>
+</div>
+	
+<!––---------------PORTFOLIO PAGE------------------>
+<div class="pf-center"  id="port">
+ 	<div class="pf-bg">
+		<div class="pf-contents">
+			<div class="img__wrap">
+				  <img class="img__img" src="images/thumb-000.jpg" alt="description 1" />
+				
+				<div class="pf_title"> <h5 id="projects">PROJECTS<br></h5><h6 id="portfolio">&#38;  PORTFOLIO</h6></div>
+			</div>
+			<div class="img__wrap pf-thumbs"><img class="img__img" src="images/thumb-01.jpg"  alt="description 1" />
+				  <a href="portfolio 01.001.html"><div class="img__description_layer">
+					<h4>Client Work</h4>
+					  <br>
+					  <p></p>
+					  </div></a>
+			</div>
+			<div class="img__wrap pf-thumbs">
+				  <img class="img__img" src="images/thumb-02.jpg" alt="description 1" />
+				  <div class="img__description_layer">
+					<h4>Design Work</h4>
+					  <br>
+					  <p>Print Media<br>
+					  Logo Design<br>
+					  T-Shirt<br>
+						Sticker Design</p>
+				  </div>
+			</div>
+			<div class="img__wrap pf-thumbs">
+				  <img class="img__img" src="images/thumb-03.jpg" alt="description 1" />
+				  <div class="img__description_layer">
+					<h4>Film &#38; Video</h4>
+					  <br>
+					  <p></p>
+				  </div>
+			</div>
+			<img src="images/VHS-Bottom.jpg" class="pf-resize" alt="00"/>
+			
+			
+			
+		</div>
+	</div>
+</div>
+<!---------------RESUME PAGE----------------->	
+<div class="pf-center">
+	<div class="pf-bg">
+		<div class="pf-contents" id="resume">	
+			<iframe src="docs/resume_file.pdf" width="712px" height="1960px" style="overflow: hidden">
+			</iframe>
+			</div>
+		</div>
+	</div>
+<!---------------CONTACT PAGE---------------->	
+<div class="center"  id="contact">
+  <div class="contact-bg">
+    <div class="form-style">
+		
+			<div class="form-title">
+				<h3>SE-CAM</h3>
+				<h2>CONTACT</h2>
+			</div>
+			<form>
+				<input type="text" name="name" placeholder="name:" style="background-color: #eca2a1">
+				<br>
+				<input type="text" name="email" placeholder="email:" style="background-color: #ebc7c5">
+				<br>
+				<textarea rows="5" id="message" name="message" placeholder="message:"></textarea>
+				<input type="submit" name="submit" value="&#9632;  Submit" style="background-color: #e5e2d8" id="submit-button">
+      		</form>
+		
+	  </div>
+	</div>
+</div>
+</body>
+</html>
