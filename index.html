@@ -602,6 +602,12 @@ body, html {
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 	}
+	
+#name #email #message {
+		border-radius: 0px;
+	}
+	
+	
 </style>
 </head>
 <body>
@@ -684,9 +690,9 @@ body, html {
 				<h2>CONTACT</h2>
 			</div>
 			<form>
-				<input type="text" name="name" placeholder="name:" style="background-color: #eca2a1">
+				<input type="text" id="name" name="name" placeholder="name:" style="background-color: #eca2a1">
 				<br>
-				<input type="text" name="email" placeholder="email:" style="background-color: #ebc7c5">
+				<input type="text" id="email" name="email" placeholder="email:" style="background-color: #ebc7c5">
 				<br>
 				<textarea rows="5" id="message" name="message" placeholder="message:"></textarea>
 				<input type="submit" name="submit" value="&#9632;  Submit" style="background-color: #e5e2d8" id="submit-button">
