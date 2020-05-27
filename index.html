@@ -19,6 +19,26 @@
             });
         });
     </script>
+	<script>
+	var disable_click_flag = false;
+
+$(window).scroll(function() {
+  disable_click_flag = true;
+
+  clearTimeout($.data(this, 'scrollTimer'));
+
+  $.data(this, 'scrollTimer', setTimeout(function() {
+    disable_click_flag = false;
+  }, 250));
+});
+
+$("body").on("click", "a", function(e) {
+  if (disable_click_flag) {
+    e.preventDefault();
+  }
+});
+
+	</script>
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
 <title>Website 03.051</title>
@@ -559,9 +579,6 @@ iframe {
 		width: 100%;
 	}
 	
-	
-	.img__img:hover, .img__img:active{
-	height:300px;
 }
 }
 </style>
