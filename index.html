@@ -19,29 +19,9 @@
             });
         });
     </script>
-	<script>
-	var disable_click_flag = false;
-
-$(window).scroll(function() {
-  disable_click_flag = true;
-
-  clearTimeout($.data(this, 'scrollTimer'));
-
-  $.data(this, 'scrollTimer', setTimeout(function() {
-    disable_click_flag = false;
-  }, 250));
-});
-
-$("body").on("click", "a", function(e) {
-  if (disable_click_flag) {
-    e.preventDefault();
-  }
-});
-
-	</script>
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
-<title>Website 03.051</title>
+<title>Website 03.056</title>
 <style>
 body, html {
 	height: 100%;
@@ -578,8 +558,6 @@ iframe {
 	.img__wrap {
 		width: 100%;
 	}
-	
-}
 }
 </style>
 </head>
@@ -612,7 +590,7 @@ iframe {
 				<div class="pf_title"> <h5 id="projects">PROJECTS<br></h5><h6 id="portfolio">&#38;  PORTFOLIO</h6></div>
 			</div>
 			<div class="img__wrap pf-thumbs"><img class="img__img" src="images/thumb-01.jpg"  alt="description 1" />
-				  <a href="portfolio 01.001.html"><div class="img__description_layer">
+				  <a href="portfolio01.html"><div class="img__description_layer">
 					<h4>Client Work</h4>
 					  <br>
 					  <p></p>
