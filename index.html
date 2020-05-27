@@ -234,7 +234,23 @@ A:hover {
   transition: opacity .2s, visibility .2s;
 }
 
+.img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
 
+.img__description {
+	
+  transition: .2s;
+  transform: translateY(1em);
+	margin-top: 20%;
+	margin: 10%;
+}
+
+.img__wrap:hover .img__description {
+  transform: translateY(0);
+}
+	
 
 	
 .contact-bg {
@@ -542,6 +558,23 @@ iframe {
 	.img__wrap {
 		width: 100%;
 	}
+	
+	.img__wrap:active .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img__description {
+	
+  transition: .2s;
+  transform: translateY(1em);
+	margin-top: 20%;
+	margin: 10%;
+}
+
+.img__wrap:active .img__description {
+  transform: translateY(0);
+}
 }
 </style>
 </head>
