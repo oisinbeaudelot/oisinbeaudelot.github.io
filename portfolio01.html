@@ -5,7 +5,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-	<title>portfolio 01.110</title>
+	<title>portfolio 01.112</title>
 	<style>
 body, html {
 	height: 100%;
@@ -125,7 +125,7 @@ a:hover {
 .linkedin {
 	padding-top: 27px;
   margin-right: 150px;
-  height: auto;
+  height: 84px;
 }
 		
 		.li-reduced {
@@ -260,7 +260,13 @@ a:hover {
 	position: relative;
 	left: 50%;
 	transform: translate(-50%, 0%);
-}
+		}
+	
+.back-button {
+	margin: 0px;
+		padding: 0px;
+	}
+
 #maskText h7 {
 	display: block;
 	-webkit-mask-image: url("images/tiny-texture3.png");
@@ -296,12 +302,14 @@ a:hover {
 	position: relative;
 	background-image: url(images/footer-and-back-button4.png);
 	background-color: black;
-	height: 98px;
-	padding-top: 70px;
+	height: 97px;
+	padding-top: 69px;
 }
 
 		#bottom-text {
 		}
+		
+	
 
 /********************MEDIA QUERIES START HERE MA MAN**********************/
 @media (max-width: 1020px) {
@@ -360,7 +368,7 @@ ul {
 	margin: 0 10px;
 }
 .showcase {
-	margin-top: 138px; /* To stop overlay on top of the header*/
+	margin-top: 150px;
 }
 .header {
 	position: absolute;
@@ -384,10 +392,7 @@ ul {
 	text-align: right;
 	padding-right: 10px;
 }
-	.back-button {
-		
-	
-	}
+
 	.bottom-go-back {
 	background-image: url(images/footer-and-back-button4-reduced.png);
 	height: 87px;
@@ -420,7 +425,7 @@ ul {
 .linkedin {
 	padding-top: 27px;
   margin-right: 130px;
-  height: auto;
+  height: 58px;
 }	
 .li-main {
 		display: none;
@@ -429,7 +434,15 @@ ul {
 .li-reduced {
 			display:inline;
 		}
-}
+.li-mobile {
+			display:none;
+		}
+
+		#spaces {
+		display: inline;
+	}
+	
+		}
 
 /* MOBILE */
 @media screen and (max-width: 680px) {
@@ -451,33 +464,94 @@ h5 {
 	margin: 0px;
 	padding: 0px;
 }
+	
+	.go-back h7 {
+		font-size: 4.1vw;
+	margin: 0px;
+	padding: 0px;
+	}
 .header {
-	height: 22vw;
 }
 .showcase {
-	margin-top: 20vw; /* To stop overlay on top of the header*/
+	margin-top: 130px;
 }
 .subtitle {
+	display: inline-block;
 }
 .date_period {
-	-ms-flex: 58%; /* IE10 */
-	flex: 58%;
-	max-width: 58%;
+	-ms-flex: 100%; /* IE10 */
+	flex: 100%;
+	max-width: 100%;
 	padding: 0px;
+	text-align: center;
 }
 .go-back {
-	-ms-flex: 45%; /* IE10 */
-	flex: 45%;
-	max-width: 45%;
+	-ms-flex: 100%; /* IE10 */
+	flex: 100%;
+	max-width: 100%;
 	padding: 0px;
-	padding-right: 1.5%;
+	text-align: center;
+	padding: 0px;
 }
 }
 		
 @media screen and (max-width: 480px) {
-    img {
-         width: 320px;
-    }
+	
+	#about {
+	display: block;
+	}
+	
+	#print {
+	display: block;
+	}
+	
+	#hello {
+	display: block;
+		padding-bottom: 4px;
+	}
+	
+.footer {
+	background-image: url(images/website-footer-bg.png);
+	height: 160px;
+	margin-top: 135px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	width: 1020px;
+	}
+	
+		
+.footer-text {
+	text-align: center;
+	width: 100%;
+	padding-top: 29px;
+	margin-left: 0px;
+		}
+		
+.footer-text h7{
+	line-height: 28px;
+		font-size: 23px;
+		}
+	
+.linkedin {
+	float: center;
+	padding-top: 0px;
+  margin-right: 0px;
+  height: 30px;
+}
+	
+	#spaces {
+		display: none;
+	}
+	
+.li-reduced {
+			display:none;
+		}
+
+.li-mobile {
+			display:inline;
+		}
+	
 }
 </style>
 	</head>
@@ -534,14 +608,14 @@ h5 {
 			</div></div>
 		<footer class="footer">
 			<div class="footer-text">
-				<a href="" id="about"><h7>-About Oisin Beaudelot</h7></a><h7>&nbsp; &nbsp;</h7>  <a href="docs/resume_file.pdf" target="_blank" id="print"><h7>-Print Resume</h7><br></a>
-				<a href="Website 03.052 (fixed contact label min size).html#contact" id="hello"><h7>Get in touch: hi@oisinbeaudelot.com</h7></a>
+				<a href="" id="about"><h7>-About Oisin Beaudelot</h7></a><h7 id="spaces">&nbsp; &nbsp;</h7>  <a href="docs/resume_file.pdf" target="_blank" id="print"><h7>-Print Resume</h7><br></a>
+				<a href="Website 03.052 (fixed contact label min size).html#contact" id="hello"><h7 id="spaces">Get in touch </h7><h7>- hi@oisinbeaudelot.com</h7></a>
 			  </div>
-			<div class="linkedin"><a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank"><img src="images/linkedin-sticker.png" alt="linkedin logo" class="li-main"><img src="images/linkedin-sticker-reduced.png" alt="linkedin logo" class="li-reduced"></a></div>
+			<div class="linkedin"><a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank"><img src="images/linkedin-sticker.png" alt="linkedin logo" class="li-main"><img src="images/linkedin-sticker-reduced.png" alt="linkedin logo" class="li-reduced"><img src="images/linkedin-sticker-mobile.png" alt="linkedin logo" class="li-mobile"></a></div>
         </footer>
         </div>
     
-    
+   
   </div>
     </div>
 </body>
