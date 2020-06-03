@@ -5,7 +5,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-	<title>portfolio 01.112</title>
+	<title>portfolio 01.116</title>
 	<style>
 body, html {
 	height: 100%;
@@ -14,6 +14,7 @@ body, html {
 	margin: 0;
 	background-color: black;
 	scroll-snap-type: y proximity;
+	-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
 }
 h1 {
 	color: white;
@@ -183,6 +184,7 @@ a:hover {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, 0%);
+	padding-bottom: 0px;
 }
 .title {
 	text-align: center;
@@ -320,6 +322,7 @@ a:hover {
 }
 .showcase {
 	padding: 0 2px;
+	margin-top: 168px;
 }
 	.bottom-go-back{
 	position: absolute;
@@ -370,7 +373,7 @@ ul {
 	margin: 0 10px;
 }
 .showcase {
-	margin-top: 150px;
+	margin-top: 136px;
 }
 .header {
 	position: absolute;
@@ -472,14 +475,18 @@ h5 {
 }
 	
 .go-back h7 {
-		font-size: calc(17px + 1.5vw);
+	font-size: calc(17px + 1.5vw);
 	margin: 0px;
 	padding: 0px;
 	}
 .header {
+	position: absolute;
+	background-size: cover;
+	height: auto;
+	padding-bottom: 5px;
 }
 .showcase {
-	margin-top: 130px;
+	margin-top: calc(95px + 9.5vw);
 }
 .subtitle {
 	display: inline-block;
@@ -529,9 +536,9 @@ h5 {
 		
 .footer-text {
 	text-align: center;
-	width: 100%;
+	width: 27%;
 	padding-top: 29px;
-	margin-left: 0px;
+	margin-left: 35%;
 		}
 		
 .footer-text h7{
@@ -540,9 +547,9 @@ h5 {
 		}
 	
 .linkedin {
-	float: center;
-	padding-top: 0px;
-  margin-right: 0px;
+	float: right;
+	padding-top: 40px;
+  margin-right: 31%;
   height: 30px;
 }
 	
@@ -556,6 +563,28 @@ h5 {
 	
 	
 }
+		
+		@media screen and (max-width: 350px){
+			
+.footer-text {
+	text-align: center;
+	width: 15%;
+	padding-top: 29px;
+	margin-left: 38%;
+		}
+		
+.footer-text h7{
+	line-height: 28px;
+		font-size: 23px;
+		}
+	
+.linkedin {
+	float: right;
+	padding-top: 30px;
+  margin-right: 38%;
+  height: 30px;
+}			
+		}
 </style>
 	</head>
 
@@ -586,7 +615,7 @@ h5 {
       
           <div class="showcase">
         <div class="img__wrap">
-              <video width="100%" height="auto" controls="true">
+              <video width="100%" height="auto" controls="true" poster="images/Video-Placeholder.jpg">
             <source src="images/video1.mp4" type="video/mp4">
             Your browser does not support the video tag. </video>
             </div>
@@ -611,8 +640,8 @@ h5 {
 			</div></div>
 		<footer class="footer">
 			<div class="footer-text">
-				<a href="" id="about"><h7>-About Oisin Beaudelot</h7></a><h7 id="spaces">&nbsp; &nbsp;</h7>  <a href="docs/resume_file.pdf" target="_blank" id="print"><h7>-Print Resume</h7><br></a>
-				<a href="index.html#contact" id="hello"><h7 id="remove_mobile">Get in touch </h7><h7>- hi@oisinbeaudelot.com</h7></a>
+				<a href="" id="about"><h7 id="remove_mobile">-</h7><h7>About Oisin</h7></a><h7 id="spaces">&nbsp; &nbsp;-</h7>  <a href="docs/resume_file.pdf" target="_blank" id="print"><h7>Print Resume</h7><br></a>
+				<a href="index.html#contact" id="hello"><h7 id="remove_mobile">Get in touch -</h7><h7> hi@oisinbeaudelot.com</h7></a>
 			  </div>
 			<div class="linkedin"><a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank"><img src="images/linkedin-sticker.png" alt="linkedin logo" class="li-main"><img src="images/linkedin-sticker-reduced.png" alt="linkedin logo" class="li-reduced"></a></div>
         </footer>
