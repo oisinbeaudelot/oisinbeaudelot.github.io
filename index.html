@@ -256,12 +256,20 @@ A:hover {
 }
 	
 	.about_me {
-		background-image: none;
-		background-color: black;
+		background-image: url(images/Flexbox-Buffer-Reduced.jpg);
+		background-position: center;
+		background-position: top;
+		display: flex;
 	}
+	
 	.about_me_tape {
-		margin: -2px;
-	}
+		background-image: url(images/About-Me-356px.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+		height: 642px;
+		width: 356px;
+	}	
 	
 .contact-bg {
 	/* The image used */
@@ -386,6 +394,10 @@ input {
 /* *************************MEDIA QUERIES***************************************************** */
  @media (max-width: 1156px) {
 	 
+	
+	
+	 
+	 
 	h2 {
  font-size: 5vh;
 }
@@ -416,29 +428,11 @@ input {
 ::-ms-input-placeholder { /* Microsoft Edge */
 	font-size: 2.5vh;
 }
+	 
+
  
 }
 	
-
-
-@media (max-width: 712px) {
-	.pf-contents{
-		left: 50%;
-	transform: translateX(-50%);
-	}
-	
-	.about_me {
-		background-image: url(images/Flexbox-Buffer-Reduced.jpg);
-		background-position: center;
-		background-position: top;
-	}
-.about_me_tape {
-		margin: 0px;
-	}
-	
-	
-	
-	}
 	
 @media (max-width: 830px), (max-height: 812px) {
 h1 {
@@ -465,6 +459,7 @@ h1 {
 	margin-top: 40px;
 	padding-left: 50px;
 }
+
 	
 .pf-bg {
 	
@@ -495,6 +490,32 @@ h1 {
 	
 
 }
+	
+@media (max-width: 712px) {
+	.pf-contents{
+		left: 50%;
+	transform: translateX(-50%);
+	}
+	
+
+	.about_me {
+		background-image: url(images/Flexbox-Buffer-Reduced.jpg);
+		background-position: center;
+		background-position: top;
+		display: block;
+	}
+	
+	.about_me_tape {
+		background-image: url(images/About-Me-356px.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+		height: 642px;
+		width: 712px;
+	}
+	
+	
+	}
 	
 @media (max-width: 640px) {
 		
@@ -650,11 +671,22 @@ body, html {
 		font-size: 5vw;
 	}
 	
+	.about_me {
+		
+	}
 	
+	.about_me_tape {
+		width: 100%;
+		background-position: center;
+		transform: translateX(0%)
+	}	
 
 }
 	
+	@media screen and (max-width: 356px) {
 	
+		
+	}	
 
 	
 	
@@ -713,15 +745,14 @@ body, html {
 					  <p></p>
 				  </div>
 			</div>
-			<img src="images/VHS-Bottom.jpg" class="pf-resize" alt="00"/>
+			<div class="spacer"><img src="images/VHS-Bottom.jpg" class="pf-resize" alt="00"/></div>
 			
 <!---------------ABOUT ME----------------->				
 			
-			<div class="about_me" id="resume">
-      <img class="about_me_tape" src="images/About-Me-356px.png" alt="Example image">
-      <img class="about_me_tape" src="images/About-Me-356px.png" alt="Example image">   
+			<div class="about_me" id="resume"><div class="about_me_tape"><p>TEXT HERE I GUESS</p></div>
+				<div class="about_me_tape"><p>TEXT HERE I GUESS</p></div>
    </div>
-			<img src="images/VHS-Bottom.jpg" class="pf-resize" alt="00"/>
+			<div class="spacer" id="about_end"><img src="images/VHS-Bottom.jpg" class="pf-resize" alt="00"/></div>
 			
 			
 		</div>
