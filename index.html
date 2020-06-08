@@ -258,21 +258,7 @@ A:hover {
   transform: translateY(0);
 }
 	
-	.about_me {
-		background-image: url(images/Flexbox-Buffer-Reduced.jpg);
-		background-position: center;
-		background-position: top;
-		display: flex;
-	}
-	
-	.about_me_tape {
-		background-image: url(images/About-Me-356px.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		text-align: center;
-		height: 642px;
-		width: 356px;
-	}	
+		
 	
 .contact-bg {
 	/* The image used */
@@ -389,10 +375,29 @@ input {
 	font-size: 2.5vh;
 }	
 	
-	iframe {
-		width:712px;
-		height:1960px;
+	
+.about-thumbs {
+	z-index: 1;
+	background-image: none;
 	}
+
+.about__wrap {
+	display: inline-flex;
+	
+}
+
+	.about__img {
+		width: 508px;
+	}
+	
+.about__description_layer {
+	position: absolute;
+	color: white;
+	width: 508px;
+}
+
+	
+
 	
 /* *************************MEDIA QUERIES***************************************************** */
  @media (max-width: 1156px) {
@@ -478,10 +483,11 @@ h1 {
   	width: 712px;
 }
 
-	.img__img {
+.img__img {
 		width: 712px;
 	}
-		.img__description_layer h4 {
+	
+.img__description_layer h4 {
 		font-size: 55px;
 			margin-bottom: 10px;
 	}
@@ -489,7 +495,17 @@ h1 {
 		font-size: 35px;
 	}
 	
+.about__img {
+		width: 356px;
+	}
 	
+.about__description_layer {
+	position: absolute;
+	color: white;
+	width: 356px;
+}
+	
+
 	
 
 }
@@ -500,22 +516,45 @@ h1 {
 	transform: translateX(-50%);
 	}
 	
-
-	.about_me {
-		background-image: url(images/Flexbox-Buffer-Reduced.jpg);
-		background-position: center;
-		background-position: top;
-		display: block;
+	.about-thumbs {
+	background-image: url(images/Flexbox-Buffer-Reduced.jpg);
+	background-position: center;
 	}
 	
-	.about_me_tape {
-		background-image: url(images/About-Me-356px.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		text-align: center;
-		height: 642px;
-		width: 712px;
+	.about__wrap {
+		display: block;
+  position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+  	width: 712px;
+}
+
+	.about__img {
+		width: 356px;
 	}
+	
+	.about__description_layer {
+  position: absolute;
+	top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: none;
+  color: #fff;
+  visibility: visible;
+  opacity: 1;
+		transform: translateX(50%);
+}
+		.about__description_layer h8 {
+		font-size: 30px;
+			margin-bottom: 10px;
+	}
+	.about__description_layer p {
+		font-size: 35px;
+	}
+	
+
 	
 	
 	}
@@ -524,7 +563,7 @@ h1 {
 		
 		.form-style {
 			width: 100%;
-				min-width: inherit;
+			min-width: inherit;
 		}
 	
 	
@@ -587,10 +626,6 @@ h1 {
 	width: 320px;
 	}
 	
-iframe {
-		width:100%;
-		height: 275%;
-	}	
 	
 	.pf-center {
 		width: 100%;
@@ -636,6 +671,35 @@ iframe {
   transform: translateY(50);
 }
 	
+	.about__wrap {
+	width: 320px;
+	}
+	
+	.about__img {
+		width: 100%;
+		max-width: 356px;
+	}
+	.about__wrap {
+		width: 100%;
+	}
+	
+
+
+.about__description_layer {
+	width: 100%;
+	
+  visibility: visible;
+  transform: translateY(1em);
+	margin-top: 0%;
+	margin: 0%;
+	}
+	
+	.about__description_layer h8{
+		padding: 0px;
+		margin: 0px;
+		font-size: 8vw;
+	}
+	
 body, html {
 		scroll-snap-type: none;
 	}
@@ -673,21 +737,16 @@ body, html {
 		margin-top: 0px;
 		font-size: 5vw;
 	}
-	
-	.about_me {
 		
-	}
-	
-	.about_me_tape {
-		width: 100%;
-		background-position: center;
-		transform: translateX(0%)
-	}	
 
 }
 	
 	@media screen and (max-width: 356px) {
 	
+.about-thumbs {
+	background-image: none;
+	background-color: black;
+	}		
 		
 	}	
 
@@ -751,11 +810,25 @@ body, html {
 			<div class="spacer"><img src="images/VHS-Bottom.jpg" class="pf-resize" alt="00"/></div>
 			
 <!---------------ABOUT ME----------------->				
+			<div class="about__wrap about-thumbs" id="resume">
+				  <img class="about__img" src="images/About-Me-356px.png" alt="About Me Tape 1" />
+				  <div class="about__description_layer">
+					<h8>Film &#38; Video</h8>
+					  <br>
+					  <p></p>
+				  </div>
+			</div>
+			<div class="about__wrap about-thumbs">
+				  <img class="about__img" src="images/About-Me-356px.png" alt="About Me Tape 2" />
+				  <div class="about__description_layer">
+					<h8>Film &#38; Video</h8>
+					  <br>
+					  <p></p>
+				  </div>
+			</div>
 			
-			<div class="about_me" id="resume"><div class="about_me_tape"><p>TEXT HERE I GUESS</p></div>
-				<div class="about_me_tape"><p>TEXT HERE I GUESS</p></div>
-   </div>
-			<div class="spacer" id="about_end"><img src="images/VHS-Bottom.jpg" class="pf-resize" alt="00"/></div>
+			<div class="spacer"><img src="images/VHS-Bottom.jpg" class="pf-resize" alt="00"/></div>
+			
 			
 			
 		</div>
