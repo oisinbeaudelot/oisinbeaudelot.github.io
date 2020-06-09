@@ -395,8 +395,20 @@ input {
 	color: white;
 	width: 508px;
 }
-
 	
+#about_mobile {
+		display: none;
+	}
+
+	.contact_links {
+		margin-top: 82vh; 
+		position: absolute;
+		display: inline-block;
+		
+	}	
+	#resume_link {
+		transform: translateX(-100%)
+	}
 
 	
 /* *************************MEDIA QUERIES***************************************************** */
@@ -510,17 +522,8 @@ h1 {
 
 }
 	
-@media (max-width: 712px) {
-	.pf-contents{
-		left: 50%;
-	transform: translateX(-50%);
-	}
 	
-	.about-thumbs {
-	background-image: url(images/Flexbox-Buffer-Reduced.jpg);
-	background-position: center;
-	}
-	
+@media (max-width: 732px) {
 	.about__wrap {
 		display: block;
   position: relative;
@@ -528,6 +531,24 @@ h1 {
 	transform: translateX(-50%);
   	width: 712px;
 }
+	
+	.about-thumbs {
+	background-image: url(images/Flexbox-Buffer-Reduced.jpg);
+	background-position: center;
+	}	
+	
+	}
+	
+	
+@media (max-width: 712px) {
+	.pf-contents{
+		left: 50%;
+	transform: translateX(-50%);
+	}
+	
+
+	
+	
 
 	.about__img {
 		width: 356px;
@@ -552,6 +573,14 @@ h1 {
 	}
 	.about__description_layer p {
 		font-size: 35px;
+	}
+	
+		#about_mobile {
+		display: block;
+	}
+	
+	#about_id1, #about_id2 {
+		display: none;
 	}
 	
 
@@ -597,6 +626,8 @@ h1 {
 }
 	
 @media screen and (max-width: 480px), (max-height: 550px) {
+	
+
     
 h1 {
 	font-size: 15px;
@@ -810,7 +841,8 @@ body, html {
 			<div class="spacer"><img src="images/VHS-Bottom.jpg" class="pf-resize" alt="00"/></div>
 			
 <!---------------ABOUT ME----------------->				
-			<div class="about__wrap about-thumbs" id="resume">
+			<div id="resume">
+			<div class="about__wrap about-thumbs" id="about_id1">
 				  <img class="about__img" src="images/About-Me-356px.png" alt="About Me Tape 1" />
 				  <div class="about__description_layer">
 					<h8>Film &#38; Video</h8>
@@ -818,13 +850,35 @@ body, html {
 					  <p></p>
 				  </div>
 			</div>
-			<div class="about__wrap about-thumbs">
+			<div class="about__wrap about-thumbs" id="about_id2">
 				  <img class="about__img" src="images/About-Me-356px.png" alt="About Me Tape 2" />
 				  <div class="about__description_layer">
-					<h8>Film &#38; Video</h8>
+					<h8>Hi, I’m Oisin, a creative digital advertiser currently based in Dublin, Ireland. <br>
+
+I’m also currently a digital marketing executive for Grange in Baldoyle, as well as a massive movie buff, originating from my favourite films watched on repeat on VHS. In fact, my first experience with sharing my creativity was by VHS, and this inspired the concept of this very website, which I wrote from scratch. <br>
+
+With qualifications in both media and business marketing, I combine the two to offer a comprehensive approach to digital advertising that’s on message with a creative punch.<br>
+
+Feel free to contact me at hi@oisinbeaudelot.com.</h8>
 					  <br>
 					  <p></p>
 				  </div>
+			</div>
+				
+			<div class="about__wrap about-thumbs" id="about_mobile">
+				  <img class="about__img" src="images/About-Me-356px.png" alt="About Me Tape 2" />
+				  <div class="about__description_layer">
+					<h8>Hi, I’m Oisin, a creative digital advertiser currently based in Dublin, Ireland. <br>
+
+I’m also currently a digital marketing executive for Grange in Baldoyle, as well as a massive movie buff, originating from my favourite films watched on repeat on VHS. In fact, my first experience with sharing my creativity was by VHS, and this inspired the concept of this very website, which I wrote from scratch. <br>
+
+With qualifications in both media and business marketing, I combine the two to offer a comprehensive approach to digital advertising that’s on message with a creative punch.<br>
+
+Feel free to contact me at hi@oisinbeaudelot.com.</h8>
+					  <br>
+					  <p></p>
+				  </div>
+			</div>
 			</div>
 			
 			<div class="spacer"><img src="images/VHS-Bottom.jpg" class="pf-resize" alt="00"/></div>
@@ -833,8 +887,7 @@ body, html {
 			
 		</div>
 	</div>
-</div>
-<!---------------RESUME PAGE----------------->	
+</div>	
 
 <!---------------CONTACT PAGE---------------->	
 <div class="center"  id="contact">
@@ -846,15 +899,16 @@ body, html {
 				<h2>CONTACT</h2>
 			</div>
 			<form action="contact-form-handler.php" target="_blank" method="post">
-				<input type="text" id="name" name="name" placeholder="name:" style="background-color: #eca2a1">
+				<input type="text" id="name" name="name" placeholder="your name:" style="background-color: #eca2a1">
 				<br>
-				<input type="text" id="email" name="email" placeholder="email:" style="background-color: #ebc7c5">
+				<input type="text" id="email" name="email" placeholder="your email:" style="background-color: #ebc7c5">
 				<br>
 				<textarea rows="5" id="message" name="message" placeholder="message:"></textarea>
 				<input type="submit" name="submit" value="&#9632;  Submit" style="background-color: #e5e2d8" id="submit-button">
       		</form>
-		
 	  </div>
+	  <img src="images/linkedin-sticker-reduced.png" alt="LinkedIn Logo" class="contact_links" id="li_link">
+		<img src="images/linkedin-sticker-reduced.png" alt="LinkedIn Logo" class="contact_links" id="resume_link">
 	</div>
 </div>
 </body>
