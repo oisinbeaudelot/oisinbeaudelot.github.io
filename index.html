@@ -414,15 +414,24 @@ input {
 		position: absolute;
 		display: inline-block;
 		bottom: 5%;
+		padding: 0 10px;
 		
 	}	
-	#resume_link {
+	.resume_link {
 		transform: translateX(-100%);
 	}
 	
 	#li_link, #resume_link{
-		padding: 0 10px;
 		
+		
+	}
+	
+	.display_not_mobile {
+		
+	}
+	
+	.display_mobile_only{
+		display: none;
 	}
 
 	
@@ -684,7 +693,6 @@ h1 {
 .top {
 	width: 420px;
 	padding-left: 55px;
-
 }
 .bottom {
 	width: 300px;
@@ -798,6 +806,15 @@ body, html {
 	.img__description_layer p {
 		margin-top: 0px;
 		font-size: 5vw;
+	}
+	
+	.display_not_mobile {
+		display: none;
+		
+	}
+	
+	.display_mobile_only{
+		display: inherit;
 	}
 		
 
@@ -969,8 +986,8 @@ Feel free to contact me at hi@oisinbeaudelot.com.</p>
 				<input type="submit" name="submit" value="&#9632;  Submit" style="background-color: #e5e2d8" id="submit-button">
       		</form>
 	  </div>
-	  <a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a"><img src="images/linkedin-sticker-reduced.png" alt="LinkedIn Logo" class="contact_links" id="li_link"></a>
-		<a href="docs/resume_file.pdf"><img src="images/Resume-Sticker-59px.png" alt="LinkedIn Logo" class="contact_links" id="resume_link"></a>
+	  <a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a"><img src="images/linkedin-sticker.png" alt="LinkedIn Logo" class="contact_links display_not_mobile"> <img src="images/linkedin-sticker-reduced.png" alt="LinkedIn Logo" class="contact_links display_mobile_only resume_link"></a>
+		<a href="docs/resume_file.pdf"><img src="images/Resume-Sticker-85px.png" alt="LinkedIn Logo" class="contact_links display_not_mobile resume_link"> <img src="images/Resume-Sticker-59px.png" alt="LinkedIn Logo" class="contact_links display_mobile_only"></a>
 	</div>
 </div>
 </body>
