@@ -6,654 +6,105 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 	<title>portfolio 01.116</title>
-	<style>
-body, html {
-	height: 100%;
-	width: 100%;
-	overflow-x: hidden;
-	margin: 0;
-	background-color: black;
-	scroll-snap-type: y proximity;
-	-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
-}
-h1 {
-	color: white;
-	font-size: 70px;
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-	margin: 0px;
-}
-h4 {
-	color: yellow;
-	font-family: 'Roboto', sans-serif;
-	font-size: 35px;
-	margin-bottom: 1em;
-	margin: 0px;
-}
-h5 {
-	color: teal;
-	font-size: 35px;
-	font-family: 'Roboto', sans-serif;
-	padding: 0px;
-	margin: 0px;
-	margin-right: 0px;
-	margin-top: 0px;
-}
-h6 {
-	color: black;
-	text-shadow: -1px -1px 0 #fff,  1px -1px 0 #fff,  -1px 1px 0 #fff,  1px 1px 0 #fff;
-}
-h7 {
-	font-size: 27px;
-	font-family: 'Permanent Marker', serif;
-}
-p {
-	color: #181818;
-	font-family: 'Roboto', sans-serif;
-	font-size: 35px;
-	margin: 3%;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	text-align: left;
-}
-ul {
-	color: #181818;
-	font-family: 'Roboto', sans-serif;
-	font-size: 25px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	text-align: left;
-}
- video::-webkit-media-controls-panel {
- background-image: linear-gradient(transparent, transparent);
-!important;
- -webkit-box-shadow: none;
-!important;
- -moz-box-shadow: none;
-!important;
- box-shadow: none;
-!important;
-}
-A:link {
-	COLOR: white;
-	TEXT-DECORATION: none;
-	font-weight: bold
-}
-a:visited {
-	COLOR: white;
-	TEXT-DECORATION: none;
-	font-weight: bold
-}
-a:hover {
-	COLOR: red;
-	text-decoration: none;
-	font-weight: bold
-}
-.footer {
-	background-image: url(images/website-footer-bg.png);
-	background-color: black;
-	position: relative;
-	width: 1020px;
-	height: 149px;
-}
-		
-.footer-text {
-	float: left;
-	width: 560px;
-	padding-top: 38px;
-	margin-left: 140px;
-		}
-		
-.footer-text h7{
-	line-height: 35px;
-		font-size: 28px;
-		}
-		
-.footer-text A:link {
-	COLOR: black;
-}
-.footer-text a:visited {
-	COLOR: black;
-	TEXT-DECORATION: none;
-	font-weight: bold
-}
-.footer-text a:hover {
-	COLOR: red;
-	text-decoration: none;
-	font-weight: bold
-}
-
-.linkedin {
-	padding-top: 27px;
-  margin-right: 150px;
-  height: 84px;
-}
-		
-		.li-reduced {
-			display: none;
-		}
-		
-.center {
-	margin: 0 auto;
-	text-align: center;
-	width: 100%;
-	height: 100%;
-	scroll-snap-align: start;
-}
-.pf-center {
-	margin: 0;
-	text-align: center;
-	width: 100%;
-}
-.pf-bg {
-	/* The image used */
-	background-image: url("images/VHS-Bottom.jpg");
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: repeat;
-	position: relative;
-}
-.pf-contents {
-	background-image: url("images/portfolio-bg-texture.jpg");
-	position: relative;
-	display: inline-block;
-	max-width: 1020px;
-}
-.img__wrap {
-	position: relative;
-	width: 100%;
-	left: 50%;
-	transform: translateX(-50%);
-}
-.pf_title {
-	position: absolute;
-	border-radius: 10px;
-	top: 35%;
-	left: 35%;
-	transform: translate(-50%, -50%);
-	transform: rotate(-45deg);
-	background: transparent;
-	color: #fff;
-}
-.header {
-	position: absolute;
-	background-image: url(images/new-port-header3.jpg);
-	background-color: #000;
-	width: 1020px;
-	height: 168px;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0%);
-	padding-bottom: 0px;
-}
-.title {
-	text-align: center;
-	padding: 0px;
-	margin-top: 20px;
-	z-index: 1;
-}
-.subtitle {
-	display: -ms-flexbox; /* IE10 */
-	display: flex;
-	-ms-flex-wrap: nowrap; /* IE10 */
-	flex-wrap: nowrap;
-	z-index: 1;
-}
-.date_period {
-	-ms-flex: 58%; /* IE10 */
-	flex: 58%;
-	max-width: 58%;
-	padding: 0px;
-	text-align: left;
-}
-.go-back {
-	-ms-flex: 42%; /* IE10 */
-	flex: 42%;
-	max-width: 42%;
-	padding: 0px;
-	text-align: right;
-	padding-right: 20px;
-}
-.header-texture {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	z-index: 2;
-	transform: translate(-50%, -50%);
-	max-width: 1000px;
-	opacity: 100%;
-}
-.showcase {
-	display: -ms-flexbox; /* IE10 */
-	display: flex;
-	-ms-flex-wrap: wrap; /* IE10 */
-	flex-wrap: wrap;
-	padding: 0 20px;
-	justify-content: center;
-	margin-top: 180px; /* To stop overlay on top of the header*/
-}
-.row {
-	display: -ms-flexbox; /* IE10 */
-	display: flex;
-	-ms-flex-wrap: wrap; /* IE10 */
-	flex-wrap: wrap;
-	padding: 2%;
-}
-.description {
-	margin-bottom: 20px;
-	margin: 0 20px;
-}
-.column {
-	-ms-flex: 49%; /* IE10 */
-	flex: 49%;
-	max-width: 49%;
-	padding: 0 0.5%;
-}
-.column img {
-	margin-top: 2%;
-	vertical-align: middle;
-}
-.end-tape {
-	background-image: url(images/footer-bg);
-	background-color: #ebe6e3;
-	margin-top: 0px;
-	width: 1020px;
-	height: auto;
-	position: relative;
-	left: 50%;
-	transform: translate(-50%, 0%);
-		}
-	
-.back-button {
-	margin: 0px;
-		padding: 0px;
-	}
-
-#maskText h7 {
-	display: block;
-	-webkit-mask-image: url("images/tiny-texture3.png");
-	opacity: 100%;
-}
-#maskText2 h4 {
-	display: block;
-	-webkit-mask-image: url("images/tiny-texture3.png");
-	opacity: 100%;
-}
-#maskText3 h1 {
-	display: block;
-	-webkit-mask-image: url("images/tiny-texture3.png");
-	opacity: 100%;
-}
-.end-tape h7 {
-	font-size: 40px;
-}
-.end-tape A:link {
-	COLOR: black;
-}
-.end-tape a:visited {
-	COLOR: black;
-	TEXT-DECORATION: none;
-	font-weight: bold
-}
-.end-tape a:hover {
-	COLOR: red;
-	text-decoration: none;
-	font-weight: bold
-}
-.bottom-go-back {
-	position: relative;
-	background-image: url(images/footer-and-back-button4.png);
-	background-color: black;
-	height: 97px;
-	padding-top: 69px;
-}
-
-		#bottom-text {
-		}
-		
-	
-
-/********************MEDIA QUERIES START HERE MA MAN**********************/
-@media (max-width: 1020px) {
-.pf-contents {
-	left: 50%;
-	transform: translateX(-50%);
-	background-size: contain;
-}
-.showcase {
-	padding: 0 2px;
-	margin-top: 168px;
-}
-	.bottom-go-back{
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0%);
-		width: 1020px;
-	}
-	
-	.footer {
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0%);
-	margin-top: 168px;
-	}
-}
-
-/* TABLET */
-@media (max-width: 830px) {
-.pf-bg {
-	/* The image used */
-	background-image: url("images/VHS-Bottom-reduced.jpg");
-}
-.pf-contents {
-	max-width: 830px;
-	background-image: url("images/portfolio-bg-texture-reduced.jpg");
-	
-}
-.pf-resize {
-	max-width: 830px;
-}
-h1 {
-	font-size: 60px;
-}
-h4 {
-	font-size: 30px;
-	margin-bottom: 1em;
-	margin: 0px;
-}
-h5 {
-	font-size: 30px;
-}
-p {
-	font-size: 24px;
-	margin: 0 30px;
-}
-ul {
-	font-size: 18px;
-	margin: 0 10px;
-}
-.showcase {
-	margin-top: 136px;
-}
-.header {
-	position: absolute;
-	background-image: url(images/new-port-header3-reduced.jpg);
-	width: 830px;
-	height: 138px;
-}
-
-.date_period {
-	-ms-flex: 59%; /* IE10 */
-	flex: 59%;
-	max-width: 59%;
-	padding: 0px;
-	text-align: left;
-}
-.go-back {
-	-ms-flex: 40%; /* IE10 */
-	flex: 40%;
-	max-width: 40%;
-	padding: 0px;
-	text-align: right;
-	padding-right: 10px;
-}
-
-	.bottom-go-back {
-	background-image: url(images/footer-and-back-button4-reduced.png);
-	height: 87px;
-	padding-top: 50px;
-	width: 830px;
-	}
-	
-	
-	.footer {
-	background-image: url(images/website-footer-bg-reduced.png);
-	width: 830px;
-	height: 121px;
-	margin-top: 135px;
-	
-	}
-	
-		
-.footer-text {
-	float: left;
-	width: 470px;
-	padding-top: 29px;
-	margin-left: 105px;
-		}
-		
-.footer-text h7{
-	line-height: 28px;
-		font-size: 23px;
-		}
-
-.linkedin {
-	padding-top: 27px;
-  margin-right: 130px;
-  height: 58px;
-}	
-.li-main {
-		display: none;
-	}
-	
-.li-reduced {
-			display:inline;
-		}
-
-
-		#spaces {
-		display: inline;
-	}
-	
-	#remove_1, #remove_2, #remove_3 {
-		display: inline;
-	}
-	
-	
-	
-		}
-
-/* MOBILE */
-@media screen and (max-width: 680px) {
-.column {
-	-ms-flex: 100%;
-	flex: 100%;
-	max-width: 100%;
-}
-h1 {
-	font-size: 8.5vw;
-}
-h4 {
-	font-size: calc(13px + 1.5vw);
-	margin: 0px;
-	padding: 0px;
-}
-h5 {
-	font-size: 4.1vw;
-	margin: 0px;
-	padding: 0px;
-}
-	
-.go-back h7 {
-	font-size: calc(17px + 1.5vw);
-	margin: 0px;
-	padding: 0px;
-	}
-.header {
-	position: absolute;
-	background-size: cover;
-	height: auto;
-	padding-bottom: 5px;
-}
-.showcase {
-	margin-top: calc(95px + 9.5vw);
-}
-.subtitle {
-	display: inline-block;
-}
-.date_period {
-	-ms-flex: 100%; /* IE10 */
-	flex: 100%;
-	max-width: 100%;
-	padding: 0px;
-	text-align: center;
-}
-.go-back {
-	-ms-flex: 100%; /* IE10 */
-	flex: 100%;
-	max-width: 100%;
-	padding: 0px;
-	text-align: center;
-	padding: 0px;
-}
-	
-	
-	
-	#remove_2 {
-		display: none;
-	}
-}
-		
-@media screen and (max-width: 480px) {
-	
-	
-	
-.footer {
-	background-image: url(images/website-footer-bg.png);
-	height: 160px;
-	margin-top: 135px;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0%);
-	width: 1020px;
-	}
-	
-		
-.footer-text {
-	text-align: center;
-	width: 27%;
-	padding-top: 40px;
-	margin-left: 35%;
-		}
-		
-.footer-text h7{
-	line-height: 28px;
-		font-size: 23px;
-		}
-	
-.linkedin {
-	float: right;
-	padding-top: 40px;
-  margin-right: 31%;
-  height: 30px;
-}
-	
-	
-	
-	#remove_1, #remove_3 {
-		display: none;
-	}
-	
-	
-}
-		
-		@media screen and (max-width: 350px){
-			
-.footer-text {
-	text-align: center;
-	width: 15%;
-	padding-top: 29px;
-	margin-left: 38%;
-		}
-		
-.footer-text h7{
-	line-height: 28px;
-		font-size: 23px;
-		}
-	
-.linkedin {
-	float: right;
-	padding-top: 30px;
-  margin-right: 38%;
-  height: 30px;
-}	
-			
-			#about, #print, #hello {
-	display: block;
-	}
-	
-	#hello {
-		padding-bottom: 4px;
-	}
-			
-			#spaces {
-		display: none;
-	}
-		}
-</style>
+	<link href="mainstyles.css" rel="stylesheet" type="text/css">
+	<link href="subpage.css" rel="stylesheet" type="text/css">
 	</head>
 
-	<body>
+<body>
 <!––---------------PORTFOLIO PAGE------------------>
-<div class="pf-center">
-      <div class="pf-bg">
-    <div class="pf-contents">
-        <div class="header">
-              <div class="title">
-            <div id="maskText3">
-                  <h1>PROJECT 1 GALLERY</h1>
-                </div>
-          </div>
-              <div class="subtitle">
-            <div class="go-back"> <a href="index.html">
-              <div id="maskText">
-                <h7>&#x25C2; OISIN BEAUDELOT</h7>
-              </div>
-              </a> </div>
-            <div class="date_period">
-                  <div id="maskText2">
-                <h4>SEPTEMBER 2016 - MAY 2017</h4>
-              </div>
-                </div>
-          </div>
-            </div>
-      
-          <div class="showcase">
-        <div class="img__wrap">
-              <video width="100%" height="auto" controls="true" poster="images/Video-Placeholder.jpg">
-            <source src="images/video1.mp4" type="video/mp4">
-            Your browser does not support the video tag. </video>
-            </div>
-      </div>
-          <br>
-          <div class="description">
-        <p> Heading Here </p>
-        <ul type="disc">
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-              <li>Animi eveniet voluptas accusantium ipsum perferendis earum! </li>
-              <li>Quas nobis in, non repellendus quaerat dolorum earum nesciunt, aliquid laboriosam officiis, incidunt autem sed.</li>
-            </ul>
-      </div>
+	<div class="pf-center">
+		<div class="pf-bg">
+    		<div class="pf-contents">
+				<div class="header">
+				  	<div class="title">
+						<div id="maskText3">
+					  		<h1>PROJECT 1 GALLERY</h1>
+						</div>
+			  		</div>
+				  	<div class="subtitle">
+						<div class="go-back"> 
+							<a href="index.html">
+							  <div id="maskText">
+								<h7>&#x25C2; OISIN BEAUDELOT</h7>
+							  </div>
+						  	</a> 
+						</div>
+						<div class="date_period">
+							<div id="maskText2">
+								<h2>SEPTEMBER 2016 - MAY 2017</h2>
+							</div>
+						</div>
+			  		</div>
+				</div>
+<!––---------------VIDEO SHOWCASE------------------>
+			  	<div class="showcase">
+					<div class="img__wrap">
+					  <video width="100%" height="auto" controls="true" poster="images/Video-Placeholder.jpg">
+					<source src="images/video1.mp4" type="video/mp4">
+					Your browser does not support the video tag. </video>
+					</div>
+		  		</div>
+          		
+          		<div class="description">
+        			<br>
+					<h3> Heading Here </h3>
+					<ul type="disc">
+					  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					  <li>Animi eveniet voluptas accusantium ipsum perferendis earum! </li>
+					  <li>Quas nobis in, non repellendus quaerat dolorum earum nesciunt, aliquid laboriosam officiis, incidunt autem sed.</li>
+					</ul>
+      			</div>
           
-          <!-- Photo Grid -->
-          <div class="row">
-        <div class="column"> <img src="images/test images/CAUTION TEENAGERS (SCALED DOWN).2,2.png" style="width:100%" alt=""> <img src="images/test images/Dead Along the Way.jpg" style="width:100%" alt=""> <img src="images/test images/Cine.png" style="width:100%" alt=""> <img src="images/test images/Eiffel-Tower-the-Album.jpg" style="width:100%" alt=""> </div>
-        <div class="column"> <img src="images/test images/Cine.png" style="width:100%" alt=""> <img src="images/test images/Eiffel-Tower-the-Album.jpg" style="width:100%" alt=""> <img src="images/test images/Dead Along the Way.jpg" style="width:100%" alt=""> <img src="images/test images/CAUTION TEENAGERS (SCALED DOWN).2,2.png" style="width:100%" alt=""> </div>
-      </div>
-		<div class="back-button"><div class="bottom-go-back">
-			<a href="index.html" id="bottom-text"><h7>&#x25C2; OISIN BEAUDELOT</h7></a>
-			</div></div>
-		<footer class="footer">
-			<div class="footer-text">
-				<a href="index.html#resume" id="about"><h7 id="remove_1">-</h7><h7>About Oisin</h7></a><h7 id="spaces">&nbsp; &nbsp;</h7><a href="docs/resume_file.pdf" target="_blank" id="print"><h7 id="remove_3">-Print </h7><h7>Resume</h7><br></a>
-				<a href="index.html#contact" id="hello"><h7 id="remove_2">-Get in touch - </h7><h7>hi@oisinbeaudelot.com</h7></a>
-			  </div>
-			<div class="linkedin"><a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank"><img src="images/linkedin-sticker.png" alt="linkedin logo" class="li-main"><img src="images/linkedin-sticker-reduced.png" alt="linkedin logo" class="li-reduced"></a></div>
-        </footer>
-        </div>
-    
-   
-  </div>
+<!––---------------IMAGE GRID------------------>
+				<div class="row">
+					<div class="column">
+						<img src="images/test images/CAUTION TEENAGERS (SCALED DOWN).2,2.png" style="width:100%" alt="">
+						<img src="images/test images/Dead Along the Way.jpg" style="width:100%" alt="">
+						<img src="images/test images/Cine.png" style="width:100%" alt="">
+						<img src="images/test images/Eiffel-Tower-the-Album.jpg" style="width:100%" alt="">
+					</div>
+					<div class="column">
+						<img src="images/test images/Cine.png" style="width:100%" alt="">
+						<img src="images/test images/Eiffel-Tower-the-Album.jpg" style="width:100%" alt="">
+						<img src="images/test images/Dead Along the Way.jpg" style="width:100%" alt="">
+						<img src="images/test images/CAUTION TEENAGERS (SCALED DOWN).2,2.png" style="width:100%" alt="">
+					</div>
+				</div>
+<!––---------------BACK TO HOMEPAGE------------------>
+				<div class="back-button">
+					<div class="bottom-go-back">
+						<a href="index.html" id="bottom-text">
+							<h7>&#x25C2; OISIN BEAUDELOT</h7>
+						</a>
+					</div>
+				</div>
+<!––---------------FOOTER------------------>
+				<footer class="footer">
+					<div class="footer-text">
+						<h7>
+						<a href="index.html#resume" id="about">
+							<span id="remove_1">-</span>
+							About Oisin
+						</a>
+							<span id="spaces">&nbsp; &nbsp;</span>
+						<a href="docs/resume_file.pdf" target="_blank" id="print">
+							<span id="remove_3">-Print </span>
+							Resume
+							<br>
+						</a>
+						<a href="index.html#contact" id="hello">
+							<span id="remove_2">- </span>
+							hi@oisinbeaudelot.com
+						</a>
+						</h7>
+					</div>
+					<div class="linkedin">
+						<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank"><img src="images/linkedin-sticker.png" alt="linkedin logo" class="li-main"><img src="images/linkedin-sticker-reduced.png" alt="linkedin logo" class="li-reduced"></a>
+					</div>
+				</footer>
+        	</div>
+  		</div>
+
     </div>
 </body>
 </html>

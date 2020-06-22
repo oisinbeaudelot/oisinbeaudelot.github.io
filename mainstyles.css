@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	background-color: black;
+	scroll-snap-type: y proximity;
+	-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+	-webkit-text-size-adjust: 100%;
+}
+input, textarea {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+.center {
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	scroll-snap-align: start;
+}
+.pf-center {
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+.pf-bg {
+	/* The image used */
+	background-image: url("images/VHS-Bottom.jpg");
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: repeat;
+	position: relative;
+}
+.pf-contents {
+	position: relative;
+	display: inline-block;
+	max-width: 1020px;
+}
+.pf_title {
+	position: absolute;
+	border-radius: 10px;
+	top: 35%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+	transform: rotate(-45deg);
+	background: transparent;
+	color: #fff;
+}
+.img__wrap {
+	position: relative;
+	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+/********************MEDIA QUERIES START HERE MA MAN**********************/
+
+/*****************MEDIA QUERIES 480px************************************/
+@media screen and (max-width: 480px), (max-height: 550px) {
+body, html {
+		scroll-snap-type: none;
+}
+.display_not_mobile {
+	display: none;
+}
+.display_mobile_only {
+	display: inherit;
+}
+}
