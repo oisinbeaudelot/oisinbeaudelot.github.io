@@ -56,6 +56,12 @@ input, textarea {
 	left: 50%;
 	transform: translateX(-50%);
 }
+.display_not_mobile {
+	display: inline-block;
+}
+.display_mobile_only {
+	display: none;
+}
 /********************MEDIA QUERIES START HERE MA MAN**********************/
 
 /*****************MEDIA QUERIES 480px************************************/
@@ -67,6 +73,6 @@ body, html {
 	display: none;
 }
 .display_mobile_only {
-	display: inherit;
+	display: inline-block;
 }
 }
