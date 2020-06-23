@@ -267,7 +267,6 @@ input {
 }
 .about__description_layer {
 	position: absolute;
-	color: white;
 }
 #about_description_id {
 	padding: 80px 40px 0px 150px;
@@ -275,7 +274,7 @@ input {
 	color: #1E1E1E;
 }
 
-#about-me__title {
+.about-me__title {
 		width: 512px;
 		margin: 100px 0px 0px 0px;
 		left: 0;
@@ -285,7 +284,7 @@ input {
 		
 		
 	}
-#about-me__title h9 {
+.about-me__title h9 {
 		color: white;
 		display: block;
 		font-family: "Kanit", sans-serif;
@@ -304,7 +303,6 @@ input {
 }
 .contact_links {
 	position: absolute;
-	display: inline-block;
 	bottom: 5%;
 	padding: 0 10px;
 }
@@ -312,10 +310,7 @@ input {
 	transform: translateX(-100%);
 }
 #li_link, #resume_link {}
-.display_not_mobile {}
-.display_mobile_only {
-	display: none;
-}
+
 /* *************************MEDIA QUERIES************************************************************************************************************ */
 @media (max-width: 1156px) {
 	h2 {
@@ -391,13 +386,11 @@ input {
 	.about__img {
 		width: 356px;
 	}
-	#about-me__title {
+	.about-me__title {
 		width: 356px;
-		margin: 70px 0px 0px 0px;
-		
-		
+		margin: 70px 0px 0px 0px;	
 	}
-	#about-me__title h9 {
+	.about-me__title h9 {
 		font-size: 100px;
 		line-height: 70px;
 		padding: 0px 2px 0px 0px;
@@ -452,9 +445,6 @@ input {
 		opacity: 1;
 		transform: translateX(50%);
 	}
-	#about_description_id_mobile {
-		padding-top: 370px;
-	}
 	#about_description_id_mobile h8 {
 		font-size: 40px;
 		padding: 0 5px;
@@ -473,6 +463,20 @@ input {
 	.pf-contents {
 		left: 50%;
 		transform: translateX(-50%);
+	}
+	.about-me__title {
+		width: 356px;
+		margin: 0px 0px 0px 0px;
+	}
+	.about-me__title h9 {
+		font-size: 100px;
+		line-height: 70px;
+		padding: 50px 2px 0px 0px;
+		text-shadow: -8px 0px 0px black;
+	}
+		
+	#about_description_id_mobile {
+		margin-top: 175px;
 	}
 }
 /* *************************MEDIA QUERIES 640px***************************************************** */
@@ -587,7 +591,6 @@ input {
 		left: 50%;
 		margin: 0%;
 	}
-	
 	#projects {
 		font-size: 5vw;
 	}
@@ -610,12 +613,24 @@ input {
 		margin-top: 0px;
 		font-size: 5vw;
 	}
-
 }
 /* *************************MEDIA QUERIES 370px***************************************************** */
 @media screen and (max-width: 370px) {
+	.about-me__title {
+		width: 100%;
+		margin: 0px 0px 0px 0px;
+	}
+	.about-me__title h9 {
+		font-size: 26vw;
+		line-height: 20vw;
+		padding: 30px 0px 0px 0px;
+		text-shadow: -8px 0px 0px black;
+	}
 	#about_description_id_mobile {
-		margin: 0;
+		
+	}
+	#about_description_id_mobile {
+		margin: 18vw 0 0 0;
 		padding: 0;
 		transform: translateY(58%);
 		left: 0%;
