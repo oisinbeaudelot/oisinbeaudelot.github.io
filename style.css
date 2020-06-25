@@ -275,26 +275,26 @@ input {
 }
 
 .about-me__title {
-		width: 512px;
-		margin: 100px 0px 0px 0px;
-		left: 0;
-		transform: rotate(-11deg);
-		text-align: right;
-		opacity: 80%;
+	width: 512px;
+	margin: 100px 0px 0px 0px;
+	left: 0;
+	transform: rotate(-11deg);
+	text-align: right;
+	opacity: 80%;
 		
 		
 	}
 .about-me__title h9 {
-		color: white;
-		display: block;
-		font-family: 'Kanit', sans-serif;
-		font-style: italic;
-		font-weight: bolder;
-		font-size: 145px;
-		line-height: 100px;
-		letter-spacing: 0px;
-		padding: 0px 2px 0px 0px;
-		text-shadow: -10px 5px 0px black;
+	color: white;
+	display: block;
+	font-family: 'Kanit', sans-serif;
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 145px;
+	line-height: 100px;
+	letter-spacing: 0px;
+	padding: 0px 2px 0px 0px;
+	text-shadow: -10px 5px 0px black;
 	}
 #about_id2 h8 {
 	font-family: 'Roboto', sans-serif;
@@ -305,14 +305,15 @@ input {
 }
 .contact_links {
 	position: absolute;
-	bottom: 5%;
-	padding: 0 10px;
+	top: 50%;
+	padding-left: calc(100px + 30vw);
 }
+	 
 .resume_link {
+	padding-top: 30px;
+	padding-right: calc(60px + 30vw);
 	transform: translateX(-100%);
-}
-#li_link, #resume_link {}
-
+}	
 /* *************************MEDIA QUERIES************************************************************************************************************ */
 @media (max-width: 1156px) {
 	h2 {
@@ -338,6 +339,14 @@ input {
 	}
 	::-ms-input-placeholder { /* Microsoft Edge */
 		font-size: 2.5vh;
+	}
+	.contact_links {
+		top: auto;
+		bottom: 5%;
+		padding: 0 10px;
+	}
+	.resume_link {
+		bottom: 6%;
 	}
 }
 /* *************************MEDIA QUERIES 830px***************************************************** */
