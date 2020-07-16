@@ -32,11 +32,6 @@ h3{
 	text-align: left;
 	font-weight: normal;
 }
-h7 {
-	font-size: 27px;
-	font-family: 'Permanent Marker', serif;
-}
-
 ul {
 	color: #181818;
 	font-family: 'Roboto', sans-serif;
@@ -81,8 +76,7 @@ a:hover {
 .footer-text {
 	width: 360px;
 	padding-top: 38px;
-}
-.footer-text h7{
+	font-family: 'Permanent Marker', serif;
 	line-height: 35px;
 	font-size: 28px;
 }
@@ -271,16 +265,15 @@ a:hover {
 		left: 50%;
 		transform: translate(-50%, 0%);
 		width: 580px;
-		padding: 0px;
+		padding: 0;
 	}		
 	.footer-text {
 		width: 280px;
 		padding-top: 29px;
-			}
-	.footer-text h7{
+		padding-left: 10px;
 		line-height: 28px;
 		font-size: 23px;
-	}
+		}
 	.footer__sticker {
 		padding-top: 27px;
 		height: 58px;
@@ -314,7 +307,7 @@ a:hover {
 		width: 100%;
 		padding-right: 10%;
 	}
-	#footer-text__spaces--display, #footer-text__get-in--display {
+	#footer-text__get-in--display {
 		display: none;
 	}
 }
@@ -333,8 +326,6 @@ a:hover {
 	.footer-text {
 		width: 50%;
 		padding-top: 30px;
-	}	
-	.footer-text h7{
 		line-height: 28px;
 		font-size: 23px;
 	}
@@ -342,7 +333,7 @@ a:hover {
 		padding-top: 40px;
 		height: 30px;
 	}
-	#footer-text__get-in--display {
+	#footer-text__spaces--display {
 		display: none;
 	}
 	#footer-text__break--display {
@@ -369,10 +360,8 @@ a:hover {
 	.footer-text {
 		width: 55%;
 		padding-top: 29px;
-	}		
-	.footer-text h7{
 		line-height: 28px;
-			font-size: 23px;
+		font-size: 20px;
 	}
 	.footer__sticker {
 		padding-top: 40px;
