@@ -105,6 +105,19 @@ a:hover {
 	display: block;
 	padding: 0 20px;
 }
+.vimeo-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.vimeo-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 .description {
 	margin-bottom: 20px;
 	margin: 0 20px;
@@ -192,7 +205,7 @@ a:hover {
 		transform: translateX(-50%);
 		background-size: contain;
 	}
-	.header {
+	.header{
 		width: 100%;
 		height: auto;
 		background-size: contain;
