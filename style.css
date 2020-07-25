@@ -308,7 +308,10 @@ input {
 	padding-top: 30px;
 	padding-right: calc(60px + 30vw);
 	transform: translateX(-100%);
-}	
+}
+.spacer{
+	margin: -3px;
+}
 /* *************************MEDIA QUERIES************************************************************************************************************ */
 @media (max-width: 1156px) {
 	h2 {
