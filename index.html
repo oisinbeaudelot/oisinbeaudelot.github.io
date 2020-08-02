@@ -4,21 +4,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	
 <script src="docs/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("a").on('click', function(event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 750, function() {
-                        window.location.hash = hash;
-                    });
-                }
-            });
-        });
-    </script>
+<script>
+	$(document).ready(function() {
+		$("a").on('click', function(event) {
+			if (this.hash !== "") {
+				event.preventDefault();
+				var hash = this.hash;
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 750, function() {
+					window.location.hash = hash;
+				});
+			}
+		});
+	});
+</script>
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
@@ -27,11 +35,10 @@
 <link href="mainstyles.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <style>
+
 	
 	
-	
-	@media (max-width: 1020px) {
-		
+	@media (max-width: 1020px) {	
 	}
 	@media (max-width: 732px) {
 	
@@ -77,7 +84,7 @@
 				<img class="img__img" src="images/pf__tile01.jpg"  alt="description 1" />
 				<a href="portfolio01.html">
 					<div class="img__description_layer">
-						<h4><br>Client Work</h4>
+						<h4>Client Work</h4>
 					  	<br>
 					  	<p></p>
 					</div>
@@ -87,7 +94,7 @@
 				  <img class="img__img" src="images/pf__tile02.jpg" alt="description 1" />
 				<a href="portfolio02.html">  
 					<div class="img__description_layer">
-						<h4><br>Photography</h4>
+						<h4>Photography</h4>
 						<p></p>
 					</div>
 				</a>
@@ -97,8 +104,6 @@
 				<a href="portfolio03.html">
 					<div class="img__description_layer">
 						<h4>Film &#38; Video</h4>
-						<br>
-						<p></p>
 					</div>
 				</a>
 			</div>
@@ -106,9 +111,7 @@
 				<img class="img__img" src="images/pf__tile04.jpg" alt="description 1" />
 				<a href="portfolio04.html">
 					<div class="img__description_layer">
-						<h4><br>Extra-Curriculars</h4>
-						<br>
-						<p></p>
+						<h4>Extra-Curriculars</h4>
 					</div>
 				</a>
 			</div>
@@ -117,6 +120,7 @@
 <!---------------ABOUT ME----------------->				
 			<div id="resume">
 			<div class="about__wrap about-thumbs" id="about_id1">
+				
 				  <img class="about__img" src="images/about-me__bg-left--510px.png" alt="About Me Tape 1" />
 				  <div class="about__description_layer about-me__title">
 					<h9>ABOUT<br>ME&nbsp;</h9>
@@ -124,6 +128,7 @@
 				
 			</div>
 			<div class="about__wrap about-thumbs" id="about_id2">
+				
 				  <img class="about__img" src="images/about-me__bg-right--510px.png" alt="About Me Tape 2" />
 				  <div class="about__description_layer" id="about_description_id">
 					<h8>Hi, I’m Oisin, a creative digital advertiser currently based in Dublin, Ireland. <br><br>
@@ -131,9 +136,8 @@
 					I’m also currently a digital marketing executive for Grange in Baldoyle, as well as a massive movie buff, originating from my favourite films on VHS watched on repeat. In fact, my first experience with sharing my creativity was by VHS, and this inspired the concept of this very website, which I wrote from scratch. <br><br>
 
 					With qualifications in both media and business marketing, I combine the two to offer a comprehensive approach to digital advertising that’s on message with a creative punch.</h8>
-					  <br>
-					  <p></p>
 				  </div>
+				
 			</div>
 				
 			<div class="about__wrap about-thumbs" id="about_mobile">
@@ -172,7 +176,7 @@
 				<h3>SE-CAM</h3>
 				<h2>CONTACT</h2>
 			</div>
-			<form action="contact-form-handler.php" target="_blank" method="post">
+			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd9eh5UUwzPc1axBAP_QfRFHYQQfBKNeluXn10EU-Wo88_ghw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
 				<input type="text" id="name" name="name" placeholder="your name:" style="background-color: #eca2a1">
 				<br>
 				<input type="text" id="email" name="email" placeholder="your email:" style="background-color: #ebc7c5">
@@ -180,8 +184,9 @@
 				<textarea rows="5" id="message" name="message" placeholder="message:"></textarea>
 				<input type="submit" name="submit" value="&#9632;  Submit" style="background-color: #e5e2d8" id="submit-button">
       		</form>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 	  </div>
-	  	<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a">
+	  	<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
 		  <img src="images/linkedin-sticker--85px.png" alt="LinkedIn logo" class="contact_links display_not_mobile">
 		  <img src="images/linkedin-sticker--59px.png" alt="LinkedIn logo" class="contact_links display_mobile_only">
 	  	</a>
