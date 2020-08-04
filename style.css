@@ -126,7 +126,6 @@ A:hover {
 }
 .img__description_layer {
 	position: absolute;
-	border-radius: 10px;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -181,6 +180,7 @@ A:hover {
 	width: 40%;
 	min-width: 530px;
 	padding-top: 0%;
+	z-index: 2;
 }
 .form-title {
 	background-color: #ea4c46;
@@ -225,7 +225,7 @@ input {
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	outline: none;
 }
-#submit-button {
+#submitbutton {
 	width: 100%;
 	text-align: left;
 	border: none;
@@ -302,6 +302,7 @@ input {
 	position: absolute;
 	top: 50%;
 	padding-left: calc(100px + 30vw);
+	z-index: 1;
 }
 	 
 .resume_link {

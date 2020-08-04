@@ -22,10 +22,16 @@
 <script src="assets/js/jquery.min.js"></script>
 <script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
-  });
+	$(function () {
+          $('#gform').on('submit', function(e) {
+			$('#name, #email, #message, #submitbutton').css({
+        	'background-color': 'black',
+        	'color': '#CECECE'
+    		});
+			$('#submitbutton').val('...Message sent! I\'ll get back to you real soon.');  
+          })
+})
+	
 </script>
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
@@ -35,7 +41,32 @@ $('#gform').on('submit', function(e) {
 <link href="mainstyles.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <style>
-
+	/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #CECECE;
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+		#name {
+			background-color: #eca2a1;
+		}
+		#email {
+			background-color: #ebc7c5;
+		}
+		#message {
+			background-color: #e5e2d8;
+		}
+		#submitbutton {
+			background-color: #e5e2d8;
+		}
 	
 	
 	@media (max-width: 1020px) {	
@@ -177,23 +208,35 @@ $('#gform').on('submit', function(e) {
 				<h2>CONTACT</h2>
 			</div>
 			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd9eh5UUwzPc1axBAP_QfRFHYQQfBKNeluXn10EU-Wo88_ghw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-				<input type="text" id="entry.390305579 name" name="entry.390305579" placeholder="your name:" style="background-color: #eca2a1">
+				<input type="text" id="name" name="entry.390305579" placeholder="your name:">
 				<br>
-				<input type="text" id="entry.1577486740 email" name="entry.1577486740" placeholder="your email:" style="background-color: #ebc7c5">
+				<input type="text" id="email" name="entry.1577486740" placeholder="your email:">
 				<br>
 				<textarea rows="5" id="message" name="entry.1790357440" placeholder="message:"></textarea>
-				<input type="submit" name="submit" value="&#9632;&nbsp;&nbsp;Submit" style="background-color: #e5e2d8" id="submit-button">
+				<input type="submit" name="submit" value="&#9632;&nbsp;&nbsp;Submit" id="submitbutton">
       		</form>
 			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 	  </div>
-	  	<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
-		  <img src="images/linkedin-sticker--85px.png" alt="LinkedIn logo" class="contact_links display_not_mobile">
-		  <img src="images/linkedin-sticker--59px.png" alt="LinkedIn logo" class="contact_links display_mobile_only">
-	  	</a>
-		<a href="docs/resume_file.pdf">
-			<img src="images/resume-sticker--85px.png" alt="Resume sticker" class="contact_links display_not_mobile resume_link">
-			<img src="images/resume-sticker--59px.png" alt="Resume sticker" class="contact_links display_mobile_only resume_link">
-	  	</a>
+	  	<div class="contact_links display_not_mobile">
+			<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
+			  <img src="images/linkedin-sticker--85px.png" alt="LinkedIn logo">
+			</a>
+		</div>
+	  	<div class="contact_links display_mobile_only">
+			<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
+			  <img src="images/linkedin-sticker--59px.png" alt="LinkedIn logo">
+			</a>
+		</div>
+		<div class="contact_links display_not_mobile resume_link">
+			<a href="docs/resume_file.pdf">
+			<img src="images/resume-sticker--85px.png" alt="Resume sticker">
+	  		</a>
+		</div>
+	  	<div class="contact_links display_mobile_only">
+			<a href="docs/resume_file.pdf">
+				<img src="images/resume-sticker--59px.png" alt="Resume sticker">
+			</a>
+		</div>
 	</div>
 </div>
 </body>
