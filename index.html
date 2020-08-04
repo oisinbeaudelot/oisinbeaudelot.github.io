@@ -28,7 +28,8 @@
         	'background-color': 'black',
         	'color': '#CECECE'
     		});
-			$('#submitbutton').val('...Message sent! I\'ll get back to you real soon.');  
+			$('#submitbutton').val('...Message sent!');
+			$("#submitbutton").attr("disabled", true);
           })
 })
 	
@@ -41,32 +42,7 @@
 <link href="mainstyles.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <style>
-	/* Change Autocomplete styles in Chrome*/
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #CECECE;
-  -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
-		#name {
-			background-color: #eca2a1;
-		}
-		#email {
-			background-color: #ebc7c5;
-		}
-		#message {
-			background-color: #e5e2d8;
-		}
-		#submitbutton {
-			background-color: #e5e2d8;
-		}
+
 	
 	
 	@media (max-width: 1020px) {	
@@ -151,6 +127,7 @@ select:-webkit-autofill:focus {
 <!---------------ABOUT ME----------------->				
 			<div id="resume">
 			<div class="about__wrap about-thumbs" id="about_id1">
+
 				
 				  <img class="about__img" src="images/about-me__bg-left--510px.png" alt="About Me Tape 1" />
 				  <div class="about__description_layer about-me__title">
@@ -232,7 +209,7 @@ select:-webkit-autofill:focus {
 			<img src="images/resume-sticker--85px.png" alt="Resume sticker">
 	  		</a>
 		</div>
-	  	<div class="contact_links display_mobile_only">
+	  	<div class="contact_links display_mobile_only resume_link">
 			<a href="docs/resume_file.pdf">
 				<img src="images/resume-sticker--59px.png" alt="Resume sticker">
 			</a>

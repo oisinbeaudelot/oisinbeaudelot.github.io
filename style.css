@@ -1,6 +1,20 @@
 @charset "utf-8";
 /* CSS Document */
-
+	/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #CECECE;
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+		
 h1 {
 	color: black;
 	font-family: 'Permanent Marker', serif;
@@ -235,7 +249,15 @@ input {
 	border-bottom-right-radius: 20px;
 	font-size: 3vh;
 	font-family: 'Roboto', sans-serif;
+	background-color: #e5e2d8;
 }
+#name {
+	background-color: #eca2a1;
+}
+#email {
+	background-color: #ebc7c5;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: #353535;
 	font-size: 2.5vh;
