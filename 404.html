@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>&#9632; STOP - 404 Page not found...</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<style>
+	html, body
+{
+    width: 100%;
+	height: 100%;
+    margin:0;
+    padding:0;
+	position: absolute;
+}
+	h1{
+		color: #353535;
+	font-size: calc(10pt + 2vw);
+	font-family: 'Roboto', sans-serif; font-weight:500; font-style:italic;
+	}
+	.contents{
+		position: relative;
+		transform: translateX(-50%);
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		
+	}
+	.container{
+		width: 100%;
+		height: 100%;	
+	}
+	.button{
+		position: relative;
+		display: block;
+		background-color: black;
+		color: white;
+		width: calc(100px + 28vw);
+		padding: 10px;
+		border-radius: 60px;
+		transform: translateX(-50%);
+		left: 50%;
+		font-family: 'Roboto', sans-serif; font-weight:800; font-style:normal;
+		font-size: calc(5pt + 1.5vw);
+		
+	}
+.main-image {
+	
+		height: auto;
+		width: 80%;
+	max-width: 1000px;
+}
+	.rw {
+		letter-spacing: calc(-10pt - 2vw);
+	}
+A:link {
+	COLOR: white;
+	TEXT-DECORATION: none;
+	font-weight: bold
+}
+a:visited {
+	COLOR: white;
+	TEXT-DECORATION: none;
+	font-weight: bold
+}
+A:hover {
+	COLOR: red;
+	TEXT-DECORATION: none;
+	font-weight: bold
+}
+	
+@media screen and (min-aspect-ratio: 16/9) {
+	.contents{
+		top: 0;
+		transform: translate(0);
+	}
+	}
+</style>
+</head>
+
+<body>
+	<div class="contents">
+		<h1>Oh&nbsp;snap! There's&nbsp;nothing&nbsp;here...</h1>
+		<a href="/"><div class="button"><span class="rw">&#x25C0;&#x25C0;</span>&nbsp;&nbsp;&nbsp;&nbsp; Click here to rewind &nbsp;&nbsp;&nbsp;<span class="rw">&#x25C0;&#x25C0;</span></div></a>
+		<div class="container"
+			 ><img class="main-image" src="images/404__image.jpg" alt="">
+		</div>
+	</div>
+</body>
+</html>
