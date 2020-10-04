@@ -22,10 +22,17 @@
 <script src="assets/js/jquery.min.js"></script>
 <script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
-  });
+	$(function () {
+          $('#gform').on('submit', function(e) {
+			$('#name, #email, #message, #submitbutton').css({
+        	'background-color': 'black',
+        	'color': '#CECECE'
+    		});
+			$('#submitbutton').val('...Message sent!');
+			$("#submitbutton").attr("disabled", true);
+          })
+})
+	
 </script>
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
@@ -39,6 +46,9 @@ $('#gform').on('submit', function(e) {
 	
 	
 	@media (max-width: 1020px) {	
+	}
+	@media (max-width: 830px) {
+
 	}
 	@media (max-width: 732px) {
 	
@@ -84,9 +94,7 @@ $('#gform').on('submit', function(e) {
 				<img class="img__img" src="images/pf__tile01.jpg"  alt="description 1" />
 				<a href="portfolio01.html">
 					<div class="img__description_layer">
-						<h4>Client Work</h4>
-					  	<br>
-					  	<p></p>
+						<div class="img__description-layer__text"><h4>Client Work</h4></div>
 					</div>
 				</a>
 			</div>
@@ -94,7 +102,7 @@ $('#gform').on('submit', function(e) {
 				  <img class="img__img" src="images/pf__tile02.jpg" alt="description 1" />
 				<a href="portfolio02.html">  
 					<div class="img__description_layer">
-						<h4>Photography</h4>
+						<div class="img__description-layer__text"><h4>Photography</h4></div>
 						<p></p>
 					</div>
 				</a>
@@ -103,7 +111,7 @@ $('#gform').on('submit', function(e) {
 				<img class="img__img" src="images/pf__tile03.jpg" alt="description 1" />
 				<a href="portfolio03.html">
 					<div class="img__description_layer">
-						<h4>Film &#38; Video</h4>
+						<div class="img__description-layer__text"><h4>Film &#38; Video</h4></div>
 					</div>
 				</a>
 			</div>
@@ -111,7 +119,7 @@ $('#gform').on('submit', function(e) {
 				<img class="img__img" src="images/pf__tile04.jpg" alt="description 1" />
 				<a href="portfolio04.html">
 					<div class="img__description_layer">
-						<h4>Extra-Curriculars</h4>
+						<div class="img__description-layer__text"><h4>Graphics</h4></div>
 					</div>
 				</a>
 			</div>
@@ -120,16 +128,12 @@ $('#gform').on('submit', function(e) {
 <!---------------ABOUT ME----------------->				
 			<div id="resume">
 			<div class="about__wrap about-thumbs" id="about_id1">
-				
-				  <img class="about__img" src="images/about-me__bg-left--510px.png" alt="About Me Tape 1" />
-				  <div class="about__description_layer about-me__title">
+				  <div class="about-me__title">
 					<h9>ABOUT<br>ME&nbsp;</h9>
 				  </div>
 				
 			</div>
 			<div class="about__wrap about-thumbs" id="about_id2">
-				
-				  <img class="about__img" src="images/about-me__bg-right--510px.png" alt="About Me Tape 2" />
 				  <div class="about__description_layer" id="about_description_id">
 					<h8>Hi, I’m Oisin, a creative digital advertiser currently based in Dublin, Ireland. <br><br>
 
@@ -137,9 +141,7 @@ $('#gform').on('submit', function(e) {
 
 					With qualifications in both media and business marketing, I combine the two to offer a comprehensive approach to digital advertising that’s on message with a creative punch.</h8>
 				  </div>
-				
 			</div>
-				
 			<div class="about__wrap about-thumbs" id="about_mobile">
 				  <img class="about__img" src="images/about-me__bg-mobile--356px.jpg" alt="About Me Tape 2" />
 				  	<div class="about-me__title">
@@ -156,7 +158,7 @@ $('#gform').on('submit', function(e) {
 							With qualifications in both media and business marketing, I combine the two to offer a comprehensive approach to digital advertising that’s on message with a creative punch.</p>
 						</div>
 					</div>
-			</div>
+				</div>
 			</div>
 			
 			<div class="spacer"><img src="images/spacer--1020px.jpg" class="pf-resize" alt="00"/></div>
@@ -177,23 +179,35 @@ $('#gform').on('submit', function(e) {
 				<h2>CONTACT</h2>
 			</div>
 			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd9eh5UUwzPc1axBAP_QfRFHYQQfBKNeluXn10EU-Wo88_ghw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-				<input type="text" id="entry.390305579 name" name="entry.390305579" placeholder="your name:" style="background-color: #eca2a1">
+				<input type="text" id="name" name="entry.390305579" placeholder="your name:">
 				<br>
-				<input type="text" id="entry.1577486740 email" name="entry.1577486740" placeholder="your email:" style="background-color: #ebc7c5">
+				<input type="text" id="email" name="entry.1577486740" placeholder="your email:">
 				<br>
 				<textarea rows="5" id="message" name="entry.1790357440" placeholder="message:"></textarea>
-				<input type="submit" name="submit" value="&#9632;&nbsp;&nbsp;Submit" style="background-color: #e5e2d8" id="submit-button">
+				<input type="submit" name="submit" value="&#9632;&nbsp;&nbsp;Submit" id="submitbutton">
       		</form>
 			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 	  </div>
-	  	<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
-		  <img src="images/linkedin-sticker--85px.png" alt="LinkedIn logo" class="contact_links display_not_mobile">
-		  <img src="images/linkedin-sticker--59px.png" alt="LinkedIn logo" class="contact_links display_mobile_only">
-	  	</a>
-		<a href="docs/resume_file.pdf">
-			<img src="images/resume-sticker--85px.png" alt="Resume sticker" class="contact_links display_not_mobile resume_link">
-			<img src="images/resume-sticker--59px.png" alt="Resume sticker" class="contact_links display_mobile_only resume_link">
-	  	</a>
+	  	<div class="contact_links display_not_mobile">
+			<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
+			  <img src="images/linkedin-sticker--85px.png" alt="LinkedIn logo">
+			</a>
+		</div>
+	  	<div class="contact_links display_mobile_only">
+			<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
+			  <img src="images/linkedin-sticker--59px.png" alt="LinkedIn logo">
+			</a>
+		</div>
+		<div class="contact_links display_not_mobile resume_link">
+			<a href="docs/resume_file.pdf">
+			<img src="images/resume-sticker--85px.png" alt="Resume sticker">
+	  		</a>
+		</div>
+	  	<div class="contact_links display_mobile_only resume_link">
+			<a href="docs/resume_file.pdf">
+				<img src="images/resume-sticker--59px.png" alt="Resume sticker">
+			</a>
+		</div>
 	</div>
 </div>
 </body>
