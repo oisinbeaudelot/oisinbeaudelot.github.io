@@ -1,0 +1,469 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<style>
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: #d9d9d9;
+    overflow-x: hidden;
+    margin: 0;
+    scroll-snap-type: y proximity;
+    -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+    -webkit-text-size-adjust: 100%;
+}
+h1 {
+    text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	color: #003468;
+	margin: 0;
+	padding: 0;
+}
+p {
+    text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #003468;
+	margin: 0;
+	padding: 0;
+}
+img {
+    max-width: 100%;
+    display: block;
+	border-radius: 8px;
+}
+.hero {
+    width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero__logo {
+	width: 510px;
+	margin: 0 auto;
+}
+.hero__subtitle {
+    text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1.2rem;
+	color: #003468;
+	margin: 0;
+	padding: 30px 0 0 0;
+}
+.hero, .main-container, .results-container {
+    padding: 15px 0 15px 0;
+}
+.summary-container {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: 419px 2px 419px;
+    grid-auto-rows: minmax(auto, auto);
+	padding: 60px 0;
+}
+#line {
+    height: 100px;
+    width: 2px;
+    background-color: #003468;
+    align-self: flex-end;
+}
+.main-container, .results-container {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-column-gap: 10px;
+	grid-row-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 415px));
+    grid-auto-rows: minmax(auto, auto);
+}
+.main-container > * {
+    border-right: 0px solid red;
+    background-color: none;
+}
+.main-container > div > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.grid-items {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.grid-items p, h1 {
+    padding: 0 20px 20px 20px;
+}
+#main-7 {
+    grid-column: 1 / span 2;
+}
+.results-container {
+    font-family: 'Roboto', sans-serif;
+}
+#results-1__image, #results-1__text {
+    grid-row: 1 / 2;
+}
+#results-1__image {
+	grid-column: 1 / 2;
+    width: 50%;
+	padding-left: 5%;
+	height: auto;
+}
+#results-1__text {
+    grid-column: 1 / 2;
+}
+#results-1__text__1 {
+	grid-row: 1 / 2;
+	color: #d9d9d9;
+	font-weight: 700;
+	font-size: 6rem;
+	width: 60%;
+	padding-top: 26%;
+	letter-spacing: -0.3rem;
+	float: left;
+	text-align: center;
+	height: 35%;
+}
+#results-1__text__2 {
+	color: #003468;
+    text-align: left;
+    width: 40%;
+	height: 60%;
+	padding-top: 10%;
+    float: right;
+	font-weight: 700;
+	font-size: 4rem;
+	line-height: 3.5rem;
+}
+#results-1__text__3 {
+    width: 100%;
+    text-align: center;
+	float: left;
+	color: #2c98d6;
+	font-weight: 400;
+	font-size: 3rem;
+}
+#results-2__text {
+	margin-top: auto;
+	margin-bottom: auto;
+    text-align: center;
+	color: #2c98d6;
+}
+#results-2__text__1, #results-2__text__3 {
+	font-weight: 700;
+	font-size: 4rem;
+	line-height: 3rem;
+}
+#results-2__text__2 {
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 3rem;
+}
+#results-3__image, #results-3__text {
+    grid-row: 2 / 3;
+    align-self: flex-end;
+}
+#results-3__image {
+    grid-column: 1 / span 3;
+    width: 840px;
+}
+#results-3__text {
+    grid-column: 1 / span 3;
+	line-height: 7rem;
+	padding-bottom: 2%;
+}
+#results-3__text__1 {
+    width: 49%;
+    float: left;
+    text-align: right;
+	font-weight: 700;
+	font-size: 10rem;
+	letter-spacing: -0.5rem;
+	font-kerning: normal;
+	color: #003468;
+}
+#results-3__text__2 {
+    width: 49%;
+    float: right;
+	font-weight: 400;
+	font-size: 3.5rem;
+	line-height: 3rem;
+	color: #2c98d6;
+}
+#footer-container {
+    max-width: 840px;
+    height: 123px;
+    margin: 5% auto 0 auto;
+    background-image: url("images/footer-bg--1020px.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 12.25% 20% 20% 15% 15.5% 17.25%;
+    grid-template-rows: 21% 28% 28% 23%;
+    text-align: center;
+	font-family: 'Permanent Marker', serif;
+}
+#footer-container > a > img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#footer__back {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+#footer__next {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+#footer__contact {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 2;
+}
+#footer__resume {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 2;
+    justify-content: center;
+}
+#footer__linkedin {
+    grid-column: 5 / span 1;
+    grid-row: 2 / span 2;
+    justify-content: center;
+}
+
+@media (max-width: 840px) {
+.main-container > div > img {
+    width: 90%;
+	margin: 0 auto;
+}
+.main-container, .results-container, .summary-container {
+    max-width: 415px;
+	grid-row-gap: 2rem;
+}
+.main-container, .results-container {
+	grid-row-gap: 4rem;
+}
+#main-7 {
+    grid-column: 1 / span 1;
+}
+.hero {
+    max-width: 450px;
+    width: 80%;
+}
+.hero__logo {
+    max-width: 100%;
+}
+.summary-container {
+    grid-template-columns: auto;
+    grid-auto-rows: minmax(auto, auto);
+}
+#line {
+    height: 2px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.results-container {
+padding: 0 10px;
+grid-template-columns: 100%;
+grid-auto-rows: minmax(auto, auto);
+grid-row-gap: 4rem;
+margin-top: 4rem;
+}
+#results-2__text {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+#results-3__text, #results-3__image {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+#results-3__image, #results-3__text {
+    grid-column: 1 / span 2;
+}
+#results-1__image {
+	padding-bottom: 0rem;
+}
+#results-1__text__1 {
+	font-size: 5.8rem;
+	letter-spacing: 0rem;
+}
+#results-1__text__2 {
+	font-size: 4.5rem;
+	line-height: 3.8rem;
+	padding-top: 5%;
+}
+#results-1__text__3 {
+	font-size: 3rem;
+}
+#results-2__text__1, #results-2__text__3 {
+	font-size: 5rem;
+	line-height: 5rem;
+}
+#results-2__text__2 {
+	font-size: 2.5rem;
+	line-height: 2rem;
+}
+#results-3__text {
+	line-height: 4rem;
+}
+#results-3__text__1 {
+	font-size: 5rem;
+	letter-spacing: -0.2rem;
+}
+#results-3__text__2 {
+	font-size: 2rem;
+	line-height: 1.8rem;
+}
+#footer-container {
+    width: 100%;
+    max-width: 420px;
+    max-height: 61px;
+}
+}
+@media (max-width: 450px) {
+	.results-container {
+		grid-row-gap: 20vw;
+		margin-top: 20vw;
+	}
+    #results-1__text__1 {
+        font-size: 20vw;
+        letter-spacing: 0rem;
+    }
+    #results-1__text__2 {
+        font-size: 15vw;
+        line-height: 14vw;
+		padding-top: 5vw;
+    }
+    #results-1__text__3 {
+        font-size: 11vw;
+    }
+    #results-2__text__1, #results-2__text__3 {
+        font-size: 17vw;
+        line-height: 17vw;
+    }
+    #results-2__text__2 {
+        font-size: 8.6vw;
+    }
+    #results-3__text {
+        line-height: 15vw;
+    }
+    #results-3__text__1 {
+        font-size: 20vw;
+        letter-spacing: -0.2rem;
+    }
+    #results-3__text__2 {
+        font-size: 7vw;
+        line-height: 6vw;
+    }
+}
+</style>
+</head>
+	
+<body>
+  <div class="hero">
+      <div class="hero__logo">
+              <img src="images/dcuds-logo.png" alt="hero__logo">
+      </div>
+      <div class="hero__subtitle">
+              <span>MARKETING &amp; ADVERTISING OFFICER  &#65372; 2016&nbsp;-&nbsp;&nbsp;2017</span>
+      </div>
+  </div>
+	
+  <div class="summary-container">
+      <div class="grid-items">
+          <h1>PROBLEM</h1>
+          <p>A society with a reputation for being too 'serious' was not getting new signups, and had trouble standing out from the other socieities on campus.</p>
+      </div>
+      <div id="line"></div>
+      <div class="grid-items">
+          <h1>SOLUTION</h1>
+          <p>Open the semester with creative topics, communicating in the spaces the students are, and showcase the society's value proposition in a less serious environment.</p>
+      </div>
+  </div>
+	
+  <div class="main-container">  
+      <div class="grid-items" id="main-1">
+          <h1>COMEDY DEBATES</h1>
+          <p>Hosting a comedy debates and casual conversation outlets allowed students to get involved with the society and meet its members without being weighed down by a serious topic.
+          </p>
+          <img src="images/memes-poster-2.jpg" alt="">
+      </div>  
+      <div class="grid-items" id="main-2">
+          <img src="images/memes-poster-1.jpg" alt="">
+      </div>  
+      <div class="grid-items" id="main-3">
+          <img src="images/dcuds-drugs.jpg" alt="">
+      </div>  
+      <div class="grid-items" id="main-4">
+          <h1>FACEBOOK ADS</h1>
+          <p>
+              The social network that was most popular with students for organising events, this was the primary channel of communication.<br>
+              <br>
+              Taking advantage of Facebook ads to target students on campus, it was one of the first socities on campus to use paid ads on social media.
+          </p>
+      </div>  
+      <div class="grid-items" id="main-5">
+            <h1>ACCESSIBILITY</h1>
+            <p>The method of signups was taken from a pen and paper method to a online signup form, allowing new members to sign up instantly instead of waiting for signup desks to pop up twice a semester.<br>
+            <br>
+            This also allowed for a mailing list for all members, opening a second channel of communication directly with members, and established a database that could inform future committees.</p>
+      </div>  
+      <div class="grid-items" id="main-6">
+          <img src="images/signups.jpg" alt="">
+      </div>
+      <div class="grid-items" id="main-7">
+          <img src="images/wine-about-it.jpg" alt="">
+      </div>
+      <div class="grid-items" id="main-8">
+          <img src="images/dcuds-dominoes.jpg" alt="">
+      </div>
+      <div class="grid-items" id="main-9">
+          <h1>LIGHT-ARTED</h1>
+            <p>The artwork to support the activities had a casual, playful tone, designed to stand out from the other socities but also with a level of quality that would indicate an established group.</p>
+      </div>
+  </div>
+			
+  <div class="results-container">
+    <img src="images/dcuds-icon.png" alt="" id="results-1__image">
+    <div id="results-1__text">
+        <div id="results-1__text__1"><span>358</span></div>
+        <div id="results-1__text__2"><span>NEW<br>SIGN<br>-UPS</span></div>
+		<div id="results-1__text__3"><span>in the first month</span></div>
+    </div>
+    <div id="results-2__text"><span id="results-2__text__1">FROM 20&#37;<br></span><span id="results-2__text__2">EMAIL BOUNCE RATE<br></span><span id="results-2__text__3">TO &lt;1&#37;</span></div>
+    <img src="images/dcuds-icon-2.png" alt="" id="results-3__image">
+    <div id="results-3__text">
+		<div id="results-3__text__1">&asymp;100</div>
+		<div id="results-3__text__2">av. attendees<br>per event</div>
+    </div>
+  </div>
+  <footer>
+      <div id="footer-container">
+		  <a href="index.html#port" id="footer__back">&#x25C2;Back</a>
+          <a href="index.html#port" id="footer__next">Next project&#x25b8;</a>
+          <a href="portfolio03.html" id="footer__contact">Get in Contact</a>
+          <a href="docs/resume_file.pdf" target="_blank" id="footer__resume">
+          	<img src="images/resume-sticker--85px.png" alt="">
+          </a>
+          <a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank" id="footer__linkedin">
+              <img src="images/linkedin-sticker--85px.png" alt="">
+          </a>
+      </div>
+  </footer>	
+	
+	
+	
+	
+</body>
+</html>
