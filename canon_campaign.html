@@ -15,7 +15,7 @@
 		body, html {
           height: 100%;
           width: 100%;
-          background-color: #1e1f22;
+          background-color: #1D1E22;
           overflow-x: hidden;
           margin: 0;
           scroll-snap-type: y proximity;
@@ -159,12 +159,12 @@
 		#case-demo {
 			width: 390px;
 			border-radius: 10px;
-			padding-left:10px;
+			margin-left:10px;
 		}
 		#watch-demo {
 			width: 315px;
 			border-radius: 10px;
-			padding-left:50px;
+			margin-left: 15px;
 		}
         #superscript {
             font-size: 2.6rem;
@@ -375,11 +375,14 @@
 		}
 		#case-demo {
 			width: 100%;
-			padding: 0 1px;
+			padding: 0 0px;
+		}
+		#video-padding {
+			margin-left: 15%;
 		}
 		#watch-demo {
 			width: 70%;
-			padding: 0 15%;
+			padding: 0;
 		}
         model-viewer{
             height: 120vw;
@@ -607,7 +610,7 @@
               <br>
               As this window is different every day, Canon will create a <span class="red">branded watch face</span> that allows users to keep track, and act as a prompt to take beautiful photographs.</p>
         </div>
-        <div class="grid-items">
+        <div class="grid-items" id="video-padding">
               <video id="watch-demo" autoplay="" loop="" muted="" playsinline="" src="images/canon-watch-face_.mp4" style=""></video>
         </div>
     </div>
