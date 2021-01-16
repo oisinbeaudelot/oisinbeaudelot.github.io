@@ -1,0 +1,667 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<!-- 3D Model from modelviewer.dev -->
+    	<script src="focus-visible.js" defer></script>
+		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+		<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+	<title>"You're a Natural" Imagined Campaign - Canon</title>
+	<style>
+		body, html {
+          height: 100%;
+          width: 100%;
+          background-color: #1e1f22;
+          overflow-x: hidden;
+          margin: 0;
+          scroll-snap-type: y proximity;
+          -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+          -webkit-text-size-adjust: 100%;
+          font-family: 'Roboto', sans-serif;
+		}
+/*<--------------------FUNDAMENTALS--------------------------->*/		
+		img {
+			max-width: 100%;
+			display: block;
+			border-radius: 8px;
+		}
+		.grey-bg {
+			background-color: #1e1f22;
+		}
+		.white-bg {
+			background-color: white;
+		}
+        .column-1-2 {
+            grid-column: 1 / span 2;
+        }
+		.column-1 {
+			grid-column: 1 / span 1;
+		}
+		.column-2 {
+			grid-column: 2 / span 1;
+		}
+		.row-1 {
+			grid-row: 1 / span 1;
+		}
+		.row-2 {
+			grid-row: 2 / span 1;
+		}
+		.row-1-2 {
+			grid-row: 1 / span 2;
+		}
+		.row-1-2-3 {
+			grid-row: 1 / span 3;
+		}
+/*<--------------------FONT--------------------------->*/		
+		.hero__subtitle, h1, p {
+			color: #fff;
+		}
+		h1 {
+			text-align: center;
+			font-weight: 700;
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			text-align: center;
+			font-weight: 400;
+			font-size: 1rem;
+			line-height: 1.5rem;
+			margin: 0;
+			padding: 0;
+		}
+		.red {
+			color: #fb001f;
+		}
+		.grey {
+			color: #7F7F7F;
+		}
+		.white {
+			color: white;
+		}
+/*<--------------------SECTIONS--------------------------->*/		
+		.hero {
+			width: 840px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 8%;
+		}
+		.hero__logo {
+			width: 510px;
+			margin: 0 auto;
+		}
+		.hero__subtitle {
+			text-align: center;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
+			font-size: 1.2rem;
+			margin: 0;
+			padding: 30px 0 0 0;
+		}
+		#summary-container {
+			max-width: 840px;
+			margin-left: auto;
+			margin-right: auto;
+			display: grid;
+			grid-gap: 4px;
+			grid-template-columns: 419px 2px 419px;
+			grid-auto-rows: minmax(auto, auto);
+			padding: 60px 0;
+		}
+		#line {
+			height: 100px;
+			width: 2px;
+			background-color: #fff;
+			align-self: flex-end;
+		}
+		.main-content {
+			max-width: 840px;
+			margin-left: auto;
+			margin-right: auto;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(auto, 415px));
+			grid-auto-rows: minmax(auto, auto);
+			grid-column-gap: 10px;
+		}
+        .main-content > * {
+            border-right: 0px solid red;
+        }
+        .main-content > div > img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        .grid-items {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        model-viewer#reveal {
+            --poster-color: transparent;
+        }
+        model-viewer{
+            width: 100%;
+            height: 700px;
+            background-image: radial-gradient(ellipse, rgba(45,45,45,1) 0%, rgba(107,107,107,0) 70%);
+            outline: none;
+        }
+        #captions {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            padding: 2% 8%;
+        }
+		#case-demo {
+			width: 390px;
+			border-radius: 10px;
+			padding-left:10px;
+		}
+		#watch-demo {
+			width: 315px;
+			border-radius: 10px;
+			padding-left:50px;
+		}
+        #superscript {
+            font-size: 2.6rem;
+            vertical-align: super;
+            line-height: 2.6rem;
+        }
+        #results-1__image {
+            width: 40%;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            padding-left: 60%;
+            padding-top: 5%;
+        }
+        #results-1__text__1 {
+            width: 30%;
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            font-weight: 400;
+            font-size: 5rem;
+            line-height: 5rem;
+            padding-left: 5%;
+        }
+        #results-1__text__2 {
+            width: 160%;
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            font-weight: 700;
+            font-size: 5rem;
+            line-height: 5rem;
+            padding-left: 60%;
+        }
+        #results-2__image, #results-2__text {
+            grid-row: 3 / 4;
+        }
+        #results-2__image {
+            grid-column: 1 / 2;
+            width: 20%;
+            float: right;
+            padding-left: 68%;
+            height: auto;
+        }
+        #results-2__text {
+            grid-column: 1 / 2;
+        }
+        #results-2__text__1 {
+            color: #fb001f;
+            text-align: center;
+            width: 80%;
+            height: 60%;
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+        }
+        #results-2__text__2 {
+            width: 100%;
+            text-align: center;
+            float: left;
+            color: #7F7F7F;
+            font-weight: 400;
+            font-size: 1.7rem;
+            padding-top: 5px;
+        }
+        #results-3__text {
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+            color: #2c98d6;
+        }
+        #results-3__text__1 {
+            font-weight: 400;
+            font-size: 3.8rem;
+            line-height: 3rem;
+        }
+        #results-3__text__2 {
+            font-weight: 700;
+            font-size: 3.8rem;
+            line-height: 4.5rem;
+        }
+        #results-4__image {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            width: 20%;
+            height: auto;
+            float: left;
+            padding-left: 8%;
+        }
+        #results-4__text {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            width: 60%;
+            text-align: center;
+            float: right;
+            padding-left: 30%;
+        }
+        #results-4__image__1, #results-4__image__2 {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            width: 90%;
+            height: auto;
+            padding-left: 5%;
+        }
+        #results-4__image__1 {
+            padding-bottom: 2%;
+            }
+        #results-4__image__2 {
+            padding-top: 2%;
+            }
+        #results-4__text__1 {
+            font-weight: 1000;
+            font-size: 2.3rem;
+            line-height: 2.3rem;
+            text-align: center;
+        }
+        #results-5__image, #results-5__text {
+            grid-row: 4 / 5;
+        }
+        #results-5__image {
+            grid-column: 2 / 3;
+            width: 35%;
+            float: right;
+            padding-left: 55%;
+            padding-bottom: 15%;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        #results-5__text {
+            grid-column: 2 / 3;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        #results-5__text__1 {
+            color: #fb001f;
+            text-align: center;
+            width: 50%;
+            height: auto;
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 3rem;
+            padding-left: 5%;
+        }
+        #results-5__text__2 {
+            width: 100%;
+            text-align: center;
+            float: left;
+            color: #7F7F7F;
+            font-weight: 400;
+            font-size: 2.5rem;
+            padding-top: 10px;
+        }
+/*<--------------------PADDINGS--------------------------->*/		
+		.main-content {
+			padding: 15px 0 200px 0;
+		}
+        .grid-items, p {
+            padding: 20px 0;
+        }
+		h1 {
+			padding: 0 20px 20px 20px;
+		}
+		.hero {
+			padding: 15px 0 15px 0;
+		}
+		#summary-container p {
+			padding: 0 40px;
+		}
+		#app-section {
+			padding-top: 200px;
+		}
+		#app-section p {
+			padding: 0;
+		}
+		#results-section {
+			grid-row-gap: 100px;
+			margin-bottom: 200px;
+		}
+	
+/*<--------------------------------MEDIA-QUERIES------------------------------------->*/
+	@media (max-width: 840px) {
+		.column-1-2 {
+            grid-column: 1 / span 1;
+        }
+		.column-2 {
+			grid-column: 1 / span 1;
+		}
+		#summary-container p {
+			padding: 0 40px;
+		}
+		#summary-container {
+			grid-template-columns: 100%;
+			max-width: 419px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.hero {
+			max-width: 450px;
+			width: 80%;
+		}
+		.hero__logo {
+			max-width: 100%;
+		}
+		.main-content > div > img {
+			width: 100%;
+			margin: 0 auto;
+		}
+		.main-content p {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		#case-demo {
+			width: 100%;
+			padding: 0 1px;
+		}
+		#watch-demo {
+			width: 70%;
+			padding: 0 15%;
+		}
+        model-viewer{
+            height: 120vw;
+        }
+		.main-content {
+			max-width: 415px;
+		}
+		#line {
+			height: 2px;
+			width: 200px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#app-demo {
+			max-width: 150%;
+			width: 150%;
+			transform: translateX(-17%);
+		}
+		#watch-section > .grid-items {
+			padding: 0;
+		}
+		#ooh-section > .grid-items {
+			padding: 0;
+		}
+		#ooh-section h1 {
+			padding-top: 20px;
+		}
+		#results-section > .grid-items {
+			padding: 0;
+		}
+		#results-section h1 {
+			padding: 0;
+		}
+		#superscript {
+			font-size: 1.5rem;
+			line-height: 1rem;
+		}
+		#results-1__image {
+			width: 18%;
+			grid-column: 1 / 2;
+			padding-left: 82%;
+			padding-top: 2%;
+		}
+		#results-1__text__1 {
+			width: 15%;
+			font-size: 2.5rem;
+			line-height: 2.5rem;
+			padding-left: 0%;
+		}
+		#results-1__text__2 {
+			width: 80%;
+			grid-column: 1 / 2;
+			font-size: 2.8rem;
+			line-height: 2.6rem;
+			padding-left: 26%;
+		}
+		#results-3__text {
+			grid-column: 1 / span 1;
+			grid-row: 4 / span 1;
+		}
+		#results-4__image, #results-4__text, #results-4__image__1, #results-4__image__2 {
+			grid-row: 5 / span 1;
+		}
+		#results-5__image, #results-5__text {
+			grid-row: 6 / span 1;
+		}
+		#results-5__image, #results-5__text {
+			grid-column: 1 / 2;
+		}
+	}
+/*<--------------------------------MEDIA-QUERIES-II------------------------------------->*/
+
+	@media (max-width: 450px) {
+		#case-options {
+			padding: 0 5%;
+			width: 90%
+		}
+		#app-demo {
+			width: 94%;
+			transform: translateX(0);
+			padding: 0 3%;
+		}
+		#results-section {
+			grid-row-gap: 20vw;
+			margin-top: 20vw;
+			padding: 0 3%;
+		}
+		#superscript {
+			font-size: 5vw;
+			line-height: 5vw;
+		}
+		#results-1__image {
+			width: 18%;
+			padding-left: 73vw;
+			padding-top: 3%;
+		}
+		#results-1__text__1 {
+			width: 14%;
+			font-size: 9vw;
+			line-height: 9vw;
+		}
+		#results-1__text__2 {
+			width: 80%;
+			font-size: 9vw;
+			line-height: 9vw;
+			padding-left: 25vw;
+		}
+        #results-2__image {
+			width: 20vw;
+            padding-left: 70vw;
+        }
+        #results-2__text__1 {
+            font-size: 8.5vw;
+            width: 70vw;
+            line-height: 8.5vw;
+        }
+        #results-2__text__2 {
+			width: 100vw;
+            font-size: 7vw;
+            padding-top: 1vw;
+        }
+        #results-3__text__2 {
+            font-size: 13vw;
+            line-height: 12vw;
+        }
+        #results-3__text__1 {
+            font-size: 12vw;
+            line-height: 3rem;
+        }
+        #results-4__text {
+            padding-left: 30vw;
+        }
+        #results-4__image__1, #results-4__image__2 {
+            padding-left: 0;
+        }
+        #results-4__text__1 {
+            font-size: 8vw;
+            line-height: 8vw;
+        }
+        #results-5__image {
+            width: 35%;
+            padding-left: 55%;
+            padding-bottom: 15%;
+        }
+		#results-5__text {
+			margin: 0;
+		}
+        #results-5__text__1 {
+            font-size: 13vw;
+            line-height: 12vw;
+        }
+        #results-5__text__2 {
+            font-size: 8vw;
+            padding-top: 1vw;
+        }
+	}
+	</style>
+</head>
+	
+<body>
+<!----------------------------------------------->
+    <div class="hero">
+        <div class="hero__logo">
+                <img src="images/canon-logo.png" alt="hero__logo">
+        </div>
+        <div class="hero__subtitle">
+                <span>"YOU'RE A NATURAL"  &#65372; IMAGINED CAMPAIGN</span>
+        </div>
+    </div>
+<!----------------------------------------------->
+    <div id="summary-container">
+        <div class="grid-items">
+            <h1>PROBLEM</h1>
+            <p>As the quality of smartphone cameras skyrockets thanks to software and automatic settings, the jump from casual to enthusiast photographers is getting increasingly difficult.</p>
+        </div>
+        <div id="line"></div>
+        <div class="grid-items">
+            <h1>SOLUTION</h1>
+            <p>Canon will invite the 'Casuals' to enter the mindset of an enthusiast, where the value proposition of a standalone camera becomes clear.</p>
+        </div>
+    </div>
+<!----------------------------------------------->
+	<div class="main-content" id="app-section">
+        <div class="grid-items column-1-2">
+              <h1>APP + FILTERS</h1>
+        </div>
+        <div class="grid-items column-1-2">
+            <img src="images/iphone-x.png" id="app-demo" alt="">
+        </div> 
+        <div class="grid-items">
+              <p>Canon will create the <span class="red">Natural Photographer</span> app that allows users to have more control over their image, and shoot in the closest format to RAW.<br>
+              <br>
+              By giving quick tips, and breaking down in a simple way what's going on 'under the hood', the Casuals will be gradually exposed to new photography techniques and ideas.
+              </p>
+        </div>  
+        <div class="grid-items" id="main-2">
+            <p>This app will also demonstrate the usefulness of being able to control individual settings, and will show the limitations of the phone's sensor and cameras.
+            </p>
+        </div>  
+	</div>
+<!----------------------------------------------->
+	<div class="main-content" id="ooh-section">
+        <div class="grid-items column-1">
+              <h1>OUT OF HOME</h1>
+        </div>
+        <div class="grid-items">
+              <p>Dotted in various interesting places in select cities, branded <span class="red">#naturalfilter</span> installations that act as smartphone 'tripods', opening up new ideas for angles and concepts to try out.<br>
+              <br>
+              With an added window containing a UV filter or a polarising filter, the installation will also demonstrate the power of controlling an image before it reaches the camera's sensor.</p>
+        </div> 
+        <div class="grid-items column-2 row-1-2-3">
+              <model-viewer id="reveal" loading="eager" src="models/tripod-model-edited.glb" camera-controls camera-orbit="179deg 90deg 1600m" min-camera-orbit="auto 55deg auto" max-camera-orbit="auto 90deg auto" auto-rotate poster="models/poster.jpg" data-js-focus-visible exposure="1.2"></model-viewer>
+        </div>
+        <div class="grid-items column-1">
+            <img src="images/tripod-mockup__1.jpg" alt="">
+        </div>
+	</div>
+<!----------------------------------------------->
+    <div class="main-content" id="watch-section">
+		<div class="grid-items column-1-2">
+              <h1>GOLDEN HOUR WATCH FACE</h1>
+        </div>
+        <div class="grid-items" id="main-6">
+              <p>Golden hour refers to a one-hour time period after sunrise and before sunset that basks the earth in a complimentary, stunning glow.<br>
+              <br>
+              As this window is different every day, Canon will create a <span class="red">branded watch face</span> that allows users to keep track, and act as a prompt to take beautiful photographs.</p>
+        </div>
+        <div class="grid-items">
+              <video id="watch-demo" autoplay="" loop="" muted="" playsinline="" src="images/canon-watch-face_.mp4" style=""></video>
+        </div>
+    </div>
+<!----------------------------------------------->
+    <div class="main-content" id="case-section">
+        <div class="grid-items column-1-2">
+            <h1>PHONE CASE FILTERS</h1>
+        </div>
+        <div class="grid-items">
+              <video id="case-demo" autoplay="" loop="" muted="" playsinline="" src="images/phone-case-video_.mp4" style=""></video>
+        </div>
+        <div class="grid-items">
+              <p>As an added phone accessory, Canon can team up with Otterbox to offer limited edition transparent <span class="red">Filter Cases</span> that offer phone users a polarising and a UV filter on either end - keeping the Casuals in that enthusiast mindset every time they turn on their camera.</p>
+        </div>
+        <div class="grid-items column-1-2">
+            <img src="images/3-cases.jpg" id="case-options" alt="">
+            <div class="white" id="captions">
+				<span>UV Filter</span>
+				<span>CPL Filter</span>
+				<span>FLD Filter</span>
+			</div>
+        </div>
+    </div>
+<!----------------------------------------------->
+    <div class="main-content" id="results-section">
+		<div class="grid-items column-1-2">
+              <h1>SUCCESS METRICS</h1>
+        </div>
+		<span class="grey" id="results-1__text__1">
+			MAIN<br>GOAL
+		</span>
+        <span class="red" id="results-1__text__2">INCREASE<br>IN 1<span id="superscript">ST</span> TIME<br>DSLR OWNERS</span>
+		<img src="images/camera-icon_w.svg" alt="" id="results-1__image">
+        <div id="results-2__text">
+            <div id="results-2__text__1"><span>GOLDEN HOUR<br>WATCH FACE<br>DOWNLOADS</span></div>
+            <div id="results-2__text__2"><span>and &percnt; increase of golden<br>hour online mentions</span></div>
+        </div>
+		<img src="images/watch-white.svg" alt="" id="results-2__image"> 
+    	<div id="results-3__text">
+			<span id="results-3__text__1" class="grey">uses of<br></span>
+			<span id="results-3__text__2" class="red">&num;naturalfilter</span>
+		</div>
+	 	<img src="images/case-right.svg" alt="" id="results-4__image">
+		<div id="results-4__text">
+			<img src="images/case-right-pattern.svg" alt="" id="results-4__image__1">
+			<span class="red" id="results-4__text__1">PHONE CASES<br>DISTRIBUTED</span>
+			<img src="images/case-left-pattern.svg" alt="" id="results-4__image__2">
+		</div>
+		<img src="images/app-icon.svg" alt="" id="results-5__image">
+		<div id="results-5__text">
+			<div id="results-5__text__1"><span>APP<br>DOWN-<br>LOADS</span></div>
+			<div id="results-5__text__2"><span>&amp; daily active users</span></div>
+		</div>
+    </div>
+<!----------------------------------------------->
+</body>
+</html>
