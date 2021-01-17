@@ -43,6 +43,36 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 <style>
 
+	#new-portfolio {
+		width: 100%;
+		background-color: white;
+	}
+	.new-portfolio-items {
+		width: 80%;
+		margin: 25px 0 25px 16%;
+	}
+	#new-portfolio-items {
+		padding-top: 200px;
+		padding-bottom: 200px;
+		margin: 25px 0 25px 16%;
+	}
+	.parent {
+    	position: relative;
+        top: 0;
+        left: 0;
+	}
+	.shadow {
+		position: relative;
+		width: 93%;
+		top: 0;
+		left: 0;
+	}
+	.tapes {
+		position: absolute;
+		width: 80%;
+		top: 0;
+		left: 0;
+	}
 	
 	
 	@media (max-width: 1020px) {	
@@ -82,103 +112,34 @@
 </div>
 	
 <!––---------------PORTFOLIO PAGE------------------>
-<div class="pf-center"  id="port">
- 	<div class="pf-bg">
-		<div class="pf-contents">
-			<div class="img__wrap">
-				  <img class="img__img" src="images/pf__tile00.jpg" alt="description 1" />
-				
-				<div class="pf_title"> <h5 id="projects">PROJECTS<br></h5><h6 id="portfolio">&#38;  PORTFOLIO</h6></div>
-			</div>
-			<div class="img__wrap pf-thumbs">
-				<img class="img__img" src="images/pf__tile01.jpg"  alt="description 1" />
-				<a href="portfolio01.html">
-					<div class="img__description_layer">
-						<div class="img__description-layer__text"><h4>Client Work</h4></div>
-					</div>
-				</a>
-			</div>
-			<div class="img__wrap pf-thumbs">
-				  <img class="img__img" src="images/pf__tile02.jpg" alt="description 1" />
-				<a href="portfolio02.html">  
-					<div class="img__description_layer">
-						<div class="img__description-layer__text"><h4>Photography</h4></div>
-						<p></p>
-					</div>
-				</a>
-			</div>
-			<div class="img__wrap pf-thumbs">
-				<img class="img__img" src="images/pf__tile03.jpg" alt="description 1" />
-				<a href="canon_campaign.html">
-					<div class="img__description_layer">
-						<div class="img__description-layer__text"><h4>Film &#38; Video</h4></div>
-					</div>
-				</a>
-			</div>
-			<div class="img__wrap pf-thumbs">
-				<img class="img__img" src="images/pf__tile04.jpg" alt="description 1" />
-				<a href="portfolio04.html">
-					<div class="img__description_layer">
-						<div class="img__description-layer__text"><h4>Graphics</h4></div>
-					</div>
-				</a>
-			</div>
-			<div class="spacer"><img src="images/spacer--1020px.jpg" class="pf-resize" alt="00"/></div>
-			
-<!---------------ABOUT ME----------------->				
-			<div id="resume">
-			<div class="about__wrap about-thumbs" id="about_id1">
-				  <div class="about-me__title">
-					<h9>ABOUT<br>ME&nbsp;</h9>
-				  </div>
-				
-			</div>
-			<div class="about__wrap about-thumbs" id="about_id2">
-				  <div class="about__description_layer" id="about_description_id">
-					<h8>Oisin Beaudelot is an art director based in Dublin, Ireland.<br><br>
-						He is also a marketing executive at Grange Homevalue in Baldoyle, a huge movie buff, and an amateur Wear OS Watch face designer. He speaks English, French, Irish, and HTML & CSS (with which he wrote this website from scratch).<br><br>
-
-						Brands Worked On:<br>
-						Grange&nbsp;Homevalue, Ultrakabin, Euronics&nbsp;Grange, CarYard, Radius&nbsp;Ireland, Neutral&nbsp;Cycle, Universal&nbsp;Forklifts<br><br>
-
-						Education:<br>
-						Dublin City University (2016-2020)<br>
-						University of Illinois at Urbana-Champaign (2018-2019 Study Abroad)<br>
-						Pulse College (2014-2016)</h8>
-				  </div>
-			</div>
-			<div class="about__wrap about-thumbs" id="about_mobile">
-				  <img class="about__img" src="images/about-me__bg-mobile--356px.jpg" alt="About Me Tape 2" />
-				  	<div class="about-me__title">
-						<h9>ABOUT<br>ME&nbsp;</h9>
-					</div>
-					<div class="about__description_layer" >
-						<div id="about_description_id_mobile">  
-						  <h8>Be kind, design.</h8>
-						  <br>
-						  <p>Oisin Beaudelot is an art director based in Dublin, Ireland.<br><br>
-						He is also a marketing executive at Grange Homevalue in Baldoyle, a huge movie buff, and an amateur Wear OS Watch face designer. He speaks English, French, Irish, and HTML & CSS (with which he wrote this website from scratch).<br><br>
-
-						Brands Worked On:<br>
-						Grange&nbsp;Homevalue, Ultrakabin, Euronics&nbsp;Grange, CarYard, Radius&nbsp;Ireland, Neutral&nbsp;Cycle, Universal&nbsp;Forklifts<br><br>
-
-						Education:<br>
-						Dublin City University (2016-2020)<br>
-						University of Illinois at Urbana-Champaign (2018-2019 Study Abroad)<br>
-						Pulse College (2014-2016)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="spacer"><img src="images/spacer--1020px.jpg" class="pf-resize" alt="00"/></div>
-			
-			
-			
+<div id="new-portfolio">
+	<div id="new-portfolio-items">
+		<div class="parent">
+			<img class="shadow" src="images/shadows.png" alt="" />
+			<a href="portfolio04.html">
+				<img class="tapes" src="images/dcuds-tape_.png" alt="" />
+			</a>
+		</div>
+		<div class="parent">
+			<img class="shadow" src="images/shadows.png" alt="" />
+			<a href="canon_campaign.html">
+				<img class="tapes" src="images/canon-tape_.png" alt="" />
+			</a>
+		</div>
+		<div class="parent">
+				<img class="shadow" src="images/shadows.png" alt="" />
+			<a href="neutral-campaign.html">
+				<img class="tapes" src="images/neutral-cycle-tape_.png" alt="" />
+			</a>
+		</div>
+		<div class="parent">
+			<img class="shadow" src="images/shadows.png" alt="" />
+			<a href="film-and-video.html">
+				<img class="tapes" src="images/video-tape_.png" alt="" />
+			</a>
 		</div>
 	</div>
-</div>	
-
+</div>
 <!---------------CONTACT PAGE---------------->	
 <div class="center"  id="contact">
   <div class="contact-bg">
