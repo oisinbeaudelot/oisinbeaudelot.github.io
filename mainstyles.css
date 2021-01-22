@@ -6,7 +6,7 @@ body, html {
 	width: 100%;
 	overflow-x: hidden;
 	margin: 0;
-	background-color: black;
+	background-color: white;
 	scroll-snap-type: y proximity;
 	-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
 	-webkit-text-size-adjust: 100%;
