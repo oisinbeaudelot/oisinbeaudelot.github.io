@@ -1,6 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
+<meta charset="UTF-8">
+<title>New Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	
 <script src="docs/jquery.min.js"></script>
@@ -25,7 +27,7 @@
 	$(function () {
           $('#gform').on('submit', function(e) {
 			$('#name, #email, #message, #submitbutton').css({
-        	'background-color': 'white',
+        	'background-color': 'black',
         	'color': '#CECECE'
     		});
 			$('#submitbutton').val('...Message sent!');
@@ -38,10 +40,107 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:italic&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,900&display=swap" rel="stylesheet">
-<title>Oisin Beaudelot</title>
-<link href="mainstyles.css" rel="stylesheet" type="text/css">
-<link href="style.css" rel="stylesheet" type="text/css">
 <style>
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover, 
+	input:-webkit-autofill:focus,
+	textarea:-webkit-autofill,
+	textarea:-webkit-autofill:hover,
+	textarea:-webkit-autofill:focus,
+	select:-webkit-autofill,
+	select:-webkit-autofill:hover,
+	select:-webkit-autofill:focus {
+	  -webkit-text-fill-color: #CECECE;
+	  -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+	  transition: background-color 5000s ease-in-out 0s;
+	}
+
+	body, html {
+		height: 100%;
+		width: 100%;
+		overflow-x: hidden;
+		margin: 0;
+		scroll-snap-type: y proximity;
+		-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+		-webkit-text-size-adjust: 100%;
+	}
+	A:link {
+		COLOR: black;
+		TEXT-DECORATION: none;
+		font-weight: bold
+	}
+	a:visited {
+		COLOR: black;
+		TEXT-DECORATION: none;
+		font-weight: bold
+	}
+	A:hover {
+		COLOR: red;
+		TEXT-DECORATION: none;
+		font-weight: bold
+	}
+	
+/* ************************* HOME SECTION ***************************************************** */
+
+	#home {
+		width: 100%;
+		height: 100%;
+		background-image: url("images/white-studio_.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}	
+	#home__contents {
+		height: 100%;
+		position: relative;
+	}
+	#tv {
+		width: auto;
+		max-width: 130%;
+		height: 95%;
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#main-video {
+		position: absolute;
+		width: auto;
+		max-width: 90%;
+		height: 61%;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#home__text {
+		
+	}
+	#home__text__portfolio, #home__text__about-me, #home__text__contact {
+		color: black;
+		font-family: 'Permanent Marker', serif;
+		font-size: 4vh;
+		position: absolute;
+		z-index: 2;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	#home__text__portfolio {
+		margin-left: -22vh;
+		margin-top: 2.5vh;
+	}
+	#home__text__about-me {
+		margin-left: -15vh;
+		margin-top: 7.5vh;
+	}
+	#home__text__contact {
+		transform: rotate(10deg);
+		margin-left: 10vh;
+		margin-top: 4.5vh;
+	}
+	
+/* ************************* PORTFOLIO SECTION ***************************************************** */
 
 	#new-portfolio {
 		width: 100%;
@@ -49,12 +148,12 @@
 	}
 	.new-portfolio-items {
 		width: 80%;
-		margin: 25px 0 25px 16%;
+		margin: 0 0 25px 16%;
 	}
 	#new-portfolio-items {
-		padding-top: 200px;
+		padding-top: 30vw;
 		padding-bottom: 200px;
-		margin: 25px 0 25px 16%;
+		margin: 0 0 25px 16%;
 	}
 	.parent {
     	position: relative;
@@ -72,41 +171,59 @@
 		width: 80%;
 		top: 0;
 		left: 0;
+	}	
+/* *************************MEDIA QUERIES************************************************************************************************************ */
+	
+/* Maximum aspect ratio */
+@media (max-aspect-ratio: 29/34) {
+	#main-video {
+		max-width: 92%;
 	}
-	
-	
-	@media (max-width: 1020px) {	
+	#tv {
+		width: 140%;
+		max-width: 140%;
+		height: auto;
 	}
-	@media (max-width: 830px) {
-
+	#home__text__portfolio, #home__text__about-me, #home__text__contact {
+		font-size: 5.5vw;
+		left: 0;
+		transform: translateX(0);
+		top: 50%;
+		transform: translateY(-50%);
 	}
-	@media (max-width: 732px) {
-	
+	#home__text__portfolio {
+		margin-left: 10vw;
+		margin-top: -55vw;
 	}
-	@media (max-width: 370px) {
-	
-	
+	#home__text__about-me {
+		margin-left: 18vw;
+		margin-top: -49.25vw;
 	}
-	
+	#home__text__contact {
+		transform: rotate(10deg);
+		margin-left: 60vw;
+		margin-top: -56.5vw;
+	}
+}
 	</style>
 </head>
-<body>
 
-<!––---------------HOME PAGE------------------>
-<div class="center" id="home">
-  <div class="bg" > 
-	  <video width="695px" height="550px" controls="false" muted webkit-playsinline playsinline autoplay loop class="bottom"><source src="images/tv-content.mp4" type="video/mp4" alt="showreel gif">Your browser does not support the video tag.</video>
-	  <img src="images/tv-cutout.png" class="top" alt="tv cutout" />
-		<div class="top">
-		  <div class="home-text1">
-			<h1><a href="#port">Portfolio</a></h1>
-		  </div>
-		  <div class="home-text2">
-			<h1><a href="#resume">About Me</a></h1>
-		  </div>
-		  <div class="home-text3">
-			<h1><a href="#contact">Contact</a></h1>
-		  </div>
+<body>
+	<!––---------------HOME PAGE------------------>
+<div id="home">
+  <div id="home__contents" > 
+	  <video id="main-video" autoplay="" loop="" muted="" playsinline=""><source src="images/tv-content.mp4" type="video/mp4" alt="showreel gif">Your browser does not support the video tag.</video>
+	  <img src="images/new-tv-shading.png" class="" id="tv" alt="tv cutout" />
+		<div id="home__text">
+		  <span id="home__text__portfolio">
+			<a href="#new-portfolio">Portfolio</a>
+		  </span>
+		  <span id="home__text__about-me">
+			<a href="">About Me</a>
+		  </span>
+		  <span id="home__text__contact">
+			<a href="">Contact</a>
+		  </span>
 		</div>
   </div>
 </div>
@@ -136,47 +253,6 @@
 			<img class="shadow" src="images/shadows.png" alt="" />
 			<a href="film-and-video.html">
 				<img class="tapes" src="images/video-tape_.png" alt="" />
-			</a>
-		</div>
-	</div>
-</div>
-<!---------------CONTACT PAGE---------------->	
-<div class="center"  id="contact">
-  <div class="contact-bg">
-    <div class="form-style">
-		
-			<div class="form-title">
-				<h3>SE-CAM</h3>
-				<h2>CONTACT</h2>
-			</div>
-			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd9eh5UUwzPc1axBAP_QfRFHYQQfBKNeluXn10EU-Wo88_ghw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-				<input type="text" id="name" name="entry.390305579" placeholder="your name:">
-				<br>
-				<input type="text" id="email" name="entry.1577486740" placeholder="your email:">
-				<br>
-				<textarea rows="5" id="message" name="entry.1790357440" placeholder="message:"></textarea>
-				<input type="submit" name="submit" value="&#9632;&nbsp;&nbsp;Submit" id="submitbutton">
-      		</form>
-			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-	  </div>
-	  	<div class="contact_links display_not_mobile">
-			<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
-			  <img src="images/linkedin-sticker--85px.png" alt="LinkedIn logo">
-			</a>
-		</div>
-	  	<div class="contact_links display_mobile_only">
-			<a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
-			  <img src="images/linkedin-sticker--59px.png" alt="LinkedIn logo">
-			</a>
-		</div>
-		<div class="contact_links display_not_mobile resume_link">
-			<a href="docs/resume_file.pdf">
-			<img src="images/resume-sticker--85px.png" alt="Resume sticker">
-	  		</a>
-		</div>
-	  	<div class="contact_links display_mobile_only resume_link">
-			<a href="docs/resume_file.pdf">
-				<img src="images/resume-sticker--59px.png" alt="Resume sticker">
 			</a>
 		</div>
 	</div>
