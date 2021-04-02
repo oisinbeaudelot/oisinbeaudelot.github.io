@@ -101,7 +101,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	#home {
 		width: 100%;
 		height: 100%;
-		background-image: url("images/white-studio_.jpg");
+		background-image: ;
+		background-color: white;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -187,7 +188,138 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		width: 80%;
 		top: 0;
 		left: 0;
-	}	
+	}
+	
+/* ************************* CONTACT SECTION ***************************************************** */
+
+	#contact-bg {
+		/* The image used */
+		background-image: url("images/contact-form-bg.png");
+		background-color: white;
+		/* Full height */
+		height: 100%;
+		/* Center and scale the image nicely */
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+	#form-style {
+		width: 42%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+	}
+	#form-title, #name, #email, #message, #submitbutton {
+		width: 100%;
+	}
+	
+	
+/* CONTACT FORM TEXT SIZING FOR HEIGHT */
+	#form-title {
+		padding-top: 1.5vw;
+	}
+	#form-title-text {
+			font-size: 3vw;
+	}
+	#se-cam {
+			font-size: 3.5vw;
+			margin-top: 1vw;
+	}
+	input, #message {
+		font-size: 1.5vw;
+		padding: 0.8vw 10px 1vw 10px;
+	}
+	#submitbutton {
+		padding: 0.5vw 10px;
+		margin-top: -2vw;
+	}
+	
+	
+	
+	
+	
+	#form-title {
+		background-color: #ea4c46;
+		border: none;
+		border-bottom: solid #333;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+	#form-title-text {
+			color: #353535;
+			font-family: 'Roboto', sans-serif; font-weight:bolder; font-style:italic;
+			padding: 0px;
+			margin: 0px;
+			text-align: left;
+			margin-left: 10px;
+	}
+	#se-cam {
+			color: #353535;
+			font-size: 3.5vh;
+			font-family: 'Roboto', sans-serif; font-weight:bolder; font-style:italic;
+			padding: 0px;
+			margin: 0px;
+			text-align: right;
+			margin-right: 10px;
+			margin-top: 10px;
+			float: right;
+			}
+	input, #message {
+		font-family: 'Roboto', sans-serif; font-weight:100; font-style:italic;
+	}
+	input {
+		margin: 0px;
+		margin-left: 0px;
+		color: #333;
+		resize: both;
+		outline: none;
+		border: none;
+		border-bottom: solid #333;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+	}
+	#name {
+		background-color: #eca2a1;
+	}
+	#email {
+		background-color: #ebc7c5;
+	}
+	#message {
+		resize: none;
+		background-color: #e5e2d8;
+		color: #333;
+		border: 0px;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+		outline: none;
+	}
+	#submitbutton {
+		text-align: left;
+		border: none;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		background-color: #e5e2d8;
+	}
+
+
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: #353535;
+		font-family: 'Roboto', sans-serif;
+		opacity: 1; /* Firefox */
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: #353535;
+	}
+	::-ms-input-placeholder { /* Microsoft Edge */
+		color: #353535;
+	}
+
+	
 /* *************************MEDIA QUERIES************************************************************************************************************ */
 	
 /* Maximum aspect ratio */
@@ -234,6 +366,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		width: 90%;
 		top: 0;
 		left: 0;
+	}
+}
+/* Maximum aspect ratio for the contact form */
+@media (max-aspect-ratio: 1388/779) {
+	#form-style {
+		width: 75vh;
+		max-width: 100%;
+	}
+	
+	/* CONTACT FORM TEXT SIZING FOR HEIGHT */
+	#form-title {
+		padding-top: 3vh;
+	}
+	#form-title-text {
+			font-size: 5vh;
+	}
+	#se-cam {
+			font-size: 3.5vh;
+			margin-top: 1vh;
+	}
+	input, #message {
+		font-size: calc(3vh);
+		padding: 1.2vh 10px 1vh 10px;
+	}
+	#submitbutton {
+		padding: 1.5vh 10px;
+		margin-top: -2vh;
 	}
 }
 	</style>
@@ -292,5 +451,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</div>
 </div>
+
+<!––----------------CONTACT PAGE------------------->
+<div id="contact-bg">
+	<div id="contact-form">
+		<div id="form-style">
+
+			<div id="form-title">
+				<span id="se-cam">SE-CAM</span>
+				<span id="form-title-text">CONTACT</span>
+			</div>
+			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd9eh5UUwzPc1axBAP_QfRFHYQQfBKNeluXn10EU-Wo88_ghw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+				<input type="text" id="name" name="entry.390305579" placeholder="your name:">
+				<br>
+				<input type="text" id="email" name="entry.1577486740" placeholder="your email:">
+				<br>
+				<textarea rows="4" id="message" name="entry.1790357440" placeholder="message:"></textarea>
+				<input type="submit" name="submit" value="&#9632;&nbsp;&nbsp;Submit" id="submitbutton">
+			</form>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+	  </div>
+  </div>
+</div>
+
 </body>
 </html>
