@@ -194,7 +194,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	
 /* ************************* CONTACT SECTION ***************************************************** */
 
-	#contact-bg {
+	#contact {
 		/* The image used */
 		background-image: url("images/contact-form-bg.png");
 		background-color: white;
@@ -227,7 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			font-size: 3vw;
 	}
 	#se-cam {
-			font-size: 3.5vw;
+			font-size: 1.5vw;
 			margin-top: 1vw;
 	}
 	input, #message {
@@ -261,7 +261,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	}
 	#se-cam {
 			color: #353535;
-			font-size: 3.5vh;
 			font-family: 'Roboto', sans-serif; font-weight:bolder; font-style:italic;
 			padding: 0px;
 			margin: 0px;
@@ -322,8 +321,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		background-image: url("images/contact-message-texture3.png");
 		background-color: #e5e2d8;
 	}
-
-
 	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 		color: #353535;
 		font-family: 'Roboto', sans-serif;
@@ -335,7 +332,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	::-ms-input-placeholder { /* Microsoft Edge */
 		color: #353535;
 	}
-
+	.contact_links {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.contact_links img {
+		width: 8vw;
+	}
+	#linkedin {
+		margin-left: -30%;
+	}
+	#resume {
+		margin-left: 37%;
+		margin-top: -5%;
+	}
 	
 /* *************************MEDIA QUERIES************************************************************************************************************ */
 	
@@ -392,7 +405,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		max-width: 100%;
 	}
 	
-	/* CONTACT FORM TEXT SIZING FOR HEIGHT */
+/* CONTACT FORM TEXT SIZING FOR HEIGHT */
 	#form-title {
 		padding-top: 3vh;
 	}
@@ -400,7 +413,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			font-size: 5vh;
 	}
 	#se-cam {
-			font-size: 3.5vh;
+			font-size: 2.5vh;
 			margin-top: 1vh;
 	}
 	input, #message {
@@ -411,8 +424,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		padding: 1.5vh 10px;
 		margin-top: -2vh;
 	}
+	.contact_links img {
+		width: 14vh;
+	}
+	#linkedin {
+		margin-left: -55vh;
+	}
+	#resume {
+		margin-left: 60vh;
+	}
 }
-	</style>
+/* CONTACT LINKS */
+@media (max-aspect-ratio: 600/440) {
+	.contact_links {
+		top: 85%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#linkedin {
+		margin-left: -10vh;
+	}
+	#resume {
+		margin-left: 10vh;
+		margin-top: -2%;
+	}
+}
+</style>
 </head>
 
 <body>
@@ -433,7 +470,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="">About Me</a>
 		  </span>
 		  <span id="home__text__contact">
-			<a href="">Contact</a>
+			<a href="#contact">Contact</a>
 		  </span>
 		</div>
   </div>
@@ -470,7 +507,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <!––----------------CONTACT PAGE------------------->
-<div id="contact-bg">
+<div id="contact">
 	<div id="contact-form">
 		<div id="form-style">
 
@@ -488,6 +525,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</form>
 			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 	  </div>
+  </div>
+  <div class="contact_links" id="linkedin">
+      <a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
+        <img src="images/linkedin-sticker--85px.png" alt="LinkedIn logo">
+      </a>
+  </div>
+  <div class="contact_links" id="resume">
+      <a href="docs/resume_file.pdf">
+      <img src="images/resume-sticker--85px.png" alt="Resume sticker">
+      </a>
   </div>
 </div>
 
