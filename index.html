@@ -167,32 +167,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		width: 100%;
 		background-color: white;
 	}
-	.new-portfolio-items {
-		width: 80%;
-		margin: 0 0 25px 16%;
+	#portfolio {
+		margin: 10% 0 10% 0;
+		transform: translateX(15%);
 	}
-	#new-portfolio-items {
-		padding-top: 30vw;
-		padding-bottom: 200px;
-		margin: 0 0 25px 16%;
+	.portfolio-items img {
+		width: 70%;
+		margin: -0.3% 0;
+		transition: transform .2s; /* Animation */
+        -webkit-border-bottom-right-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+        -moz-border-radius-bottomright: 8px;
+        -moz-border-radius-bottomleft: 8px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
 	}
-	.parent {
-    	position: relative;
-        top: 0;
-        left: 0;
+	.portfolio-items:hover, .portfolio-items:active {
+	 	 transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	  box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+				  0 4px 2px rgba(0,0,0,0.09), 
+				  0 8px 4px rgba(0,0,0,0.09), 
+				  0 16px 8px rgba(0,0,0,0.09),
+				  0 32px 16px rgba(0,0,0,0.09);
 	}
-	.shadow {
-		position: relative;
-		width: 93%;
-		top: 0;
-		left: 0;
-	}
-	.tapes {
-		position: absolute;
-		width: 80%;
-		top: 0;
-		left: 0;
-	}
+
+
 	
 /* ************************* CONTACT SECTION ***************************************************** */
 
@@ -386,20 +385,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		margin-left: 60vw;
 		margin-top: -56.5vw;
 	}
-	.new-portfolio-items, #new-portfolio-items {
-		margin-left: 8%;
+
+	
+	
+
+	#portfolio {
+		transform: translateX(0%);
 	}
-	.shadow {
-		position: relative;
-		width: 105%;
-		top: 0;
-		left: 0;
-	}
-	.tapes {
-		position: absolute;
-		width: 90%;
-		top: 0;
-		left: 0;
+	.portfolio-items img {
+		width: 100%;
+		margin: -0.8% 0;
 	}
 }
 /* Maximum aspect ratio for the contact form */
@@ -483,29 +478,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 <!––---------------PORTFOLIO PAGE------------------>
 <div id="new-portfolio">
-	<div id="new-portfolio-items">
-		<div class="parent">
-			<img class="shadow" src="images/shadows.png" alt="" />
+	<div id="portfolio">
+		<div class="portfolio-items">
 			<a href="portfolio04.html">
-				<img class="tapes" src="images/dcuds-tape_.png" alt="" />
+				<img src="images/dcuds-spine.png" alt="">
 			</a>
 		</div>
-		<div class="parent">
-			<img class="shadow" src="images/shadows.png" alt="" />
+		<div class="portfolio-items">
 			<a href="canon_campaign.html">
-				<img class="tapes" src="images/canon-tape_.png" alt="" />
+				<img src="images/canon-spine.png" alt="">
 			</a>
 		</div>
-		<div class="parent">
-				<img class="shadow" src="images/shadows.png" alt="" />
+		<div class="portfolio-items">
 			<a href="neutral-campaign.html">
-				<img class="tapes" src="images/neutral-cycle-tape_.png" alt="" />
+				<img src="images/neutral-spine.png" alt="">
 			</a>
 		</div>
-		<div class="parent">
-			<img class="shadow" src="images/shadows.png" alt="" />
+		<div class="portfolio-items">
 			<a href="film-and-video.html">
-				<img class="tapes" src="images/video-tape_.png" alt="" />
+				<img src="images/film-spine.png" alt="">
 			</a>
 		</div>
 	</div>
