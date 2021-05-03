@@ -162,102 +162,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	}
 	
 /* ************************* PORTFOLIO SECTION ***************************************************** */
-	
-	
-	.hover:hover , .hover:active {
-	 	transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-        box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+
+	#new-portfolio {
+		width: 100%;
+		background-color: white;
+	}
+	#portfolio {
+		margin: 10% 0 10% 0;
+		transform: translateX(15%);
+	}
+	.portfolio-items img {
+		width: 70%;
+		margin: -0.3% 0;
+		transition: transform .2s; /* Animation */
+        -webkit-border-bottom-right-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+        -moz-border-radius-bottomright: 8px;
+        -moz-border-radius-bottomleft: 8px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+	}
+	.portfolio-items :hover , .portfolio-items :active {
+	 	 transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	  box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
 				  0 4px 2px rgba(0,0,0,0.09), 
 				  0 8px 4px rgba(0,0,0,0.09), 
 				  0 16px 8px rgba(0,0,0,0.09),
 				  0 32px 16px rgba(0,0,0,0.09);
-		z-index: 2;
-		-webkit-border-bottom-right-radius: 9px;
-        -webkit-border-bottom-left-radius: 9px;
-        -moz-border-radius-bottomright: 9px;
-        -moz-border-radius-bottomleft: 9px;
-        border-bottom-right-radius: 9px;
-        border-bottom-left-radius: 9px;
-	}
-	.outer-container {
-		margin: 10% 0 10% 0;
-		transform: translateX(15%);
-	}
-	
-	.outer-container input {
-		display: none;
 	}
 
-	.container {
-		width: 70%;
-		position: relative;
-		height: 9.5vw;
-		transition: transform .2s; /* Animation */
-	}
-	.spine-labels {
-		position: absolute;
-		width: 100%;
-		height: 9.8vw;
-		background-repeat: no-repeat;
-		background-size: contain;
-		transition: transform 1s; /* Animation */
-		transform-origin: bottom;
-	}
-	
-	.cover-labels{
-		height: 39.5vw;
-		position: absolute;
-		width: 100%;
-		background-repeat: no-repeat;
-		background-size: contain;
-		transition: transform 1s; /* Animation */
-		transform: rotateX(0deg);
-		transform-origin: top;
-	}
-	
-	.cover-labels {
-        box-shadow: 
-			0px 2px 1px rgba(0,0,0,0.1), 
-            0 4px 2px rgba(0,0,0,0.1), 
-            0 8px 4px rgba(0,0,0,0.1), 
-            0 16px 8px rgba(0,0,0,0.1),
-            0 32px 16px rgba(0,0,0,0.1);
-	}
-	input[type=checkbox].spine-checkboxes:checked + label.spine-labels {
-		transform: rotateX(80deg);
-		transition: transform 0.66s;
-		transform-origin: bottom;
-		height: 47.3vw;
-	}
-	input[type=checkbox].cover-checkboxes:checked + label.cover-labels {
-		transform: rotateX(90deg);
-		transform-origin: top;
-		transition: transform 1s;
-	}
-	#spine-label1{
-		background-image: url("images/dcuds-spine.png");
-	}
-	#cover-label1{
-		background-image: url("images/dcuds-cover.png");
-	}
-	#spine-label2{
-		background-image: url("images/canon-spine.png");
-	}
-	#cover-label2{
-		background-image: url("images/dcuds-cover.png");
-	}
-	#spine-label3{
-		background-image: url("images/neutral-spine.png");
-	}
-	#cover-label3{
-		background-image: url("images/dcuds-cover.png");
-	}
-	#spine-label4{
-		background-image: url("images/film-spine.png");
-	}
-	#cover-label4{
-		background-image: url("images/dcuds-cover.png");
-	}
 
 	
 /* ************************* CONTACT SECTION ***************************************************** */
@@ -298,7 +231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			font-size: 1.5vw;
 			margin-top: 1vw;
 	}
-	#name, #email, #message, #submitbutton {
+	input, #message {
 		font-size: 1.5vw;
 		padding: 1vw 10px 0.8vw 10px;
 	}
@@ -337,10 +270,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			margin-top: 10px;
 			float: right;
 			}
-	#name, #email, #message, #submitbutton {
+	input, #message {
 		font-family: 'Roboto', sans-serif; font-weight:100; font-style:italic;
 	}
-	#name, #email, #message {
+	input {
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
@@ -388,7 +321,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		border-bottom-right-radius: 20px;
 		background-image: url("images/contact-message-texture3.png");
 		background-color: #e5e2d8;
-		color: #333;
 	}
 	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 		color: #353535;
@@ -455,29 +387,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	}
 
 	
-/* PORTFOLIO MEDIA QUERIES */
+	
 
-	.outer-container {
+	#portfolio {
 		transform: translateX(0%);
 	}
-	
-	.container {
+	.portfolio-items img {
 		width: 100%;
-		height: 13.8vw;
-	}
-
-	
-	.spine-labels {
-		height: 13.9vw;
-	}
-	
-	.cover-labels{
-		height: 56.5vw;
-		width: 100%;
-	}
-
-	input[type=checkbox].spine-checkboxes:checked + label.spine-labels {
-		height: 68vw;
+		margin: -0.8% 0;
 	}
 }
 /* Maximum aspect ratio for the contact form */
@@ -498,7 +415,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			font-size: 2.5vh;
 			margin-top: 1vh;
 	}
-	#name, #email, #message {
+	input, #message {
 		font-size: calc(3vh);
 		padding: 1.2vh 10px 1vh 10px;
 	}
@@ -558,41 +475,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
   </div>
 </div>
-<span class="mq-value"></span>	
+	
 <!––---------------PORTFOLIO PAGE------------------>
-<div class="outer-container">
-	<div class="container hover" id="container1">
-		<input name="spine-checkbox-name" value="Test" class="spine-checkboxes" type="checkbox" id="spine-checkbox1">
-		<label for="spine-checkbox1" class="spine-labels" id="spine-label1" onclick="container1()"></label>
-
-		<input name="cover-checkbox-name" value="notTest" class="cover-checkboxes" id="cover-checkbox1" type="checkbox">
-		<label for="cover-checkbox1" class="cover-labels" id="cover-label1" onclick="location.href='portfolio04.html';"></label>
+<div id="new-portfolio">
+	<div id="portfolio">
+		<div class="portfolio-items">
+			<a href="portfolio04.html">
+				<img src="images/dcuds-spine.png" alt="">
+			</a>
+		</div>
+		<div class="portfolio-items">
+			<a href="canon_campaign.html">
+				<img src="images/canon-spine.png" alt="">
+			</a>
+		</div>
+		<div class="portfolio-items">
+			<a href="neutral-campaign.html">
+				<img src="images/neutral-spine.png" alt="">
+			</a>
+		</div>
+		<div class="portfolio-items">
+			<a href="film-and-video.html">
+				<img src="images/film-spine.png" alt="">
+			</a>
+		</div>
 	</div>
-	
-	<div class="container hover" id="container2">
-		<input name="spine-checkbox-name" value="Test" class="spine-checkboxes" type="checkbox" id="spine-checkbox2">
-		<label for="spine-checkbox2" class="spine-labels" id="spine-label2" onclick="container2()"></label>
+</div>
 
-		<input name="cover-checkbox-name" value="notTest" class="cover-checkboxes" id="cover-checkbox2" type="checkbox">
-		<label for="cover-checkbox2" class="cover-labels" id="cover-label2" onclick="location.href='canon_campaign.html';"></label>
-	</div>
-	
-	<div class="container hover" id="container3">
-		<input name="spine-checkbox-name" value="Test" class="spine-checkboxes" type="checkbox" id="spine-checkbox3">
-		<label for="spine-checkbox3" class="spine-labels" id="spine-label3" onclick="container3()"></label>
-
-		<input name="cover-checkbox-name" value="notTest" class="cover-checkboxes" id="cover-checkbox3" type="checkbox">
-		<label for="cover-checkbox3" class="cover-labels" id="cover-label3" onclick="location.href='';"></label>
-	</div>
-	
-	<div class="container hover" id="container4">
-		<input name="spine-checkbox-name" value="Test" class="spine-checkboxes" type="checkbox" id="spine-checkbox4">
-		<label for="spine-checkbox4" class="spine-labels" id="spine-label4" onclick="container4()"></label>
-
-		<input name="cover-checkbox-name" value="notTest" class="cover-checkboxes" id="cover-checkbox4" type="checkbox">
-		<label for="cover-checkbox4" class="cover-labels" id="cover-label4" onclick="location.href='';"></label>
-	</div>
-</div>	
 <!––----------------CONTACT PAGE------------------->
 <div id="contact">
 	<div id="contact-form">
@@ -625,150 +534,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-	
-<script>
-	function container1() {
-			// Define the query
-		const mediaQuery = window.matchMedia('(max-aspect-ratio: 29/34)')
-
-		// Check if the media query is true
-		if (mediaQuery.matches) {
-		  // Then run function
-		  document.getElementById("container1").style.height = "58.5vw";
-		}
-		else
-			document.getElementById("container1").style.height = "40.5vw";
-	  document.getElementById("container1").style.transitionDuration = "0.2s";
-	  document.getElementById("container1").classList.remove("hover");
-	}
-</script>
-	
-<script>
-	function container2() {
-			// Define the query
-		const mediaQuery = window.matchMedia('(max-aspect-ratio: 29/34)')
-
-		// Check if the media query is true
-		if (mediaQuery.matches) {
-		  // Then run function
-		  document.getElementById("container2").style.height = "58.5vw";
-		}
-		else
-			document.getElementById("container2").style.height = "40.5vw";
-	  document.getElementById("container2").style.transitionDuration = "0.2s";
-	  document.getElementById("container2").classList.remove("hover");
-	}
-</script>	
-	
-<script>
-	function container3() {
-			// Define the query
-		const mediaQuery = window.matchMedia('(max-aspect-ratio: 29/34)')
-
-		// Check if the media query is true
-		if (mediaQuery.matches) {
-		  // Then run function
-		  document.getElementById("container3").style.height = "58.5vw";
-		}
-		else
-			document.getElementById("container3").style.height = "40.5vw";
-	  document.getElementById("container3").style.transitionDuration = "0.2s";
-	  document.getElementById("container3").classList.remove("hover");
-	}
-</script>	
-	
-<script>
-	function container4() {
-			// Define the query
-		const mediaQuery = window.matchMedia('(max-aspect-ratio: 29/34)')
-
-		// Check if the media query is true
-		if (mediaQuery.matches) {
-		  // Then run function
-		  document.getElementById("container4").style.height = "58.5vw";
-		}
-		else
-			document.getElementById("container4").style.height = "40.5vw";
-	  document.getElementById("container4").style.transitionDuration = "0.2s";
-	  document.getElementById("container4").classList.remove("hover");
-	}
-</script>
-	
-	
-<script>
-   $(document).ready(function()
-   {
-    $('.cover-checkboxes').prop('checked', true);  
-   });
-</script>
-
-	
-<script>
-	var allIds = [ "spine-checkbox1", "cover-checkbox1" ];
-	function uncheck( event ) 
-	{
-	   var id = event.target.id;
-	   allIds.forEach( function( id ){
-		  if ( id != event.target.id )
-		  {
-			 document.getElementById( id ).checked = false;
-		  }
-	   });
-	}
-
-	jQuery("#spine-checkbox1").click(uncheck);
-	jQuery("#cover-checkbox1").click(uncheck);
-</script>
-	
-<script>
-	var allIds2 = [ "spine-checkbox2", "cover-checkbox2" ];
-	function uncheck( event ) 
-	{
-	   var id = event.target.id;
-	   allIds2.forEach( function( id ){
-		  if ( id != event.target.id )
-		  {
-			 document.getElementById( id ).checked = false;
-		  }
-	   });
-	}
-
-	jQuery("#spine-checkbox2").click(uncheck);
-	jQuery("#cover-checkbox2").click(uncheck);
-</script>
-
-<script>
-	var allIds3 = [ "spine-checkbox3", "cover-checkbox3" ];
-	function uncheck( event ) 
-	{
-	   var id = event.target.id;
-	   allIds3.forEach( function( id ){
-		  if ( id != event.target.id )
-		  {
-			 document.getElementById( id ).checked = false;
-		  }
-	   });
-	}
-
-	jQuery("#spine-checkbox3").click(uncheck);
-	jQuery("#cover-checkbox3").click(uncheck);
-</script>
-
-<script>
-	var allIds4 = [ "spine-checkbox4", "cover-checkbox4" ];
-	function uncheck( event ) 
-	{
-	   var id = event.target.id;
-	   allIds4.forEach( function( id ){
-		  if ( id != event.target.id )
-		  {
-			 document.getElementById( id ).checked = false;
-		  }
-	   });
-	}
-
-	jQuery("#spine-checkbox4").click(uncheck);
-	jQuery("#cover-checkbox4").click(uncheck);
-</script>	
 </body>
 </html>
