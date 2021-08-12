@@ -163,100 +163,121 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	
 /* ************************* PORTFOLIO SECTION ***************************************************** */
 	
-	
-	.hover:hover , .hover:active {
-	 	transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-        box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
-				  0 4px 2px rgba(0,0,0,0.09), 
-				  0 8px 4px rgba(0,0,0,0.09), 
-				  0 16px 8px rgba(0,0,0,0.09),
-				  0 32px 16px rgba(0,0,0,0.09);
-		z-index: 2;
-		-webkit-border-bottom-right-radius: 9px;
-        -webkit-border-bottom-left-radius: 9px;
-        -moz-border-radius-bottomright: 9px;
-        -moz-border-radius-bottomleft: 9px;
-        border-bottom-right-radius: 9px;
-        border-bottom-left-radius: 9px;
-	}
 	.outer-container {
-		margin: 10% 0 10% 0;
-		transform: translateX(15%);
-	}
-	
-	.outer-container input {
-		display: none;
-	}
-
-	.container {
 		width: 70%;
+		margin: 10% 15% 10% 15%;
+		filter: drop-shadow(rgba(0, 0, 0, 0.35) 0 2.34vw 1.56vw);
+	}
+	
+	.scene-styles {
+		width: 100%;
+		margin: 0;
+		perspective-origin: top;
+	}
+	.scene {
+		height: 9.73vw;
+		transition: 1.3s;
+	}
+	.scene-rotated {
+		height: 36.6vw;
+		transition: 0.6s;
+	}
+	.box-styles {
+		width: 100%;
 		position: relative;
-		height: 9.5vw;
-		transition: transform .2s; /* Animation */
-	}
-	.spine-labels {
-		position: absolute;
-		width: 100%;
-		height: 9.8vw;
-		background-repeat: no-repeat;
-		background-size: contain;
-		transition: transform 1s; /* Animation */
-		transform-origin: bottom;
-	}
-	
-	.cover-labels{
-		height: 39.5vw;
-		position: absolute;
-		width: 100%;
-		background-repeat: no-repeat;
-		background-size: contain;
-		transition: transform 1s; /* Animation */
-		transform: rotateX(0deg);
-		transform-origin: top;
-	}
-	
-	.cover-labels {
-        box-shadow: 
-			0px 2px 1px rgba(0,0,0,0.1), 
-            0 4px 2px rgba(0,0,0,0.1), 
-            0 8px 4px rgba(0,0,0,0.1), 
-            0 16px 8px rgba(0,0,0,0.1),
-            0 32px 16px rgba(0,0,0,0.1);
-	}
-	input[type=checkbox].spine-checkboxes:checked + label.spine-labels {
-		transform: rotateX(80deg);
-		transition: transform 0.66s;
-		transform-origin: bottom;
-		height: 47.3vw;
-	}
-	input[type=checkbox].cover-checkboxes:checked + label.cover-labels {
-		transform: rotateX(90deg);
-		transform-origin: top;
+		transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+		transform: translateZ(0);
 		transition: transform 1s;
+		transform-origin: center top -19.7vw;
 	}
-	#spine-label1{
-		background-image: url("images/dcuds-spine.png");
+	.box__face {
+		position: absolute;
 	}
-	#cover-label1{
-		background-image: url("images/dcuds-cover.png");
+	.box1__front {
+		background-image: url(images/dcuds-spine.png);
 	}
-	#spine-label2{
-		background-image: url("images/canon-spine.png");
+	.box1__bottom {
+		background-image: url(images/dcuds-cover.png);
 	}
-	#cover-label2{
-		background-image: url("images/dcuds-cover.png");
+	.box2__front {
+		background-image: url(images/canon-spine.png);
 	}
-	#spine-label3{
-		background-image: url("images/neutral-spine.png");
+	.box2__bottom {
+		background-image: url(images/canon-cover.png);
 	}
-	#cover-label3{
-		background-image: url("images/dcuds-cover.png");
+	.box3__front {
+		background-image: url(images/neutral-spine.png);
 	}
-	#spine-label4{
-		background-image: url("images/film-spine.png");
+	.box3__bottom {
+		background-image: url(images/neutral-cover.png);
 	}
-	#cover-label4{
-		background-image: url("images/dcuds-cover.png");
+	.box4__front {
+		background-image: url(images/film-spine.png);
+	}
+	.box4__bottom {
+		background-image: url(images/dcuds-cover.png);
+	}
+	.box__face--front {
+		width: 100%;
+		height: 9.73vw;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	.box__face--bottom {
+		width: 100%;
+		height: 39.4vw;
+		top: 0;
+		background-size: contain;
+		background-repeat: no-repeat;
+		box-shadow: rgba(0, 0, 0, 0.75) 0 2.6vw 0.8vw -2.2vw, rgba(0, 0, 0, 0.65) 0 3.08vw 1.56vw -3.5vw, rgba(0, 0, 0, 0.15) 0 2.7vw 2.34vw -2vw, rgba(0, 0, 0, 0.75) 0 -2.4vw 0.8vw -2.2vw;
+		border--radius: 0.7vw;
+	}
+	.box__face--front {
+		transform: rotateY( 0deg) translateZ( 19.7vw);
+	}
+	.box__face--bottom {
+		transform: rotateX(90deg) translateZ( 19.7vw); 
+	}
+	.box__shadow-effect_bottom {
+		box-shadow: rgba(0, 0, 0, 0.75) 0 4.4vw 0.8vw -4.3vw, rgba(0, 0, 0, 0.65) 0 5.08vw 1.56vw -4.3vw, rgba(0, 0, 0, 0.15) 0 5.47vw 2.34vw -3.75vw;
+	}
+	.box__shadow-effect {
+		box--shadow: rgba(0, 0, 0, 0.85) 0 2.3vw 0.5vw -2vw, rgba(0, 0, 0, 0.65) 0 3vw 1.8vw -1.5vw, rgba(0, 0, 0, 0.15) 0 2.47vw 4vw -0.75vw;
+		box-shadow: rgba(0, 0, 0, 0.85) 0 2.8vw 0.5vw -2.5vw, rgba(0, 0, 0, 0.55) 0 3.3vw 1vw -3vw;
+	}
+	.box-not-rotated {
+		height: 9.73vw;
+		transform: rotateX(0deg);
+		z-index: 2;
+	}
+	.box-rotated {
+		height: 36.6vw;
+		transform: rotateX(-90deg) scale3d(0.93, 0.93, 0.93);
+		z-index: 1;
+	}
+	.box__button {
+		border-radius: 50px;
+		border: solid white 1px;
+		text-align: center;
+		background-color: rgba(255,255,255,0.1);
+		width: 40%;
+		height: 10%;
+		margin-top: 50%;
+		margin-left: 30%;
+		color: white;
+		display: grid; 
+		place-content: center;
+	}
+	.box__button p {
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.7vw;
+	}
+	.box__button:hover {
+		background-color: rgba(255,255,255,0.8);
+		transition: 0.3s;
+		cursor: pointer;
+		color: #353535;
 	}
 
 	
@@ -547,7 +568,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	  <img src="images/new-tv-shading.png" class="" id="tv" alt="tv cutout" />
 		<div id="home__text">
 		  <span id="home__text__portfolio">
-			<a href="#new-portfolio">Portfolio</a>
+			<a href="#portfolio-start">Portfolio</a>
 		  </span>
 		  <span id="home__text__about-me">
 			<a href="">About Me</a>
@@ -560,38 +581,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <span class="mq-value"></span>	
 <!––---------------PORTFOLIO PAGE------------------>
-<div class="outer-container">
-	<div class="container hover" id="container1">
-		<input name="spine-checkbox-name" value="Test" class="spine-checkboxes" type="checkbox" id="spine-checkbox1">
-		<label for="spine-checkbox1" class="spine-labels" id="spine-label1" onclick="container1()"></label>
+<div class="outer-container" id="portfolio-start">
+	<div id="scene1" class="scene-styles scene">
+	<div id="box1" class="box-styles box-not-rotated box__shadow-effect">
+  
+	  <div class="box__face box__face--front box1__front">
+	  </div>
 
-		<input name="cover-checkbox-name" value="notTest" class="cover-checkboxes" id="cover-checkbox1" type="checkbox">
-		<label for="cover-checkbox1" class="cover-labels" id="cover-label1" onclick="location.href='portfolio04.html';"></label>
-	</div>
+	  <div class="box__face box__face--bottom box1__bottom">
+
+	  <a href="portfolio01.html"><div class="box__button">
+		  <p>See Campaign</p>
+	  </div></a>
+
+	  </div>
+
+  </div>
+</div>	
 	
-	<div class="container hover" id="container2">
-		<input name="spine-checkbox-name" value="Test" class="spine-checkboxes" type="checkbox" id="spine-checkbox2">
-		<label for="spine-checkbox2" class="spine-labels" id="spine-label2" onclick="container2()"></label>
+<div id="scene2" class="scene-styles">
+	<div id="box2" class="box-styles box-not-rotated box__shadow-effect">
+  
+	  <div class="box__face box__face--front box2__front">
+	  </div>
 
-		<input name="cover-checkbox-name" value="notTest" class="cover-checkboxes" id="cover-checkbox2" type="checkbox">
-		<label for="cover-checkbox2" class="cover-labels" id="cover-label2" onclick="location.href='canon_campaign.html';"></label>
-	</div>
-	
-	<div class="container hover" id="container3">
-		<input name="spine-checkbox-name" value="Test" class="spine-checkboxes" type="checkbox" id="spine-checkbox3">
-		<label for="spine-checkbox3" class="spine-labels" id="spine-label3" onclick="container3()"></label>
+	  <div class="box__face box__face--bottom box2__bottom">
 
-		<input name="cover-checkbox-name" value="notTest" class="cover-checkboxes" id="cover-checkbox3" type="checkbox">
-		<label for="cover-checkbox3" class="cover-labels" id="cover-label3" onclick="location.href='';"></label>
-	</div>
-	
-	<div class="container hover" id="container4">
-		<input name="spine-checkbox-name" value="Test" class="spine-checkboxes" type="checkbox" id="spine-checkbox4">
-		<label for="spine-checkbox4" class="spine-labels" id="spine-label4" onclick="container4()"></label>
+	  <a href="portfolio02.html"><div class="box__button">
+		  <p>See Campaign</p>
+	  </div></a>
 
-		<input name="cover-checkbox-name" value="notTest" class="cover-checkboxes" id="cover-checkbox4" type="checkbox">
-		<label for="cover-checkbox4" class="cover-labels" id="cover-label4" onclick="location.href='';"></label>
-	</div>
+	  </div>
+
+  </div>
+</div>
+
+<div id="scene3" class="scene-styles">
+	<div id="box3" class="box-styles box-not-rotated box__shadow-effect">
+  
+	  <div class="box__face box__face--front box3__front">
+	  </div>
+
+	  <div class="box__face box__face--bottom box3__bottom">
+
+	  <a href="portfolio03.html"><div class="box__button">
+		  <p>See Campaign</p>
+	  </div></a>
+
+	  </div>
+
+  </div>
+</div>
+
+
+<div id="scene4" class="scene-styles">
+	<div id="box4" class="box-styles box-not-rotated box__shadow-effect_bottom">
+  
+	  <div class="box__face box__face--front box4__front">
+	  </div>
+
+	  <div class="box__face box__face--bottom box4__bottom">
+
+	  <a href="portfolio04.html"><div class="box__button">
+		  <p>See Campaign</p>
+	  </div></a>
+
+	  </div>
+
+  </div>
+</div>
 </div>	
 <!––----------------CONTACT PAGE------------------->
 <div id="contact">
@@ -627,148 +685,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	
 <script>
-	function container1() {
-			// Define the query
-		const mediaQuery = window.matchMedia('(max-aspect-ratio: 29/34)')
-
-		// Check if the media query is true
-		if (mediaQuery.matches) {
-		  // Then run function
-		  document.getElementById("container1").style.height = "58.5vw";
-		}
-		else
-			document.getElementById("container1").style.height = "40.5vw";
-	  document.getElementById("container1").style.transitionDuration = "0.2s";
-	  document.getElementById("container1").classList.remove("hover");
-	}
+ (function(document){
+  var div = document.getElementById('scene1');
+  var icon = document.getElementById('box1');
+  var open = false;
+	 
+  div.addEventListener('click', function(){
+    if(open){
+      icon.className = 'box-styles box__shadow-effect box-not-rotated';
+      div.className = 'scene-styles scene';
+    } else{
+      icon.className = 'box-styles box-rotated box__shadow-effect__rotated';
+      div.className = 'scene-styles scene-rotated';
+    }
+    
+    open = !open;
+  });
+})(document);
 </script>
 	
 <script>
-	function container2() {
-			// Define the query
-		const mediaQuery = window.matchMedia('(max-aspect-ratio: 29/34)')
-
-		// Check if the media query is true
-		if (mediaQuery.matches) {
-		  // Then run function
-		  document.getElementById("container2").style.height = "58.5vw";
-		}
-		else
-			document.getElementById("container2").style.height = "40.5vw";
-	  document.getElementById("container2").style.transitionDuration = "0.2s";
-	  document.getElementById("container2").classList.remove("hover");
-	}
-</script>	
-	
-<script>
-	function container3() {
-			// Define the query
-		const mediaQuery = window.matchMedia('(max-aspect-ratio: 29/34)')
-
-		// Check if the media query is true
-		if (mediaQuery.matches) {
-		  // Then run function
-		  document.getElementById("container3").style.height = "58.5vw";
-		}
-		else
-			document.getElementById("container3").style.height = "40.5vw";
-	  document.getElementById("container3").style.transitionDuration = "0.2s";
-	  document.getElementById("container3").classList.remove("hover");
-	}
-</script>	
-	
-<script>
-	function container4() {
-			// Define the query
-		const mediaQuery = window.matchMedia('(max-aspect-ratio: 29/34)')
-
-		// Check if the media query is true
-		if (mediaQuery.matches) {
-		  // Then run function
-		  document.getElementById("container4").style.height = "58.5vw";
-		}
-		else
-			document.getElementById("container4").style.height = "40.5vw";
-	  document.getElementById("container4").style.transitionDuration = "0.2s";
-	  document.getElementById("container4").classList.remove("hover");
-	}
-</script>
-	
-	
-<script>
-   $(document).ready(function()
-   {
-    $('.cover-checkboxes').prop('checked', true);  
-   });
-</script>
-
-	
-<script>
-	var allIds = [ "spine-checkbox1", "cover-checkbox1" ];
-	function uncheck( event ) 
-	{
-	   var id = event.target.id;
-	   allIds.forEach( function( id ){
-		  if ( id != event.target.id )
-		  {
-			 document.getElementById( id ).checked = false;
-		  }
-	   });
-	}
-
-	jQuery("#spine-checkbox1").click(uncheck);
-	jQuery("#cover-checkbox1").click(uncheck);
+ (function(document){
+  var div = document.getElementById('scene2');
+  var icon = document.getElementById('box2');
+  var open = false;
+  
+  div.addEventListener('click', function(){
+    if(open){
+      icon.className = 'box-styles box__shadow-effect box-not-rotated';
+      div.className = 'scene-styles scene';
+    } else{
+      icon.className = 'box-styles box-rotated box__shadow-effect__rotated';
+      div.className = 'scene-styles scene-rotated';
+    }
+    
+    open = !open;
+  });
+})(document);
 </script>
 	
 <script>
-	var allIds2 = [ "spine-checkbox2", "cover-checkbox2" ];
-	function uncheck( event ) 
-	{
-	   var id = event.target.id;
-	   allIds2.forEach( function( id ){
-		  if ( id != event.target.id )
-		  {
-			 document.getElementById( id ).checked = false;
-		  }
-	   });
-	}
-
-	jQuery("#spine-checkbox2").click(uncheck);
-	jQuery("#cover-checkbox2").click(uncheck);
+ (function(document){
+  var div = document.getElementById('scene3');
+  var icon = document.getElementById('box3');
+  var open = false;
+  
+  div.addEventListener('click', function(){
+    if(open){
+      icon.className = 'box-styles box-not-rotated box__shadow-effect';
+      div.className = 'scene-styles scene';
+    } else{
+      icon.className = 'box-styles box-rotated box__shadow-effect__rotated';
+      div.className = 'scene-styles scene-rotated';
+    }
+    
+    open = !open;
+  });
+})(document);
 </script>
-
+	
 <script>
-	var allIds3 = [ "spine-checkbox3", "cover-checkbox3" ];
-	function uncheck( event ) 
-	{
-	   var id = event.target.id;
-	   allIds3.forEach( function( id ){
-		  if ( id != event.target.id )
-		  {
-			 document.getElementById( id ).checked = false;
-		  }
-	   });
-	}
-
-	jQuery("#spine-checkbox3").click(uncheck);
-	jQuery("#cover-checkbox3").click(uncheck);
+ (function(document){
+  var div = document.getElementById('scene4');
+  var icon = document.getElementById('box4');
+  var open = false;
+  
+  div.addEventListener('click', function(){
+    if(open){
+      icon.className = 'box-styles box-not-rotated box__shadow-effect_bottom';
+      div.className = 'scene-styles scene';
+    } else{
+      icon.className = 'box-styles box-rotated box__shadow-effect__rotated';
+      div.className = 'scene-styles scene-rotated';
+    }
+    
+    open = !open;
+  });
+})(document);
 </script>
-
-<script>
-	var allIds4 = [ "spine-checkbox4", "cover-checkbox4" ];
-	function uncheck( event ) 
-	{
-	   var id = event.target.id;
-	   allIds4.forEach( function( id ){
-		  if ( id != event.target.id )
-		  {
-			 document.getElementById( id ).checked = false;
-		  }
-	   });
-	}
-
-	jQuery("#spine-checkbox4").click(uncheck);
-	jQuery("#cover-checkbox4").click(uncheck);
-</script>	
+	
 </body>
 </html>
