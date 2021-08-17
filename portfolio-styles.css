@@ -1,0 +1,227 @@
+@charset "utf-8";
+/* CSS Document */
+	/* Change Autocomplete styles in Chrome*/
+body, html {
+	background-color: var(--background-color);
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    scroll-snap-type: y proximity;
+    -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+    -webkit-text-size-adjust: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+h1 {
+    text-align: center;
+	font-weight: 700;
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+}
+h2 {
+    font-weight:1000;
+	font-style: normal;
+    font-size: 4.5vw;
+    text-align: center;
+    padding: 0 0 5vh 0;
+    margin: 0;
+	}
+subtitle {
+    font-weight: 1000;
+	font-style: normal;
+    font-size: 1.7vw;
+    width: 100%;
+    display: block;
+    text-align: center;
+    line-height: 1.7vw;
+    padding: 0;
+    margin: 0;
+	}
+p {
+    text-align: center;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin: 0;
+	padding: 0;
+	color: var(--text-color);
+}
+img {
+    max-width: 100%;
+    display: block;
+	border-radius: 8px;
+}
+.campaign__hero {
+    background-color: var(--hero-color, var(--background-color));
+}
+.campaign__header__brand {
+    max-width: 400px;
+    width: 50%;
+    padding-top: 8vw;
+    margin: 0 auto 3vw auto;
+}
+.bar {
+    height: 7vh;
+    width: 100%;
+}
+.main-container, .results-container {
+    padding: 15px 0 15px 0;
+}
+.summary-container {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: 419px 2px 419px;
+    grid-auto-rows: minmax(auto, auto);
+	padding: 60px 0;
+}
+.summary-container p {
+    padding: 0 40px;
+}
+#line {
+    height: 100px;
+    width: 2px;
+    background-color: var(--text-color);
+    align-self: flex-end;
+}
+.main-container, .results-container {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 200px;
+    display: grid;
+    grid-column-gap: 10px;
+	grid-row-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 415px));
+    grid-auto-rows: minmax(auto, auto);
+}
+.main-container > * {
+    border-right: 0px solid red;
+    background-color: none;
+}
+.main-container > div > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.grid-items {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.grid-items p, h1 {
+    padding: 0 20px 20px 20px;
+}
+.results-container {
+    font-family: 'Roboto', sans-serif;
+}
+.results-header {
+	margin: 200px 0 0 0;
+}
+footer {
+    margin: 2rem 2rem 4rem 2rem;
+}
+.footer-grid {
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto 60px 60px 60px auto;
+}
+.footer_icon-color {
+	fill: var(--footer-color, var(--background-color-darker));
+}
+.footer__next {
+    grid-column: 2 / 3;
+    height: auto;
+}
+.footer__home {
+    grid-column: 3 / 4;
+    height: auto;
+}
+.footer__contact {
+    grid-column: 4 / 5;
+    height: auto;
+}	
+
+@media (max-width: 840px) {
+	.campaign__header h2 {
+		font-size: 3rem;
+		line-height: 3rem;
+	}
+	.campaign__header subtitle {
+		font-size: 1.3rem;
+		line-height: 1.3rem
+	}
+	.campaign__header{
+		margin: 0 8% 3% 8%;
+	}
+	.campaign__header__brand {
+		width: 100%;	
+		max-width: 400px;
+	}
+	.main-container > div > img {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.main-container, .results-container, .summary-container {
+		max-width: 415px;
+		grid-row-gap: 2rem;
+	}
+	.main-container, .results-container {
+		grid-row-gap: 4rem;
+	}
+	.summary-container {
+		grid-template-columns: auto;
+		grid-auto-rows: minmax(auto, auto);
+	}
+	#line {
+		height: 2px;
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.results-container {
+		padding: 0;
+		grid-template-columns: 95%;
+		grid-auto-rows: minmax(auto, auto);
+		grid-row-gap: 5%;
+		margin-top: 4rem;
+		margin-bottom: 6rem;
+	}
+}
+@media (max-width: 450px) {
+	.campaign__header h2 {
+		font-size: 2.5rem;
+		line-height: inherit;
+		padding: 0.4rem 0 0 0;
+	}
+	.campaign__header subtitle {
+		font-size: 1rem;
+		line-height: inherit;
+		padding: 1rem 0 0 0;
+	}
+	.campaign__hero {
+		width: 100%;
+		height: 100%;
+	}
+	.campaign__header {
+		height: 68%;
+		display: grid;
+		align-content: center;
+	}
+	.color-bars {
+		height: 32%;
+	}
+	.bar {
+		height: 25%;
+	}
+	.results-container {
+		grid-row-gap: 20vw;
+		margin-top: 20vw;
+	}
+}

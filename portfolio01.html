@@ -21,100 +21,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
-	<style>
-body, html {
-    height: 100%;
-    width: 100%;
-    background-color: #d9d9d9;
-    overflow-x: hidden;
-    margin: 0;
-    scroll-snap-type: y proximity;
-    -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
-    -webkit-text-size-adjust: 100%;
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<title>Relaunch Campaign - DCU Debate Society</title>
+<link href="portfolio-styles.css" rel="stylesheet" type="text/css">
+<style>
+:root {
+    --primary-color: #003468;
+    --secondary-color: #2c98d6;
+	--tertiary-color: #0740A4;
+	--quaternary-color: #043687;
+	--background-color: #d9d9d9;
+	--background-color-darker: #8C8C8C;
+	--hero-color: #ffffff;
+	--text-color: #003468;
 }
-h1 {
-    text-align: center;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	color: #003468;
-	margin: 0;
-	padding: 0;
+.bar1 {
+    background-color: var(--secondary-color);
 }
-p {
-    text-align: center;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-	font-size: 1rem;
-	line-height: 1.5rem;
-	color: #003468;
-	margin: 0;
-	padding: 0;
+.bar2 {
+    background-color: var(--tertiary-color);
 }
-img {
-    max-width: 100%;
-    display: block;
-	border-radius: 8px;
+.bar3 {
+    background-color: var(--quaternary-color);
 }
-.hero__subtitle {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-	font-size: 1.2rem;
-	margin: 0;
-}
-.main-container, .results-container {
-    padding: 15px 0 15px 0;
-}
-.summary-container {
-    max-width: 840px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-gap: 4px;
-    grid-template-columns: 419px 2px 419px;
-    grid-auto-rows: minmax(auto, auto);
-	padding: 60px 0;
-}
-#line {
-    height: 100px;
-    width: 2px;
-    background-color: #003468;
-    align-self: flex-end;
-}
-.main-container, .results-container {
-    max-width: 840px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-column-gap: 10px;
-	grid-row-gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(auto, 415px));
-    grid-auto-rows: minmax(auto, auto);
-}
-.main-container > * {
-    border-right: 0px solid red;
-    background-color: none;
-}
-.main-container > div > img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-.grid-items {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.grid-items p, h1 {
-    padding: 0 20px 20px 20px;
+.bar4 {
+    background-color: var(--primary-color);
 }
 #main-7 {
     grid-column: 1 / span 2;
-}
-.results-container {
-    font-family: 'Roboto', sans-serif;
-}
-.results-header {
-	padding: 20% 0 0 0;
 }
 #results-1__image, #results-1__text {
     grid-row: 1 / 2;
@@ -130,7 +64,7 @@ img {
 }
 #results-1__text__1 {
 	grid-row: 1 / 2;
-	color: #d9d9d9;
+	color: var(--background-color);
 	font-weight: 700;
 	font-size: 6rem;
 	width: 60%;
@@ -141,7 +75,7 @@ img {
 	height: 35%;
 }
 #results-1__text__2 {
-	color: #003468;
+	color: var(--primary-color);
     text-align: left;
     width: 40%;
 	height: 60%;
@@ -155,7 +89,7 @@ img {
     width: 100%;
     text-align: center;
 	float: left;
-	color: #2c98d6;
+	color: var(--secondary-color);
 	font-weight: 400;
 	font-size: 3rem;
 }
@@ -163,7 +97,7 @@ img {
 	margin-top: auto;
 	margin-bottom: auto;
     text-align: center;
-	color: #2c98d6;
+	color: var(--secondary-color);
 }
 #results-2__text__1, #results-2__text__3 {
 	font-weight: 700;
@@ -196,7 +130,7 @@ img {
 	font-size: 10rem;
 	letter-spacing: -0.5rem;
 	font-kerning: normal;
-	color: #003468;
+	color: var(--primary-color);
 }
 #results-3__text__2 {
     width: 49%;
@@ -204,202 +138,60 @@ img {
 	font-weight: 400;
 	font-size: 3.5rem;
 	line-height: 3rem;
-	color: #2c98d6;
-}
-		
-		
-	subtitle {
-		font-family: 'Roboto', sans-serif; font-weight: 500; font-style: normal;
-		font-size: 2vw;
-		line-height: 2vw;
-		padding: 0;
-		margin: 0;
-	}
-	h2 {
-		font-family: 'Roboto', sans-serif; font-weight:bolder; font-style: normal;
-		font-size: 5vw;
-		padding: 0;
-		margin: 0;
-	}
-	.hero-new {
-		background-color: white;
-	}
-	.campaign-brand-logo {
-		max-width: 25%;
-		margin: 0 0 3vw -0.2vw;
-		padding-top: 8vw;
-	}
-	.campaign-header{
-		margin: 0 0 3% 20%;
-	}
-	.bar {
-		height: 7vh;
-		width: 100%;
-	}
-	
-	.bar1 {
-		background-color: #2584CC;
-	}
-	.bar2 {
-		background-color: #0740A4;
-	}
-	.bar3 {
-		background-color: #043687;
-	}
-	.bar4 {
-		background-color: #032453;
-	}
-	
-		footer {
-			margin: 2rem;
-		}
-	.footer-grid {
-		width: 100%;
-		display: grid;
-		grid-gap: 10px;
-    	grid-template-columns: auto 60px 60px 60px auto;
-	}
-	.footer_icon-color {
-		fill: white;
-	}
-	.footer__next {
-		grid-column: 2 / 3;
-		height: auto;
-	}
-	.footer__home {
-		grid-column: 3 / 4;
-		height: auto;
-	}
-	.footer__contact {
-		grid-column: 4 / 5;
-		height: auto;
-	}	
-		
-		
-		
+	color: var(--secondary-color);
+}	
 
 @media (max-width: 840px) {
-	.campaign-header h2 {
+	#main-7 {
+    	grid-column: 1 / span 1;
+	}
+	#results-2__text {
+		grid-column: 1 / span 1;
+		grid-row: 2 / span 1;
+	}
+	#results-3__text, #results-3__image {
+		grid-column: 1 / span 1;
+		grid-row: 3 / span 1;
+	}
+	#results-3__image, #results-3__text {
+		grid-column: 1 / span 2;
+	}
+	#results-1__image {
+		padding-bottom: 0rem;
+	}
+	#results-1__text__1 {
+		font-size: 5.8rem;
+		letter-spacing: 0rem;
+	}
+	#results-1__text__2 {
+		font-size: 4.2rem;
+		line-height: 3.8rem;
+		padding-top: 5%;
+	}
+	#results-1__text__3 {
 		font-size: 3rem;
 	}
-	.campaign-header subtitle {
-		font-size: 1.3rem;
+	#results-2__text__1, #results-2__text__3 {
+		font-size: 5rem;
+		line-height: 5rem;
 	}
-	.campaign-header{
-		margin: 0 8% 3% 8%;
+	#results-2__text__2 {
+		font-size: 2.5rem;
+		line-height: 2rem;
 	}
-	.campaign-brand-logo {
-		width: 100%;	
-		max-width: 400px;
+	#results-3__text {
+		line-height: 4rem;
 	}
-.main-container > div > img {
-    width: 90%;
-	margin: 0 auto;
-}
-.main-container, .results-container, .summary-container {
-    max-width: 415px;
-	grid-row-gap: 2rem;
-}
-.main-container, .results-container {
-	grid-row-gap: 4rem;
-}
-#main-7 {
-    grid-column: 1 / span 1;
-}
-.summary-container {
-    grid-template-columns: auto;
-    grid-auto-rows: minmax(auto, auto);
-}
-#line {
-    height: 2px;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.results-container {
-padding: 0;
-grid-template-columns: 95%;
-grid-auto-rows: minmax(auto, auto);
-grid-row-gap: 5%;
-margin-top: 4rem;
-}
-#results-2__text {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-}
-#results-3__text, #results-3__image {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-}
-#results-3__image, #results-3__text {
-    grid-column: 1 / span 2;
-}
-#results-1__image {
-	padding-bottom: 0rem;
-}
-#results-1__text__1 {
-	font-size: 5.8rem;
-	letter-spacing: 0rem;
-}
-#results-1__text__2 {
-	font-size: 4.2rem;
-	line-height: 3.8rem;
-	padding-top: 5%;
-}
-#results-1__text__3 {
-	font-size: 3rem;
-}
-#results-2__text__1, #results-2__text__3 {
-	font-size: 5rem;
-	line-height: 5rem;
-}
-#results-2__text__2 {
-	font-size: 2.5rem;
-	line-height: 2rem;
-}
-#results-3__text {
-	line-height: 4rem;
-}
-#results-3__text__1 {
-	font-size: 5rem;
-	letter-spacing: -0.2rem;
-}
-#results-3__text__2 {
-	font-size: 2rem;
-	line-height: 1.8rem;
-}
+	#results-3__text__1 {
+		font-size: 5rem;
+		letter-spacing: -0.2rem;
+	}
+	#results-3__text__2 {
+		font-size: 2rem;
+		line-height: 1.8rem;
+	}
 }
 @media (max-width: 450px) {
-	.campaign-header h2 {
-		font-size: 1.8rem;
-		padding: 0.4rem 0 0 0;
-	}
-	.campaign-header subtitle {
-		font-size: 1rem;
-		padding: 1rem 0 0 0;
-	}
-	.hero__subtitle {
-		font-size: 0.8rem;
-	}
-	.hero-new {
-		width: 100%;
-		height: 100%;
-	}
-	.campaign-header {
-		height: 68%;
-		display: grid;
-		align-content: center;
-	}
-	.color-bars {
-		height: 32%;
-	}
-	.bar {
-		height: 25%;
-	}
-	.results-container {
-		grid-row-gap: 20vw;
-		margin-top: 20vw;
-	}
     #results-1__text__1 {
         font-size: 20vw;
         letter-spacing: 0rem;
@@ -439,31 +231,27 @@ margin-top: 4rem;
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH7JZN2"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div class="hero-new">
-<div class="campaign-header">
-	<img src="images/dcuds-logo.png" class="campaign-brand-logo" alt="Campaign brand logo">
-	<subtitle>Re-Launch Campaign</subtitle>
-	<h2>DCU Debate Society</h2>
-	<div class="hero__subtitle">
-              <span>MARKETING &amp; ADVERTISING OFFICER  &#65372; 2016&nbsp;-&nbsp;&nbsp;2017</span>
-     </div>
-</div>
-<div class="color-bars">
-	<div class="bar bar1"></div>
-	<div class="bar bar2"></div>
-	<div class="bar bar3"></div>
-	<div class="bar bar4"></div>
-</div>
-
+<div class="campaign__hero">
+	<div class="campaign__header">
+		<img src="images/dcuds-logo.png" class="campaign__header__brand" alt="Campaign brand logo">
+		<subtitle>Marketing &amp; Advertising Officer&nbsp;&#65372; 2016-2017</subtitle>
+		<h2>Re-Launch Campaign</h2>
+	</div>
+	<div class="color-bars">
+		<div class="bar bar1"></div>
+		<div class="bar bar2"></div>
+		<div class="bar bar3"></div>
+		<div class="bar bar4"></div>
+	</div>
 </div>
 	
   <div class="summary-container">
-      <div class="grid-items">
+      <div class="">
           <h1>PROBLEM</h1>
           <p>A society with a reputation for being too 'serious' was not getting new signups, and had trouble standing out from the other socieities on campus.</p>
       </div>
       <div id="line"></div>
-      <div class="grid-items">
+      <div class="">
           <h1>SOLUTION</h1>
           <p>Open the semester with creative topics, communicating in the spaces the students are, and showcase the society's value proposition in a less serious environment.</p>
       </div>
@@ -544,9 +332,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</div>
 </footer>
-	
-	
-	
-	
 </body>
 </html>
