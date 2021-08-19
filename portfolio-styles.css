@@ -12,8 +12,9 @@ body, html {
     -webkit-text-size-adjust: 100%;
 	font-family: 'Roboto', sans-serif;
 }
-a, a:visited, a:hover, a:active {
-  color: inherit;
+a, a:link, a:visited, a:hover, a:active {
+  	color: inherit;
+	fill: inherit;
 }
 h1 {
     text-align: center;
