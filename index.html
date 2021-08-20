@@ -60,6 +60,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,900&display=swap" rel="stylesheet">
+	
+
 <style>
 	input:-webkit-autofill,
 	input:-webkit-autofill:hover, 
@@ -162,34 +164,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	}
 	
 /* ************************* PORTFOLIO SECTION ***************************************************** */
-	
-	.outer-container {
-		width: 70%;
-		margin: 10% 15% 10% 15%;
-		filter: drop-shadow(rgba(0, 0, 0, 0.35) 0 2.34vw 1.56vw);
-	}
-	
 	.scene-styles {
-		width: 100%;
 		margin: 0;
+		margin-top: 0px;
 		perspective-origin: top;
 	}
 	.scene {
-		height: 9.73vw;
 		transition: 1.3s;
 	}
 	.scene-rotated {
-		height: 36.6vw;
 		transition: 0.6s;
 	}
 	.box-styles {
-		width: 100%;
 		position: relative;
 		transform-style: preserve-3d;
 		-webkit-transform-style: preserve-3d;
 		transform: translateZ(0);
 		transition: transform 1s;
-		transform-origin: center top -19.7vw;
 	}
 	.box__face {
 		position: absolute;
@@ -219,25 +210,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		background-image: url(images/dcuds-cover.png);
 	}
 	.box__face--front {
-		width: 100%;
-		height: 9.73vw;
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
 	.box__face--bottom {
-		width: 100%;
-		height: 39.4vw;
 		top: 0;
 		background-size: contain;
 		background-repeat: no-repeat;
 		box-shadow: rgba(0, 0, 0, 0.75) 0 2.6vw 0.8vw -2.2vw, rgba(0, 0, 0, 0.65) 0 3.08vw 1.56vw -3.5vw, rgba(0, 0, 0, 0.15) 0 2.7vw 2.34vw -2vw, rgba(0, 0, 0, 0.75) 0 -2.4vw 0.8vw -2.2vw;
 		border--radius: 0.7vw;
-	}
-	.box__face--front {
-		transform: rotateY( 0deg) translateZ( 19.7vw);
-	}
-	.box__face--bottom {
-		transform: rotateX(90deg) translateZ( 19.7vw); 
 	}
 	.box__shadow-effect_bottom {
 		box-shadow: rgba(0, 0, 0, 0.75) 0 4.4vw 0.8vw -4.3vw, rgba(0, 0, 0, 0.65) 0 5.08vw 1.56vw -4.3vw, rgba(0, 0, 0, 0.15) 0 5.47vw 2.34vw -3.75vw;
@@ -247,13 +228,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		box-shadow: rgba(0, 0, 0, 0.85) 0 2.8vw 0.5vw -2.5vw, rgba(0, 0, 0, 0.55) 0 3.3vw 1vw -3vw;
 	}
 	.box-not-rotated {
-		height: 9.73vw;
 		transform: rotateX(0deg);
 		z-index: 2;
 	}
 	.box-rotated {
-		height: 36.6vw;
-		transform: rotateX(-90deg) scale3d(0.93, 0.93, 0.93);
 		z-index: 1;
 	}
 	.box__button {
@@ -280,6 +258,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		color: #353535;
 	}
 
+/* ************************* PORTFOLIO BOX SIZING PARAMS ***************************************************** */
+	.outer-container {
+		width: 70%;
+		max-width: 820px;
+		margin: 20% auto;
+		filter: drop-shadow(rgba(0, 0, 0, 0.35) 0 2.34vw 1.56vw);
+	}
+	.scene {
+		height: 9.73vw;
+		max-height: 114px;
+	}
+	.scene-rotated {
+		height: 36.6vw;
+		max-height: 463px;
+		margin-top: 10px;
+	}
+	.scene-styles {
+		width: 100%;
+	}
+	.box-styles {
+		width: 100%;
+		transform-origin: center top -230px;
+	}
+	.box__face--front {
+		width: 100%;
+		height: 9.73vw;
+		max-height: 114px;
+	}
+	.box__face--bottom {
+		width: 100%;
+		height: 39.4vw;
+		max-height: 463px;
+	}
+	.box__face--front {
+		transform: rotateY( 0deg) translateZ(230px);
+	}
+	.box__face--bottom {
+		transform: rotateX(90deg) translateZ(230px); 
+	}
+	.box-not-rotated {
+		height: 9.73vw;
+		max-height: 114px;
+	}
+	.box-rotated {
+		height: 36.6vw;
+		max-height: 463px;
+		transform: rotateX(-90deg) scale3d(0.93, 0.93, 0.93);
+	}
 	
 /* ************************* CONTACT SECTION ***************************************************** */
 
@@ -327,11 +353,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		padding: 0.5vw 10px;
 		margin-top: -2vw;
 	}
-	
-	
-	
-	
-	
 	#form-title {
 		background-image: url("images/contact-title-texture3.png");
 		background-color: #ea4c46;
@@ -443,8 +464,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	}
 	
 /* *************************MEDIA QUERIES************************************************************************************************************ */
+@media (max-width: 1200px) {
+	.box-styles {
+		transform-origin: center top -19.7vw;
+	}
+	.box__face--front {
+		transform: rotateY( 0deg) translateZ(19.7vw);
+	}
+	.box__face--bottom {
+		transform: rotateX(90deg) translateZ(19.7vw); 
+	}
+	.scene-rotated {
+		margin-top: 0;
+	}
+}
 	
-/* Maximum aspect ratio */
+	
+/* Maximum aspect ratio, essentially mobile sizing */
 @media (max-aspect-ratio: 29/34) {
 	#main-video {
 		max-width: 92%;
@@ -474,32 +510,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		margin-left: 60vw;
 		margin-top: -56.5vw;
 	}
-
-	
-/* PORTFOLIO MEDIA QUERIES */
-
+/* ************************* PORTFOLIO BOX SIZING PARAMS ***************************************************** */
 	.outer-container {
-		transform: translateX(0%);
+		width: 95%;
+		margin: 10% auto 30% auto;
 	}
-	
-	.container {
+	.scene {
+		height: 13.205vw;
+	}
+	.scene-rotated {
+		height: 51.47vw;
+		margin-top: 10px;
+	}
+	.box-styles {
+		transform-origin: center top -26.7vw;
+	}
+	.box__face--front {
 		width: 100%;
-		height: 13.8vw;
+		height: 13.205vw;
+	}
+	.box__face--bottom {
+		width: 100%;
+		height: 53.47vw;
+	}
+	.box__face--front {
+		transform: rotateY( 0deg) translateZ(26.7vw);
+	}
+	.box__face--bottom {
+		transform: rotateX(90deg) translateZ(26.7vw); 
+	}
+	.box-not-rotated {
+		height: 13.205vw;
+	}
+	.box-rotated {
+		height: 49.67vw;
 	}
 
-	
-	.spine-labels {
-		height: 13.9vw;
-	}
-	
-	.cover-labels{
-		height: 56.5vw;
-		width: 100%;
-	}
-
-	input[type=checkbox].spine-checkboxes:checked + label.spine-labels {
-		height: 68vw;
-	}
 }
 /* Maximum aspect ratio for the contact form */
 @media (max-aspect-ratio: 1388/779) {
@@ -526,6 +572,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	#submitbutton {
 		padding: 1.5vh 10px;
 		margin-top: -2vh;
+		font-size: calc(3vh);
 	}
 	.contact_links img {
 		width: 14vh;
@@ -599,7 +646,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>	
 	
-<div id="scene2" class="scene-styles">
+<div id="scene2" class="scene-styles scene">
 	<div id="box2" class="box-styles box-not-rotated box__shadow-effect">
   
 	  <div class="box__face box__face--front box2__front">
@@ -616,7 +663,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<div id="scene3" class="scene-styles">
+<div id="scene3" class="scene-styles scene">
 	<div id="box3" class="box-styles box-not-rotated box__shadow-effect">
   
 	  <div class="box__face box__face--front box3__front">
@@ -634,7 +681,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-<div id="scene4" class="scene-styles">
+<div id="scene4" class="scene-styles scene">
 	<div id="box4" class="box-styles box-not-rotated box__shadow-effect_bottom">
   
 	  <div class="box__face box__face--front box4__front">
