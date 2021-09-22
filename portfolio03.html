@@ -1,0 +1,506 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<title>"Map My City" Campaign - Neutral Cycle</title>
+<link href="portfolio-styles.css" rel="stylesheet" type="text/css">
+<style>
+:root {
+    --primary-color: #f85016;
+    --secondary-color: #139CE9;
+	--tertiary-color: #b23910;
+	--quaternary-color: #80280b;
+	--background-color: #0E5983;
+	--background-color-darker: #262626;
+	--hero-color: #ffffff;
+	--text-color: #fff;
+	--footer-color: #f85016;
+}
+.bar1 {
+    background-color: var(--primary-color);
+}
+.bar2 {
+    background-color: var(--tertiary-color);
+}
+.bar3 {
+    background-color: var(--quaternary-color);
+}
+.bar4 {
+    background-color: var(--background-color-darker);
+}
+.highlight {
+    color: var(--primary-color);
+}
+.text-color {
+    color: var(--text-color);
+}
+.secondary-color {
+    color: var(--secondary-color);
+}
+/*<--------------------FUNDAMENTALS--------------------------->*/		
+.column-1-2 {
+    grid-column: 1 / span 2;
+}
+.column-1 {
+    grid-column: 1 / span 1;
+}
+.column-2 {
+    grid-column: 2 / span 1;
+}
+.row-1 {
+    grid-row: 1 / span 1;
+}
+.row-2 {
+    grid-row: 2 / span 1;
+}
+.row-1-2 {
+    grid-row: 1 / span 2;
+}
+.row-1-2-3 {
+    grid-row: 1 / span 3;
+}
+		
+/*<--------------------SECTIONS--------------------------->*/		
+        #captions {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            padding: 2% 8%;
+        }
+		#case-demo {
+			width: 390px;
+			border-radius: 10px;
+			margin-left:10px;
+		}
+		#watch-demo {
+			width: 315px;
+			border-radius: 10px;
+			margin-left: 15px;
+		}
+        #superscript {
+            font-size: 2.6rem;
+            vertical-align: super;
+            line-height: 2.6rem;
+        }
+        #results-1__image {
+            width: 40%;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            padding-left: 60%;
+            padding-top: 5%;
+        }
+        #results-1__text__1 {
+            width: 30%;
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            font-weight: 400;
+            font-size: 5rem;
+            line-height: 5rem;
+            padding-left: 5%;
+        }
+        #results-1__text__2 {
+            width: 160%;
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            font-weight: 700;
+            font-size: 5rem;
+            line-height: 5rem;
+            padding-left: 60%;
+        }
+        #results-2__image, #results-2__text {
+            grid-row: 3 / 4;
+        }
+        #results-2__image {
+            grid-column: 1 / 2;
+            width: 20%;
+            float: right;
+            padding-left: 68%;
+            height: auto;
+        }
+        #results-2__text {
+            grid-column: 1 / 2;
+        }
+        #results-2__text__1 {
+            color: #fb001f;
+            text-align: center;
+            width: 80%;
+            height: 60%;
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+        }
+        #results-2__text__2 {
+            width: 100%;
+            text-align: center;
+            float: left;
+            color: #7F7F7F;
+            font-weight: 400;
+            font-size: 1.7rem;
+            padding-top: 5px;
+        }
+        #results-3__text {
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+            color: #2c98d6;
+        }
+        #results-3__text__1 {
+            font-weight: 400;
+            font-size: 3.8rem;
+            line-height: 3rem;
+        }
+        #results-3__text__2 {
+            font-weight: 700;
+            font-size: 3.8rem;
+            line-height: 4.5rem;
+        }
+        #results-4__image {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            width: 20%;
+            height: auto;
+            float: left;
+            padding-left: 8%;
+        }
+        #results-4__text {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            width: 60%;
+            text-align: center;
+            float: right;
+            padding-left: 30%;
+        }
+        #results-4__image__1, #results-4__image__2 {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            width: 90%;
+            height: auto;
+            padding-left: 5%;
+        }
+        #results-4__image__1 {
+            padding-bottom: 2%;
+            }
+        #results-4__image__2 {
+            padding-top: 2%;
+            }
+        #results-4__text__1 {
+            font-weight: 1000;
+            font-size: 2.3rem;
+            line-height: 2.3rem;
+            text-align: center;
+        }
+        #results-5__image, #results-5__text {
+            grid-row: 4 / 5;
+        }
+        #results-5__image {
+            grid-column: 2 / 3;
+            width: 35%;
+            float: right;
+            padding-left: 55%;
+            padding-bottom: 15%;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        #results-5__text {
+            grid-column: 2 / 3;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        #results-5__text__1 {
+            color: #fb001f;
+            text-align: center;
+            width: 50%;
+            height: auto;
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 3rem;
+            padding-left: 5%;
+        }
+        #results-5__text__2 {
+            width: 100%;
+            text-align: center;
+            float: left;
+            color: #7F7F7F;
+            font-weight: 400;
+            font-size: 2.5rem;
+            padding-top: 10px;
+        }
+/*<--------------------PADDINGS--------------------------->*/		
+		#app-section {
+			padding-top: 100px;
+		}
+		#app-section p {
+			padding: 0;
+		}
+		#results-section {
+			grid-row-gap: 100px;
+		}
+	
+/*<--------------------------------MEDIA-QUERIES------------------------------------->*/
+	@media (max-width: 840px) {
+		body, html {
+          background-color: #1B1C1E;
+		}
+		.column-1-2 {
+            grid-column: 1 / span 1;
+        }
+		.column-2 {
+			grid-column: 1 / span 1;
+		}
+		#case-demo {
+			width: 100%;
+			padding: 0 0px;
+		}
+		#video-padding {
+			margin-left: 5%;
+		}
+		#watch-demo {
+			width: 85%;
+			padding: 0;
+		}
+        model-viewer{
+            height: 120vw;
+        }
+		#app-demo {
+			max-width: 150%;
+			width: 150%;
+			transform: translateX(-17%);
+		}
+		#watch-section > .grid-items {
+			padding: 0;
+		}
+		#ooh-section > .grid-items {
+			padding: 0;
+		}
+		#ooh-section h1 {
+			padding-top: 20px;
+		}
+		#results-section > .grid-items {
+			padding: 0;
+		}
+		#results-section h1 {
+			padding: 0;
+		}
+		#superscript {
+			font-size: 1.5rem;
+			line-height: 1rem;
+		}
+		#results-1__image {
+			width: 18%;
+			grid-column: 1 / 2;
+			padding-left: 82%;
+			padding-top: 2%;
+		}
+		#results-1__text__1 {
+			width: 15%;
+			font-size: 2.5rem;
+			line-height: 2.5rem;
+			padding-left: 0%;
+		}
+		#results-1__text__2 {
+			width: 80%;
+			grid-column: 1 / 2;
+			font-size: 2.8rem;
+			line-height: 2.6rem;
+			padding-left: 26%;
+		}
+		#results-3__text {
+			grid-column: 1 / span 1;
+			grid-row: 4 / span 1;
+		}
+		#results-4__image, #results-4__text, #results-4__image__1, #results-4__image__2 {
+			grid-row: 5 / span 1;
+		}
+		#results-5__image, #results-5__text {
+			grid-row: 6 / span 1;
+		}
+		#results-5__image, #results-5__text {
+			grid-column: 1 / 2;
+		}
+	}
+/*<--------------------------------MEDIA-QUERIES-II------------------------------------->*/
+
+	@media (max-width: 450px) {
+		#case-options {
+			padding: 0 5%;
+			width: 90%
+		}
+		#app-demo {
+			width: 94%;
+			transform: translateX(0);
+			padding: 0 3%;
+		}
+		#results-section {
+			grid-row-gap: 20vw;
+			margin-top: 20vw;
+			padding: 0;
+		}
+		#superscript {
+			font-size: 5vw;
+			line-height: 5vw;
+		}
+		#results-1__image {
+			width: 18%;
+			padding-left: 75vw;
+			padding-top: 3%;
+		}
+		#results-1__text__1 {
+			width: 14%;
+			font-size: 9vw;
+			line-height: 9vw;
+			padding-left: 3vw;
+		}
+		#results-1__text__2 {
+			width: 80%;
+			font-size: 9vw;
+			line-height: 9vw;
+			padding-left: 27vw;
+		}
+        #results-2__image {
+			width: 20vw;
+            padding-left: 70vw;
+        }
+        #results-2__text__1 {
+            font-size: 8.5vw;
+            width: 70vw;
+            line-height: 8.5vw;
+        }
+        #results-2__text__2 {
+			width: 100vw;
+            font-size: 7vw;
+            padding-top: 1vw;
+        }
+        #results-3__text__2 {
+            font-size: 13vw;
+            line-height: 12vw;
+        }
+        #results-3__text__1 {
+            font-size: 12vw;
+            line-height: 3rem;
+        }
+        #results-4__text {
+            padding-left: 30vw;
+        }
+        #results-4__image__1, #results-4__image__2 {
+            padding-left: 0;
+        }
+        #results-4__text__1 {
+            font-size: 8vw;
+            line-height: 8vw;
+        }
+        #results-5__image {
+            width: 35%;
+            padding-left: 55%;
+            padding-bottom: 15%;
+        }
+		#results-5__text {
+			margin: 0;
+		}
+        #results-5__text__1 {
+            font-size: 13vw;
+            line-height: 12vw;
+        }
+        #results-5__text__2 {
+            font-size: 8vw;
+            padding-top: 1vw;
+        }
+	}
+	</style>
+</head>
+	
+<body>
+<!----------------------------------------------->
+<div class="campaign__hero">
+	<div class="campaign__header">
+		<img src="images/neutral-logo_black.png" class="campaign__header__brand" alt="Campaign brand logo">
+		<subtitle>Creative Director&nbsp;&#65372; 2018-2019</subtitle>
+		<h2>"Map My City"</h2>
+	</div>
+	<div class="color-bars">
+		<div class="bar bar1"></div>
+		<div class="bar bar2"></div>
+		<div class="bar bar3"></div>
+		<div class="bar bar4"></div>
+	</div>
+</div>
+<!----------------------------------------------->
+    <div class="summary-container">
+        <div class="">
+            <h1>PROBLEM</h1>
+            <p>The 'Map My City' event needs to grasp the attention of target audience and motivate participation in the local community.</p>
+        </div>
+        <div id="line"></div>
+        <div class="">
+            <h1>SOLUTION</h1>
+            <p>Lean into the concept, and stimulate motivation through examples and sponsored incentives.</p>
+        </div>
+    </div>
+<!----------------------------------------------->
+	<div class="main-container" id="app-section">
+        <div class="grid-items column-1-2">
+              <h1>OLV</h1>
+        </div>
+        <div class="grid-items column-1-2">
+			<div class="img__wrap">
+				<video width="100%" height="auto" controls="true" poster="images/mapmycity__images/video-placeholder.jpg">
+				<source src="images/mapmycity__images/mapmycity-concept-video.mp4" type="video/mp4">
+				Awh nuts, your browser doesn't support this kind of video!</video>
+			</div>			
+        </div> 
+	</div>
+<!----------------------------------------------->
+	<div class="main-container" id="ooh-section">
+        <div class="grid-items column-1-2">
+              <h1>OUT OF HOME</h1>
+        </div>
+        <div class="grid-items column-1-2">
+              <img src="images/mapmycity__images/02.jpg" alt="">
+        </div>
+		<div class="grid-items column-1-2">
+              <img src="images/mapmycity__images/02.jpg" alt="">
+        </div>
+	</div>
+<!----------------------------------------------->
+    <div class="main-container" id="watch-section">
+		<div class="grid-items column-1-2">
+              <h1>SPONSORSHIP</h1>
+        </div>
+        <div class="grid-items column-1">
+              <p>There was an opportunity for the team to present the campaign and artwork to local businesses and governing bodies of Champaign-Urbana.</p>
+		</div>
+		<div>
+              <p>We were successful in securing support from 16 sponsors for incentivising offers, including the local bike sharing platform that offers free rides to any participating.</p>
+        </div>
+        <div class="grid-items column-1-2">
+              <img src="images/mapmycity__images/mmc_sponsors.png" alt="" style="background-color: white; padding: 30px;">
+        </div>
+    </div>
+<!----------------------------------------------->
+
+  <footer>
+	<div class="footer-grid">
+		<div class="footer__next footer_icon-color">
+			<a href="portfolio03.html"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.958 164.958" style="enable-background:new 0 0 164.958 164.958;" xml:space="preserve">
+			<g id="ff"><g><path d="M82.479,11c39.414,0,71.479,32.065,71.479,71.479s-32.065,71.479-71.479,71.479S11,121.893,11,82.479S43.065,11,82.479,11 M82.479,0C36.927,0,0,36.927,0,82.479s36.927,82.479,82.479,82.479s82.479-36.927,82.479-82.479S128.031,0,82.479,0L82.479,0z"/></g>
+			<g><path d="M131.347,84.232l-44.58,25.74c-1.02,0.59-2.29-0.14-2.29-1.32v-17.97l-33.41,19.29c-1.02,0.59-2.29-0.14-2.29-1.32v-51.48 c0-1.17,1.27-1.9,2.29-1.32l33.41,19.29v-17.97c0-1.17,1.27-1.9,2.29-1.32l44.58,25.74 C132.367,82.182,132.367,83.652,131.347,84.232z"/></g></g></svg></a>
+		</div>
+		<div class="footer__home footer_icon-color">
+			<a href="index.html"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.958 164.958" style="enable-background:new 0 0 164.958 164.958;" xml:space="preserve">
+			<g id="ej"><g><path d="M82.479,11c39.414,0,71.479,32.065,71.479,71.479s-32.065,71.479-71.479,71.479S11,121.893,11,82.479S43.065,11,82.479,11 M82.479,0C36.927,0,0,36.927,0,82.479s36.927,82.479,82.479,82.479s82.479-36.927,82.479-82.479S128.031,0,82.479,0L82.479,0z"/></g>
+			<path d="M116.397,113.647H48.102c-0.847,0-1.534-0.687-1.534-1.534v-9.988c0-0.847,0.687-1.534,1.534-1.534h68.295 c0.847,0,1.534,0.687,1.534,1.534v9.988C117.931,112.961,117.244,113.647,116.397,113.647z"/>
+			<g><path d="M80.856,41.971L46.93,86.487c-0.879,1.153-0.056,2.814,1.393,2.814h67.852c1.45,0,2.272-1.661,1.393-2.814L83.643,41.971 C82.942,41.051,81.557,41.051,80.856,41.971z"/></g></g>
+			</svg></a>
+		</div>
+		<div class="footer__contact footer_icon-color">
+			<a href="/#contact"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.958 164.958" style="enable-background:new 0 0 164.958 164.958;" xml:space="preserve"><g id="ff_copy"><g><path d="M82.479,11c39.414,0,71.479,32.065,71.479,71.479s-32.065,71.479-71.479,71.479S11,121.893,11,82.479S43.065,11,82.479,11 M82.479,0C36.927,0,0,36.927,0,82.479s36.927,82.479,82.479,82.479s82.479-36.927,82.479-82.479S128.031,0,82.479,0L82.479,0z"/></g><path d="M115.248,54.952v53.69c0,0.85-0.69,1.54-1.55,1.54h-18.23c-0.85,0-1.54-0.69-1.54-1.54v-19.36l-41.59,24.01 c-1.14,0.66-2.57-0.16-2.57-1.48v-57.79c0-1.32,1.43-2.14,2.57-1.49l41.59,24.02v-21.6c0-0.86,0.69-1.55,1.54-1.55h18.23 C114.558,53.402,115.248,54.092,115.248,54.952z"/></g></svg></a>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
