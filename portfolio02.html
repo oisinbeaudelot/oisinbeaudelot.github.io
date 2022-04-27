@@ -10,7 +10,7 @@
     	<script src="focus-visible.js" defer></script>
 		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 		<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-<title>"You're a Natural" Case Study - Canon</title>
+<title>"You're a Natural" Campaign Case Study - Canon</title>
 <link href="portfolio-styles.css" rel="stylesheet" type="text/css">
 <style>
 :root {
@@ -88,6 +88,10 @@
         }
 		#app-demo {
 			width: 100%;
+		}
+		#app-icon {
+			width: 50%;
+			margin: 0px auto 0px auto;
 		}
 		#case-demo {
 			width: 390px;
@@ -254,6 +258,10 @@
 		#app-section p {
 			padding: 0;
 		}
+		#apple-watch-mockup {
+			width: 70%;
+			margin: 30px auto 0px 10px; 
+		}
 		#results-section {
 			grid-row-gap: 100px;
 		}
@@ -290,6 +298,9 @@
 		}
 		#watch-section > .grid-items {
 			padding: 0;
+		}
+		#apple-watch-mockup {
+			margin: 30px auto 0px auto; 
 		}
 		#ooh-section > .grid-items {
 			padding: 0;
@@ -435,7 +446,7 @@
 <div class="campaign__hero">
 	<div class="campaign__header">
 		<img src="images/canon-logo.png" class="campaign__header__brand" alt="Campaign brand logo">
-		<subtitle>Case Study</subtitle>
+		<subtitle>Campaign Case Study</subtitle>
 		<h2>"You're a Natural"</h2>
 	</div>
 	<div class="color-bars">
@@ -449,12 +460,12 @@
     <div class="summary-container">
         <div class="">
             <h1>PROBLEM</h1>
-            <p>As the quality of smartphone cameras skyrockets thanks to software and automatic settings, the jump from casual to enthusiast photographers is getting increasingly difficult.</p>
+            <p>Casual photographers don't feel the need for cameras when their smartphones now take incredible photos.</p>
         </div>
         <div id="line"></div>
         <div class="">
             <h1>SOLUTION</h1>
-            <p>Canon will invite the 'Casuals' to enter the mindset of an enthusiast, where the value proposition of a standalone camera becomes clear.</p>
+            <p>Canon will invite the 'Casual's to enter the mindset of an 'Enthusiast', where the true value of a full frame camera shines.</p>
         </div>
     </div>
 <!----------------------------------------------->
@@ -468,14 +479,30 @@
         <div class="grid-items">
               <p>Canon will create the <span class="highlight">Natural Photographer</span> app that allows users to have more control over their image, and shoot in the closest format to RAW.<br>
               <br>
-              By giving quick tips, and breaking down in a simple way what's going on 'under the hood', the Casuals will be gradually exposed to new photography techniques and ideas.
+              With quick tips and visual cues, this app will down what's going on 'under the hood', exposing the 'Casuals' gradually to new photography techniques and ideas.<br>
+              <br>
+              This app will also demonstrate the usefulness of being able to control individual settings, and will show the limitations of the phone's sensor and cameras.
               </p>
         </div>  
         <div class="grid-items" id="main-2">
-            <p>This app will also demonstrate the usefulness of being able to control individual settings, and will show the limitations of the phone's sensor and cameras.
-            </p>
+			<img src="images/app-icon.svg" alt="" id="app-icon">
         </div>  
 	</div>
+<!----------------------------------------------->
+    <div class="main-container" id="watch-section">
+		<div class="grid-items column-1-2">
+              <h1>GOLDEN HOUR WATCH FACE</h1>
+        </div>
+        <div class="grid-items" id="main-6">
+              <p>Golden hour refers to a one-hour time period after sunrise and before sunset that basks the earth in a complimentary, stunning glow.<br>
+              <br>
+              As this window is different every day, Canon will create a <span class="highlight">branded virtual smartwatch face</span> that keeps in time with the sunlight. Showing the available daylight for the current day, it also glows gold when golden hour has begun.<br><br>Styled to resemble a sundial, it serves as a novel way to tell the time on the wrist, and keeps the thought of taking beautiful photographs in the forefront.</p>
+			<img src="images/apple-watch-mockup.png" alt="" id="apple-watch-mockup">
+        </div>
+        <div class="grid-items" id="video-padding">
+              <video id="watch-demo" autoplay="" loop="" muted="" playsinline="" src="images/canon-watch-face_.mp4" style=""></video>
+        </div>
+    </div>
 <!----------------------------------------------->
 	<div class="main-container" id="ooh-section">
         <div class="grid-items column-1">
@@ -490,23 +517,15 @@
               <model-viewer id="reveal" loading="eager" src="models/tripod-model-edited.glb" camera-controls camera-orbit="179deg 90deg 1700m" min-camera-orbit="auto 55deg auto" max-camera-orbit="auto 90deg auto" auto-rotate poster="models/poster.jpg" data-js-focus-visible exposure="1.2"></model-viewer>
         </div>
         <div class="grid-items column-1">
+            <img src="images/tripod_render_1.png" alt="">
+        </div>
+		<div class="grid-items column-1">
             <img src="images/tripod-mockup__1.jpg" alt="">
         </div>
+		<div class="grid-items column-2">
+            <img src="images/tripod_render_2.png" alt="">
+        </div>
 	</div>
-<!----------------------------------------------->
-    <div class="main-container" id="watch-section">
-		<div class="grid-items column-1-2">
-              <h1>GOLDEN HOUR WATCH FACE</h1>
-        </div>
-        <div class="grid-items" id="main-6">
-              <p>Golden hour refers to a one-hour time period after sunrise and before sunset that basks the earth in a complimentary, stunning glow.<br>
-              <br>
-              As this window is different every day, Canon will create a <span class="highlight">branded watch face</span> that allows users to keep track, and act as a prompt to take beautiful photographs.</p>
-        </div>
-        <div class="grid-items" id="video-padding">
-              <video id="watch-demo" autoplay="" loop="" muted="" playsinline="" src="images/canon-watch-face_.mp4" style=""></video>
-        </div>
-    </div>
 <!----------------------------------------------->
     <div class="main-container" id="case-section">
         <div class="grid-items column-1-2">
@@ -516,7 +535,7 @@
               <video id="case-demo" autoplay="" loop="" muted="" playsinline="" src="images/phone-case-video_.mp4" style=""></video>
         </div>
         <div class="grid-items">
-              <p>As an added phone accessory, Canon can team up with Otterbox to offer limited edition transparent <span class="highlight">Filter Cases</span> that offer phone users a polarising and a UV filter on either end - keeping the Casuals in that enthusiast mindset every time they turn on their camera.</p>
+              <p>As an added phone accessory, Canon will offer limited edition transparent <span class="highlight">Filter Cases</span> that act as a pracitcal polarising or UV filter — keeping the Casuals in that enthusiast mindset every time they turn on their camera.</p>
         </div>
         <div class="grid-items column-1-2">
             <img src="images/3-cases.png" id="case-options" alt="">
