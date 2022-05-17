@@ -1,0 +1,565 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+<title>American Advertising Federation - National Student Advertising Competition</title>
+<link href="portfolio-styles.css" rel="stylesheet" type="text/css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+:root {
+    --primary-color: #ecef25;
+    --secondary-color: #c39100;
+	--tertiary-color: #dd1825;
+	--quaternary-color: #97111a;
+	--background-color: #7D5621;
+	--background-color-darker: #262626;
+	--hero-color: #ffffff;
+	--text-color: #fff;
+	--footer-color: #ffffff;
+  --shadow-color: 35deg 76% 16%;
+  --shadow-elevation-low:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.28),
+    0.4px 0.8px 1.1px -1px hsl(var(--shadow-color) / 0.32),
+    1px 2px 2.6px -2.1px hsl(var(--shadow-color) / 0.35);
+  --shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.24),
+    0.7px 1.4px 1.9px -0.5px hsl(var(--shadow-color) / 0.25),
+    1.3px 2.7px 3.6px -1px hsl(var(--shadow-color) / 0.27),
+    2.6px 5.2px 6.9px -1.6px hsl(var(--shadow-color) / 0.29),
+    4.9px 9.9px 13.1px -2.1px hsl(var(--shadow-color) / 0.31);
+  --shadow-elevation-high:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.22),
+    1.3px 2.6px 3.4px -0.2px hsl(var(--shadow-color) / 0.23),
+    2.3px 4.6px 6.1px -0.5px hsl(var(--shadow-color) / 0.23),
+    3.5px 6.9px 9.2px -0.7px hsl(var(--shadow-color) / 0.24),
+    4.9px 9.9px 13.1px -0.9px hsl(var(--shadow-color) / 0.25),
+    6.9px 13.9px 18.4px -1.2px hsl(var(--shadow-color) / 0.26),
+    9.7px 19.4px 25.7px -1.4px hsl(var(--shadow-color) / 0.27),
+    13.3px 26.7px 35.3px -1.6px hsl(var(--shadow-color) / 0.28),
+    18.1px 36.3px 48.1px -1.9px hsl(var(--shadow-color) / 0.28),
+    24.3px 48.5px 64.3px -2.1px hsl(var(--shadow-color) / 0.29);
+}
+	body, html{
+		overflow-x: visible;
+	}
+.bar1 {
+    background-color: var(--primary-color);
+}
+.bar2 {
+    background-color: var(--secondary-color);
+}
+.bar3 {
+    background-color: var(--tertiary-color);
+}
+.bar4 {
+    background-color: var(--quaternary-color);
+}
+.highlight {
+    color: var(--primary-color);
+}
+.text-color {
+    color: var(--text-color);
+}
+.secondary-color {
+    color: var(--secondary-color);
+}
+/*<--------------------FUNDAMENTALS--------------------------->*/		
+.row-1 {
+    grid-row: 1 / span 1;
+}
+.row-2 {
+    grid-row: 2 / span 1;
+}
+.row-1-2 {
+    grid-row: 1 / span 2;
+}
+.row-1-2-3 {
+    grid-row: 1 / span 3;
+}
+		
+/*<--------------------SECTIONS--------------------------->*/	
+
+.slider {
+  width: 100%;
+  max-width: 800px;
+  height: 618px;
+  position: relative;
+  overflow: hidden; /* <===  */
+  border-radius: 8px;
+}
+
+.slide {
+  width: 100%;
+  max-width: 800px;
+  height: 618px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #333;
+  font-size: 18px;
+
+}
+.btn:active {
+  transform: scale(1.1);
+}
+.btn-prev {
+  top: 45%;
+  left: 1%;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.btn-next {
+  top: 45%;
+  right: 1%;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+		.btn-prev, .btn-next {
+			background-size: 1.5rem 1.5rem;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+/*<--------------------TRIFOLD--------------------------->*/		
+	:root {
+		--trifold-width: 30%;
+		--trifold-height: 610px;
+		--trifold-transition: 0.8s;
+	}
+		.trifold-section, .trifold-section-back, .trifold-container {
+			width: var(--trifold-width);
+			height: var(--trifold-height);
+			margin: 0;
+			border: 0;
+			padding: 0;
+			outline: 0;
+		}
+		.back-container {
+			width: 100%;
+			margin-top: calc((var(--trifold-height))*-1 - 4px);
+		}
+	.p1, .p1b {
+		transform-origin: 100% 0px;
+	}
+	.trifold-section {
+		display: inline-block;
+		transition: all var(--trifold-transition);
+		backface-visibility: hidden;
+		position: relative;
+	}
+	.trifold-section-back {
+		display: inline-block;
+		position: relative;
+		transition: all var(--trifold-transition);
+	}
+	.trifold-container {
+		position: relative;
+		display: block;
+		width: auto;
+		text-align: center;
+	}
+	.trifold-section, .trifold-section-back {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-right: -4px;
+		}
+	.p1b, .p2b, .p3b {
+		box-shadow: var(--shadow-elevation-medium);
+	}
+	.active .p1b, .active .p2b, .active .p3b {
+		box-shadow: none;
+	}
+	.p1 {
+		background-image: url("images/ws__images/ws-map-4.jpg");
+		z-index: 300;
+	}
+	.p2 {
+		background-image: url("images/ws__images/ws-map-2.jpg");
+		z-index: 100;
+		cursor: pointer;
+	}
+	.p3 {
+		background-image: url("images/ws__images/ws-map-3.jpg");
+		transform-origin: 0px 0px;
+		transition-delay: var(--trifold-transition);
+		z-index: 200;
+	}
+	.p1b {
+		background-image: url("images/ws__images/ws-map-1_.jpg");
+		z-index: 250;
+		cursor: pointer;
+	}
+	.p2b {
+		background-image: none;
+	}
+	.p3b {
+		background-image: url("images/ws__images/ws-map-5_.jpg");
+		z-index: 150;
+		transform-origin: 0px 0px;
+		transition-delay: var(--trifold-transition);
+	}
+	.active .p1 {
+		transform: rotateY(180deg);
+		transition-delay: var(--trifold-transition);
+	}
+	.active .p1b {
+		transform: rotateY(180deg);
+		transition-delay: var(--trifold-transition);
+	}
+	.active .p2b {
+				box-shadow: var(--shadow-elevation-medium);
+			}
+	.active .p3 {
+		transform: rotateY(-180deg);
+		transition-delay: 0s;
+	}
+	.active .p3b {
+		transform: rotateY(-180deg);
+		transition-delay: 0s;
+	}
+	
+	
+/*<--------------------PADDINGS--------------------------->*/		
+		#video-caption {
+			padding-top: 10px;
+			font-weight: 100;
+			text-align: end;
+		}
+	footer {
+		padding-bottom: 2rem;
+	}
+	
+/*<--------------------------------MEDIA-QUERIES------------------------------------->*/
+	@media (max-width: 840px) {
+			:root {
+			--trifold-height: 0;
+			}
+		.slider, .slide {
+			width: 100%;
+		  height: 309px;
+		}
+		#trifold {
+			height: 2500px;
+		}
+			.trifold-section, .trifold-section-back, .trifold-container {
+				width: 80%;
+				margin: -4px auto 0 auto;
+				height: 520px;
+			}
+			.back-container {
+				width: 100%;
+			}
+			.p1 {
+				background-image: url("images/ws__images/ws-map-1.jpg");
+			}
+			.p2 {
+				background-image: url("images/ws__images/ws-map-2.jpg");
+			}
+			.p3 {
+				background-image: url("images/ws__images/ws-map-3.jpg");
+			}
+			.p1b {
+				background-image: url("images/ws__images/ws-map-4.jpg");
+			}
+			.p2b {
+				display: none;
+			}
+			.p3b {
+				background-image: url("images/ws__images/ws-map-5.jpg");
+			}
+			.active .p1 {
+				transform: none;
+			}
+			.active .p1b {
+				transform: none;
+			}
+			.active .p3 {
+				transform: none;
+			}
+			.active .p3b {
+				transform: none;
+			}
+			.trifold-function {
+				display: none;
+			}
+	}
+/*<--------------------------------MEDIA-QUERIES-II------------------------------------->*/
+
+	@media (max-width: 450px) {
+		.slider, .slide {
+		  height: 77vw;
+		}
+		.trifold-section, .trifold-section-back, .trifold-container {
+			width: 100%;
+			margin: -4px auto 0 auto;
+			height: 215vw;
+		}
+		#trifold {
+			height: 1050vw;
+		}
+	}
+	</style>
+</head>
+	
+<body>
+<!----------------------------------------------->
+<div class="campaign__hero">
+	<div class="campaign__header">
+		<img src="images/ws-aaf.svg" class="campaign__header__brand" alt="Campaign brand logo">
+		<subtitle>Art Director &nbsp;&#65372; 2019</subtitle>
+		<h2>AAF National Student<br>Advertising Competition</h2>
+	</div>
+	<div class="color-bars">
+		<div class="bar bar1"></div>
+		<div class="bar bar2"></div>
+		<div class="bar bar3"></div>
+		<div class="bar bar4"></div>
+	</div>
+</div>
+<!----------------------------------------------->
+    <div class="summary-container">
+        <div class="">
+            <h1>CLIENT BRIEF</h1>
+            <p>Elevate America's perception of the hotdog in a 360 national campaign that benefits the industry as a whole and also includes the client brand.</p>
+        </div>
+        <div id="line"></div>
+        <div class="">
+            <h1>SOLUTION</h1>
+            <p>Embrace the inherent fun in hotdogs, and feed the desire for it by being the brand that stands for <b>FUN</b>.</p>
+        </div>
+    </div>
+<!----------------------------------------------->
+<div class="main-container" id="about-nsac">
+        <div class="grid-items column-1-2">
+              <h1>WHAT IS NSAC&quest;</h1>
+        </div> 
+        <div class="grid-items">
+              <p>The National Student Advertising Competition (NSAC) is an annual advertising competition organised by the American Advertising Federation's (AAF). Competing AAF chapters across the nation prepare a campaign using the same client brief, and present their final plan to AAF judges.</p>
+        </div>
+		<div class="grid-items">
+              <p>This campaign was developed by the 2019 University of Illinois AAF chapter, where Oisin participated as an Art Director. The following materials are content that Oisin directly worked on either in part or wholly.</p>
+        </div>
+</div>
+
+<div class="main-container">
+        <div class="grid-items column-1-2">
+              <h1>THE PLANSBOOK</h1>
+        </div> 
+	<div class="slider column-1-2">
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_1.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_2.jpg" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_3.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_4.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_5.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_6.jpg" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_7.jpg" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_8.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_9.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_10.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_11.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_12.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_13.jpg" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_14.jpg" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_15.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_16.jpg" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_17.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_18.jpg" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_19.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_20.png" alt="" /> </div>
+		<div class="slide"> <img src="images/ws__images/plansbook/wspage_21.png" alt="" /> </div>
+
+	  <!-- Control buttons -->
+	  <button class="btn btn-next"></button>
+	  <button class="btn btn-prev"></button>
+	</div>
+</div>
+<!----------------------------------------------->
+	<div class="main-container" id="app-section">
+        <div class="grid-items column-1-2">
+              <h1>TV SPOT</h1>
+        </div>
+        <div class="grid-items column-1-2">
+			<div class="img__wrap">
+				<video width="100%" height="auto" controls="true" poster="images/ws__images/Team407_TVSpot_poster.jpg">
+				<source src="images/ws__images/Team407_TVSpot.mp4" type="video/mp4">
+				Oh snap! Your browser doesn't support this kind of video!</video>
+				<figcaption id="video-caption" class="text-color">Co-Produced by Oisin Beaudelot</figcaption>
+			</div>			
+        </div> 
+	</div>
+	
+	<div class="main-container" id="ooh-section">
+        <div class="grid-items column-1-2">
+              <h1>TV SPOT #2</h1>
+        </div>
+        <div class="grid-items column-1">
+            <img src="images/ws__images/lunch-break-p1.jpg" alt="">
+			<img src="images/ws__images/lunch-break-p2.jpg" alt="">
+			<img src="images/ws__images/lunch-break-p3.jpg" alt="">
+        </div>
+		<div class="grid-items column-2">
+              <img src="images/ws__images/lunch-break-sb-p1.jpg" alt="">
+			<img src="images/ws__images/lunch-break-sb-p2.jpg" alt="">
+			<img src="images/ws__images/lunch-break-sb-p3.jpg" alt="">
+        </div>
+	</div>
+	<div class="main-container trifold">
+		<div class="grid-items column-1-2" id="app-mockup">
+              <h1>APP MOCKUP TRIFOLD</h1>
+        </div>
+		 <div class="grid-items column-1-2">
+              <p>This trifold was created by Oisin as a physical hand-out to judges during the presentation to demonstrate the value of the proposed 'Funusual' app. As the presentation event was taking place in South Bend, Indiana, it highlighted 'fun' events happening in the city that very weekend.</p>
+        </div>
+		<div class="grid-items column-1-2" id="trifold">        
+			<div class="trifold-container active" id="brochure">
+			  <div class="trifold-section p1"> </div>
+			  <div class="trifold-section p2" id="toggle2"> </div>
+			  <div class="trifold-section p3"></div>
+			  <div class="back-container">
+				<div class="trifold-section-back p1b" id="toggle"></div>
+				<div class="trifold-section-back p2b"> </div>
+				<div class="trifold-section-back p3b"></div>
+			  </div>
+			</div>
+		</div>
+		<div id="trifold-function"></div>
+	</div>
+	
+<!----------------------------------------------->
+
+  <footer>
+	<div class="footer-grid">
+		<div class="footer__next footer_icon-color">
+			<a href="portfolio05.html"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.958 164.958" style="enable-background:new 0 0 164.958 164.958;" xml:space="preserve">
+			<g id="ff"><g><path d="M82.479,11c39.414,0,71.479,32.065,71.479,71.479s-32.065,71.479-71.479,71.479S11,121.893,11,82.479S43.065,11,82.479,11 M82.479,0C36.927,0,0,36.927,0,82.479s36.927,82.479,82.479,82.479s82.479-36.927,82.479-82.479S128.031,0,82.479,0L82.479,0z"/></g>
+			<g><path d="M131.347,84.232l-44.58,25.74c-1.02,0.59-2.29-0.14-2.29-1.32v-17.97l-33.41,19.29c-1.02,0.59-2.29-0.14-2.29-1.32v-51.48 c0-1.17,1.27-1.9,2.29-1.32l33.41,19.29v-17.97c0-1.17,1.27-1.9,2.29-1.32l44.58,25.74 C132.367,82.182,132.367,83.652,131.347,84.232z"/></g></g></svg></a>
+		</div>
+		<div class="footer__home footer_icon-color">
+			<a href="index.html"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.958 164.958" style="enable-background:new 0 0 164.958 164.958;" xml:space="preserve">
+			<g id="ej"><g><path d="M82.479,11c39.414,0,71.479,32.065,71.479,71.479s-32.065,71.479-71.479,71.479S11,121.893,11,82.479S43.065,11,82.479,11 M82.479,0C36.927,0,0,36.927,0,82.479s36.927,82.479,82.479,82.479s82.479-36.927,82.479-82.479S128.031,0,82.479,0L82.479,0z"/></g>
+			<path d="M116.397,113.647H48.102c-0.847,0-1.534-0.687-1.534-1.534v-9.988c0-0.847,0.687-1.534,1.534-1.534h68.295 c0.847,0,1.534,0.687,1.534,1.534v9.988C117.931,112.961,117.244,113.647,116.397,113.647z"/>
+			<g><path d="M80.856,41.971L46.93,86.487c-0.879,1.153-0.056,2.814,1.393,2.814h67.852c1.45,0,2.272-1.661,1.393-2.814L83.643,41.971 C82.942,41.051,81.557,41.051,80.856,41.971z"/></g></g>
+			</svg></a>
+		</div>
+		<div class="footer__contact footer_icon-color">
+			<a href="/#contact"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.958 164.958" style="enable-background:new 0 0 164.958 164.958;" xml:space="preserve"><g id="ff_copy"><g><path d="M82.479,11c39.414,0,71.479,32.065,71.479,71.479s-32.065,71.479-71.479,71.479S11,121.893,11,82.479S43.065,11,82.479,11 M82.479,0C36.927,0,0,36.927,0,82.479s36.927,82.479,82.479,82.479s82.479-36.927,82.479-82.479S128.031,0,82.479,0L82.479,0z"/></g><path d="M115.248,54.952v53.69c0,0.85-0.69,1.54-1.55,1.54h-18.23c-0.85,0-1.54-0.69-1.54-1.54v-19.36l-41.59,24.01 c-1.14,0.66-2.57-0.16-2.57-1.48v-57.79c0-1.32,1.43-2.14,2.57-1.49l41.59,24.02v-21.6c0-0.86,0.69-1.55,1.54-1.55h18.23 C114.558,53.402,115.248,54.092,115.248,54.952z"/></g></svg></a>
+		</div>
+	  </div>
+</footer>
+
+<script>
+	"use strict";
+// Select all slides
+const slides = document.querySelectorAll(".slide");
+
+// loop through slides and set each slides translateX
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+// select next slide button
+const nextSlide = document.querySelector(".btn-next");
+
+// current slide counter
+let curSlide = 0;
+// maximum number of slides
+let maxSlide = slides.length - 1;
+
+// add event listener and navigation functionality
+nextSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  //   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+// select next slide button
+const prevSlide = document.querySelector(".btn-prev");
+
+// add event listener and navigation functionality
+prevSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+
+  //   move slide by 100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+	</script>
+<script>
+// this will check if element is in viewport
+var toggler = document.getElementById('toggle');
+var pContainer = document.getElementById('brochure');
+
+function checkVisible(elm, eval) {
+  eval = eval || "object visible";
+  var viewportHeight = $(window).height(), // Viewport Height
+    scrolltop = $(window).scrollTop(), // Scroll Top
+    y = $(elm).offset().top,
+    elementHeight = $(elm).height();
+
+  if (eval == "object visible") return y < viewportHeight + scrolltop && y > scrolltop - elementHeight;
+  if (eval == "above") return y < viewportHeight + scrolltop;
+}
+
+$(window).on("scroll", function () {
+  if (checkVisible($("#trifold-function"))) {
+    pContainer.classList.toggle('active');
+    $(window).off("scroll");
+  } else {
+    // do nothing
+  }
+});
+</script>
+
+<script>
+
+var toggler = document.getElementById('toggle');
+var toggler2 = document.getElementById('toggle2');
+var pContainer = document.getElementById('brochure');
+
+var toggleBrochure = function() {
+  pContainer.classList.toggle('active');
+}
+
+toggler.addEventListener('click', toggleBrochure);
+toggler2.addEventListener('click', toggleBrochure);
+
+</script>
+</body>
+</html>
