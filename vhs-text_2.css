@@ -1,0 +1,244 @@
+@charset "utf-8";
+/* CSS Document */
+/* Effect created by Simon Breiter at https://codepen.io/simonbreiter/pen/NrmyjR */
+	.vhs_2 {
+		  position: relative;
+		  mix-blend-mode: screen;
+		  color: transparent;
+		  text-shadow: 0 0 0.2rem #f00;
+		}
+		.vhs_2_1 {
+			-webkit-animation: jitter_2 2s infinite;
+				  animation: jitter_2 2s infinite 22s, light_flicker_2 10s infinite 20s;
+				
+		}
+		.vhs_2_2 {
+			-webkit-animation: jitter_3 2s infinite;
+						  animation: jitter_3 2s infinite 22s, light_flicker_3 15s infinite 20s;
+		}
+		.vhs_2::before,
+		.vhs_2::after {
+		  content: attr(data-text);
+		  position: absolute;
+		  left: 0;
+		  mix-blend-mode: screen;
+          transform: rotate(180deg) translate(0.15rem) rotate(-180deg);
+		}
+		.vhs_2::before {
+		  text-shadow: 0 0 0.05rem #0f0;
+		}
+		.vhs_2::after {
+		  text-shadow: 0 0 0.05rem #00f;
+		  -webkit-animation-delay: 5s;
+				  animation-delay: 5s;
+		}
+		@-webkit-keyframes jitter_2 {
+		  0% {
+			transform: translateX(0);
+		  }
+		  1% {
+			transform: translateX(0);
+		  }
+		  1.25% {
+			transform: translateX(0.1em) skew(40deg);
+		  }
+		  1.5% {
+			transform: translateX(-0.2em) skew(-40deg);
+		  }
+		  1.75% {
+			transform: translateX(0);
+		  }
+		  100% {
+			transform: translateX(0);
+		  }
+		}
+		@keyframes jitter_2 {
+		  0% {
+			transform: translateX(0);
+		  }
+		  1% {
+			transform: translateX(0);
+		  }
+		  1.25% {
+			transform: translateX(0.1em) skew(40deg);
+		  }
+		  1.5% {
+			transform: translateX(-0.2em) skew(-40deg);
+		  }
+		  1.75% {
+			transform: translateX(0);
+		  }
+		  100% {
+			transform: translateX(0);
+		  }
+		}
+		@keyframes light_flicker_2{
+			0%{opacity: 0}
+			0.2%{opacity: 1}
+			0.6%{opacity: 0}
+			0.8%{opacity: 1}
+			1%{opacity: 0}
+			1.2%{opacity: 1}
+			1.4%{opacity: 0}
+			1.6%{opacity: 1}
+			1.8%{opacity: 0}
+			2%{opacity: 1}
+			4.8%{opacity: 1}
+			5%{opacity: 0}
+			8.0%{opacity: 0}
+			8.2%{opacity: 1}
+			8.6%{opacity: 0}
+			8.8%{opacity: 1}
+			9%{opacity: 0}
+			9.2%{opacity: 1}
+			9.4%{opacity: 0}
+			9.6%{opacity: 1}
+			9.8%{opacity: 0}
+			10.0%{opacity: 1}
+			13.8%{opacity: 1}
+			14.0%{opacity: 0}
+			14.2%{opacity: 1}
+			14.4%{opacity: 0}
+			14.6%{opacity: 1}
+			14.8%{opacity: 0}
+			15%{opacity: 1}
+			100%{opacity: 1}
+		}
+		@-webkit-keyframes light_flicker_2{
+			0%{opacity: 0}
+			0.2%{opacity: 1}
+			0.6%{opacity: 0}
+			0.8%{opacity: 1}
+			1%{opacity: 0}
+			1.2%{opacity: 1}
+			1.4%{opacity: 0}
+			1.6%{opacity: 1}
+			1.8%{opacity: 0}
+			2%{opacity: 1}
+			4.8%{opacity: 1}
+			5%{opacity: 0}
+			8.0%{opacity: 0}
+			8.2%{opacity: 1}
+			8.6%{opacity: 0}
+			8.8%{opacity: 1}
+			9%{opacity: 0}
+			9.2%{opacity: 1}
+			9.4%{opacity: 0}
+			9.6%{opacity: 1}
+			9.8%{opacity: 0}
+			10.0%{opacity: 1}
+			13.8%{opacity: 1}
+			14.0%{opacity: 0}
+			14.2%{opacity: 1}
+			14.4%{opacity: 0}
+			14.6%{opacity: 1}
+			14.8%{opacity: 0}
+			15%{opacity: 1}
+			100%{opacity: 1}
+		}
+
+
+		@-webkit-keyframes jitter_3 {
+		  0% {
+			transform: translateX(0);
+		  }
+		  5% {
+			transform: translateX(0);
+		  }
+		  5.25% {
+			transform: translateX(0.1em) skew(40deg);
+		  }
+		  5.5% {
+			transform: translateX(-0.2em) skew(-40deg);
+		  }
+		  5.75% {
+			transform: translateX(0);
+		  }
+		  100% {
+			transform: translateX(0);
+		  }
+		}
+		@keyframes jitter_3 {
+		  0% {
+			transform: translateX(0);
+		  }
+		  5% {
+			transform: translateX(0);
+		  }
+		  5.25% {
+			transform: translateX(0.1em) skew(40deg);
+		  }
+		  5.5% {
+			transform: translateX(-0.2em) skew(-40deg);
+		  }
+		  5.75% {
+			transform: translateX(0);
+		  }
+		  100% {
+			transform: translateX(0);
+		  }
+		}
+		@keyframes light_flicker_3{
+			0%{opacity: 0}
+			0.3%{opacity: 1}
+			0.9%{opacity: 0}
+			1.2%{opacity: 1}
+			1.5%{opacity: 0}
+			1.8%{opacity: 1}
+			2.1%{opacity: 0}
+			2.4%{opacity: 1}
+			2.7%{opacity: 0}
+			3%{opacity: 1}
+			7.2%{opacity: 1}
+			7.5%{opacity: 0}
+			12.0%{opacity: 0}
+			12.3%{opacity: 1}
+			12.9%{opacity: 0}
+			13.2%{opacity: 1}
+			13.5%{opacity: 0}
+			13.8%{opacity: 1}
+			14.1%{opacity: 0}
+			14.4%{opacity: 1}
+			14.7%{opacity: 0}
+			15.0%{opacity: 1}
+			20.7%{opacity: 1}
+			21.0%{opacity: 0}
+			21.3%{opacity: 1}
+			21.6%{opacity: 0}
+			21.9%{opacity: 1}
+			22.2%{opacity: 0}
+			22.5%{opacity: 1}
+			100%{opacity: 1}
+		}
+		@-webkit-keyframes light_flicker_3{
+			0%{opacity: 0}
+			0.3%{opacity: 1}
+			0.9%{opacity: 0}
+			1.2%{opacity: 1}
+			1.5%{opacity: 0}
+			1.8%{opacity: 1}
+			2.1%{opacity: 0}
+			2.4%{opacity: 1}
+			2.7%{opacity: 0}
+			3%{opacity: 1}
+			7.2%{opacity: 1}
+			7.5%{opacity: 0}
+			12.0%{opacity: 0}
+			12.3%{opacity: 1}
+			12.9%{opacity: 0}
+			13.2%{opacity: 1}
+			13.5%{opacity: 0}
+			13.8%{opacity: 1}
+			14.1%{opacity: 0}
+			14.4%{opacity: 1}
+			14.7%{opacity: 0}
+			15.0%{opacity: 1}
+			20.7%{opacity: 1}
+			21.0%{opacity: 0}
+			21.3%{opacity: 1}
+			21.6%{opacity: 0}
+			21.9%{opacity: 1}
+			22.2%{opacity: 0}
+			22.5%{opacity: 1}
+			100%{opacity: 1}
+		}

@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+/* Effect created by Simon Breiter at https://codepen.io/simonbreiter/pen/NrmyjR */
+	.vhs {
+		  text-transform: capitalize;
+		  position: relative;
+		  mix-blend-mode: screen;
+		  color: transparent;
+		  text-shadow: 0 0 0.2rem #f00;
+		  -webkit-animation: jitter 2s infinite 10s;
+				  animation: jitter 2s infinite 10s;
+		}
+		.vhs::before,
+		.vhs::after {
+		  content: attr(data-text);
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  mix-blend-mode: screen;
+          transform: rotate(180deg) translate(0.15rem) rotate(-180deg);
+		}
+		.vhs::before {
+		  text-shadow: 0 0 0.05rem #0f0;
+		}
+		.vhs::after {
+		  text-shadow: 0 0 0.05rem #00f;
+		  -webkit-animation-delay: 5s;
+				  animation-delay: 5s;
+		}
+		@-webkit-keyframes glitch {
+		  0% {
+			transform: rotate(0deg) translate(0.2rem) rotate(0deg);
+		  }
+		  100% {
+			transform: rotate(360deg) translate(0.2rem) rotate(-360deg);
+		  }
+		}
+		@keyframes glitch {
+		  0% {
+			transform: rotate(0deg) translate(0.2rem) rotate(0deg);
+		  }
+		  100% {
+			transform: rotate(360deg) translate(0.2rem) rotate(-360deg);
+		  }
+		}
+		@-webkit-keyframes jitter {
+		  0% {
+			transform: translateX(0);
+		  }
+		  50% {
+			transform: translateX(0);
+		  }
+		  50.25% {
+			transform: translateX(0.1em) skew(40deg);
+		  }
+		  50.5% {
+			transform: translateX(-0.2em) skew(-40deg);
+		  }
+		  50.75% {
+			transform: translateX(0);
+		  }
+		  100% {
+			transform: translateX(0);
+		  }
+		}
+		@keyframes jitter {
+		  0% {
+			transform: translateX(0);
+		  }
+		  50% {
+			transform: translateX(0);
+		  }
+		  50.25% {
+			transform: translateX(0.1em) skew(40deg);
+		  }
+		  50.5% {
+			transform: translateX(-0.2em) skew(-40deg);
+		  }
+		  50.75% {
+			transform: translateX(0);
+		  }
+		  100% {
+			transform: translateX(0);
+		  }
+		}

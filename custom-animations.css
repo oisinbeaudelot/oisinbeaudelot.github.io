@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+.about-me__glitch-overlay {
+		display: block;
+		visibility: hidden;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: none;
+		background-position: center;
+		background-size: cover;
+		z-index: 2;
+		opacity: 0.8;
+		mix-blend-mode: lighten;
+		animation-name: full-page-glitch;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-delay: 22s;
+	}
+	@-webkit-keyframes full-page-glitch {
+		0% {
+			visibility: visible;
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00001.jpg");
+		}
+		0.1% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00002.jpg");
+		}
+		0.2% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00003.jpg");
+		}
+		0.3% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00004.jpg");
+		}
+		0.4% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00005.jpg");
+		}
+		0.5% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00006.jpg");
+		}
+		0.6% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00007.jpg");
+		}
+		0.7% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00008.jpg");
+		}
+		0.8% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00009.jpg");
+		}
+		0.9% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00010.jpg");
+		}
+		1% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00011.jpg");
+		}
+		1.1% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00012.jpg");
+		}
+		1.2% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00013.jpg");
+		}
+		1.3% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00014.jpg");
+		}
+		1.4% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00015.jpg");
+		}
+		1.5% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00016.jpg");
+		}
+		1.6% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00017.jpg");
+		}
+		1.7% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00018.jpg");
+		}
+		1.8% {
+			visibility: hidden;
+			background-image: none;
+		}
+	}
+	@keyframes full-page-glitch {
+		0% {
+			visibility: visible;
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00001.jpg");
+		}
+		0.1% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00002.jpg");
+		}
+		0.2% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00003.jpg");
+		}
+		0.3% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00004.jpg");
+		}
+		0.4% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00005.jpg");
+		}
+		0.5% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00006.jpg");
+		}
+		0.6% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00007.jpg");
+		}
+		0.7% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00008.jpg");
+		}
+		0.8% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00009.jpg");
+		}
+		0.9% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00010.jpg");
+		}
+		1% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00011.jpg");
+		}
+		1.1% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00012.jpg");
+		}
+		1.2% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00013.jpg");
+		}
+		1.3% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00014.jpg");
+		}
+		1.4% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00015.jpg");
+		}
+		1.5% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00016.jpg");
+		}
+		1.6% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00017.jpg");
+		}
+		1.7% {
+			background-image: url("images/about-me__glitch-overlay/about-glitch_00018.jpg");
+		}
+		1.8% {
+			visibility: hidden;
+			background-image: none;
+		}
+	}

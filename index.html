@@ -39,7 +39,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		});
 	});
 </script>
-<script src="assets/js/jquery.min.js"></script>
 <script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
 	$(function () {
@@ -59,7 +58,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,900&display=swap" rel="stylesheet">
-	
+<link href="vhs-text.css" rel="stylesheet" type="text/css">
+<link href="vhs-text_2.css" rel="stylesheet" type="text/css">
+<link href="custom-animations.css" rel="stylesheet" type="text/css">
 
 <style>
 	input:-webkit-autofill,
@@ -85,20 +86,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
 		-webkit-text-size-adjust: 100%;
 	}
-	A:link {
-		COLOR: black;
+	a:link, a:visited, a:hover {
+		color: black;
 		TEXT-DECORATION: none;
-		font-weight: bold
+		font-weight: bold;
+		opacity: 0.85;
 	}
-	a:visited {
-		COLOR: black;
+	a:hover {
+		color: #F13F26;
 		TEXT-DECORATION: none;
-		font-weight: bold
-	}
-	A:hover {
-		COLOR: red;
-		TEXT-DECORATION: none;
-		font-weight: bold
+		font-weight: bold;
+		opacity: 1;
 	}
 	
 /* ************************* HOME SECTION ***************************************************** */
@@ -106,7 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	#home {
 		width: 100%;
 		height: 130%;
-		background-image: url("images/gradient-background____.jpg");
+		background-image: url("images/gradient-background_deposit_8.jpg");
 		background-position: bottom;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -216,6 +214,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	.box__face--front {
 		background-size: contain;
 		background-repeat: no-repeat;
+	}
+	.box__face--front:hover {
+		cursor: pointer;
 	}
 	.box__face--bottom {
 		top: 0;
@@ -327,12 +328,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		filter: drop-shadow(rgba(0, 0, 0, 0.35) 0 2.34vw 1.56vw);
 	}
 	.scene {
-		height: 9.73vw;
-		max-height: 114px;
+		height: 12.73vw;
+		/*max-height: 114px;*/
+		max-height: 130px;
 	}
 	.scene-rotated {
-		height: 36.6vw;
-		max-height: 463px;
+		/*height: 36.6vw;*/
+		height: 39vw;
+		/*max-height: 463px;*/
+		max-height: 450px;
 		margin-top: 10px;
 	}
 	.scene-styles {
@@ -367,12 +371,188 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		max-height: 463px;
 		transform: rotateX(-90deg) scale3d(0.93, 0.93, 0.93);
 	}
+/* ************************* PORTFOLIO BRAND LINES ***************************************************** */
+	.pf-bg-lines {
+		position: relative;
+	}
+	.pf-bg-lines__container {
+		position: absolute;
+		width: 100%;
+	}
+    .pf-bg-lines__left, .pf-bg-lines__right {
+        max-width: calc(50vw - 410px - 20px);
+		width: 30%;
+        height: 9.73vw;
+		max-height: 114px;
+        position: relative;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+	.pf-bg-lines__spacer {
+		height: 3vw;
+		max-height: 16px;
+	}
+	.pf-bg-lines__left  {
+			margin-left: 0;	
+			margin-right: auto;
+		}
+	.pf-bg-lines__right  {
+		margin-left: auto;	
+		margin-right: 0;
+		}
+		.pf-bg-lines__left svg, .pf-bg-lines__right svg {
+			width: 100%;
+			height: 100%;
+		}	
+		.pf-bg-lines--fill{
+			fill:none;
+			stroke-width:109.5;
+			stroke-miterlimit:10;
+			stroke-dasharray: 700;
+		}
+		.pf-bg-lines--fill1 {
+			stroke:#003468;
+		}
+		.pf-bg-lines--fill2 {
+			stroke:#D1001E;
+		}
+		.pf-bg-lines--fill3 {
+			stroke:#f85016;
+		}
+		.pf-bg-lines--fill4 {
+			stroke:#DB0031;
+		}
+		.pf-bg-lines--fill5 {
+			stroke:#1D1C22;
+		}
+		.pf-bg-lines--whitespace {
+			fill:none;
+			stroke:#FFFFFF;
+			stroke-width:110;
+			stroke-miterlimit:10;
+			stroke-dasharray: 50;
+		}
+		.pf-bg-lines--fill--animate-in {
+			animation: pf-bg-lines--fill--animate-in 0.5s cubic-bezier(0.49, 0.72, 0.47, 0.95) forwards;
+		}
+		.pf-bg-lines--fill--animate-out {
+			animation: pf-bg-lines--fill--animate-out 0.5s cubic-bezier(0.49, 0.72, 0.47, 0.95) forwards;
+		}
+		.pf-bg-lines--whitespace--animate-in {
+			animation: pf-bg-lines--whitespace--animate-in 0.8s cubic-bezier(0.49, 0.72, 0.47, 0.95) 0.25s forwards;
+		}
+		.pf-bg-lines--whitespace--animate-out {
+			animation: pf-bg-lines--whitespace--animate-out 0.8s cubic-bezier(0.49, 0.72, 0.47, 0.95) forwards;
+		}
+		@keyframes pf-bg-lines--fill--animate-in {
+			from {
+				stroke-dashoffset: 700;
+			}
+		  to {
+			stroke-dashoffset: 0;
+		  }
+		}
+		@keyframes pf-bg-lines--fill--animate-out {
+				from {
+					stroke-dashoffset: 0;
+				}
+			  to {
+				stroke-dashoffset: 700;
+			  }
+			}
+		@keyframes pf-bg-lines--whitespace--animate-in {
+			from {
+				stroke-dashoffset: 50;
+			}
+		  to {
+			stroke-dashoffset: 0;
+		  }
+		}
+		@keyframes pf-bg-lines--whitespace--animate-out {
+				from {
+					stroke-dashoffset: 0;
+				}
+			  to {
+				stroke-dashoffset: 50;
+			  }
+			}
+	
+	
+	
+/* ************************* ABOUT ME SECTION ***************************************************** */
+	#about-me {
+		background-color: #212121;
+		height: 100%;
+		-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+    	-webkit-text-size-adjust: 100%;
+		font-family: 'Roboto', sans-serif;
+		position: relative;
+		display: grid;
+	}
+	.about-me__container {
+		max-width: 1000px;
+    	margin-left: auto;
+    	margin-right: auto;
+		display: grid;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+    	grid-template-columns: 1.5fr 1fr;
+    	grid-auto-rows: minmax(auto, auto);
+  		align-content: center;
+	}
+	#about-me h2 {
+		text-transform: capitalize;
+		font-weight:900;
+		font-style: italic;
+		font-size: 5rem;
+		padding: 0 0 0 0;
+		margin: 0 0 1rem 0;
+		}
+	#about-me subtitle {
+		font-weight: 1000;
+		font-style: normal;
+		font-size: 1.5rem;
+		width: 100%;
+		display: block;
+		text-align: left;
+		color: #dddddd;
+		padding: 0;
+		margin: 0 0 0.5rem 0;
+	}
+	#about-me h3 {
+		font-weight:900;
+		font-size: 2rem;
+		font-style: italic;
+		line-height: 1.5rem;
+		padding: 5vh 0 1rem 0;
+		margin: 0;
+	}
+	#about-me ul {
+		margin: 0;
+	}
+	#about-me li, #about-me p {
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		margin: 0;
+		padding: 0;
+		color: #dddddd;
+	}
+	.about-me__title {
+		grid-column: span 2;
+	}
+	.about-me__image img {
+		max-width: 100%;
+	}
+	.about-me__text , .about-me__image{
+	}
+	
 	
 /* ************************* CONTACT SECTION ***************************************************** */
 
 	#contact {
 		/* The image used */
-		background-image: url("images/contact-form-bg.png");
+		background-image: url("images/contact-form-bg.jpg");
 		background-color: white;
 		/* Full height */
 		height: 100%;
@@ -571,8 +751,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		font-size: 2vw;
 		margin: 2% 0 0 0;
 	}
-}
 	
+}
+@media (max-width: 1171px) {
+	.pf-bg-lines__left, .pf-bg-lines__right {
+        max-width: none;
+		width: 13%;
+	}
+	.pf-bg-lines__spacer {
+		max-height: calc(130px - 9.73vw);
+	}
+}
+/* About Me aspect ratio for background height */
+@media (max-aspect-ratio: 25/14) {
+		#about-me {
+			height: auto;
+			padding: 100px 0;
+		}
+		#about-me h3 {
+			font-size: 2.5vw;
+			padding: 5vh 0 1rem 0;
+			margin: 0;
+		}
+		.about-me__container {
+			max-width: 800px;
+			width: 80vw;
+			grid-template-columns: 1.5fr 400px;
+	}
+	}
 	
 /* Maximum aspect ratio, essentially mobile sizing */
 @media (max-aspect-ratio: 29/34) {
@@ -621,10 +827,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		margin: 10% auto 30% auto;
 	}
 	.scene {
-		height: 13.205vw;
+		/*height: 13.205vw;*/
+		height: 18.205vw;
 	}
 	.scene-rotated {
-		height: 51.47vw;
+		height: 55.47vw;
 		margin-top: 10px;
 	}
 	.box-styles {
@@ -670,6 +877,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	.portfolio__project-subtitle {
 		font-size: 4vw;
 		margin: 2% 0 0 0;
+	}
+	.pf-bg-lines__left, .pf-bg-lines__right {
+		width: 2.5%;
+        height: 13.205vw;
+    }
+	.pf-bg-lines {
+		display: none;
+	}
+	
+	.about-me__container {
+		max-width: 800px;
+		width: 90vw;
+    	grid-template-columns: 1fr;
+	}
+	.about-me__title {
+		grid-column: span 1;
+		grid-row: 1;
+	}
+	.about-me__image {
+		grid-row: 2;
+		max-width: 350px;
+		margin: 0 auto;
+	}
+	#about-me {
+		height: auto;
+		padding: 100px 0;
+	}
+	#about-me h2 {
+		font-size: 12vw;
+		padding: 0 0 0 0;
+		margin: 0 0 2vw 0;
+		}
+	#about-me subtitle {
+		font-size: 1.5rem;
+		padding: 0;
+		margin: 0 0 0.5rem 0;
+	}
+	#about-me h3 {
+		font-size: 2rem;
+		line-height: 1.5rem;
+		padding: 5vh 0 1rem 0;
+		margin: 0;
+	}
+	#about-me p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		margin: 0;
+		padding: 0;
 	}
 }
 /* Maximum aspect ratio for the contact form */
@@ -743,7 +998,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<a href="#portfolio-start">Portfolio</a>
 		  </span>
 		  <span id="home__text__about-me">
-			<a href="">About Me</a>
+			<a href="#about-me">About Me</a>
 		  </span>
 		  <span id="home__text__contact">
 			<a href="#contact">Contact</a>
@@ -753,10 +1008,123 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <span class="mq-value"></span>	
 <!––---------------PORTFOLIO PAGE------------------>
+<div class="pf-bg-lines">
+	<div class="pf-bg-lines__container">
+	<div class="pf-bg-lines__left" id="pf-bg-lines__left1">
+		<svg class="brand-line" viewBox="0 0 661 111.4" preserveAspectRatio="none" >
+			<path class="pf-bg-lines--fill pf-bg-lines--fill1" d="M0 55.7, L661 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M511.4 55.7, L514.4 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M540.8 55.7, L547.4 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M569.7 55.7, L583.9 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M599.7 55.7, L617.5 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M630.7 55.7, L651 55.7"/>
+		</svg>
+	</div>
+	<div class="pf-bg-lines__spacer"></div>
+	<div class="pf-bg-lines__left" id="pf-bg-lines__left2">
+		<svg class="brand-line" viewBox="0 0 661 111.4" preserveAspectRatio="none" >
+			<path class="pf-bg-lines--fill pf-bg-lines--fill2" d="M0 55.7, L661 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M511.4 55.7, L514.4 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M540.8 55.7, L547.4 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M569.7 55.7, L583.9 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M599.7 55.7, L617.5 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M630.7 55.7, L651 55.7"/>
+		</svg>
+	</div>
+	<div class="pf-bg-lines__spacer"></div>
+	<div class="pf-bg-lines__left" id="pf-bg-lines__left3">
+		<svg class="brand-line" viewBox="0 0 661 111.4" preserveAspectRatio="none" >
+			<path class="pf-bg-lines--fill pf-bg-lines--fill3" d="M0 55.7, L661 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M511.4 55.7, L514.4 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M540.8 55.7, L547.4 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M569.7 55.7, L583.9 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M599.7 55.7, L617.5 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M630.7 55.7, L651 55.7"/>
+		</svg>
+	</div>
+	<div class="pf-bg-lines__spacer"></div>
+	<div class="pf-bg-lines__left" id="pf-bg-lines__left4">
+		<svg class="brand-line" viewBox="0 0 661 111.4" preserveAspectRatio="none" >
+			<path class="pf-bg-lines--fill pf-bg-lines--fill4" d="M0 55.7, L661 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M511.4 55.7, L514.4 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M540.8 55.7, L547.4 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M569.7 55.7, L583.9 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M599.7 55.7, L617.5 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M630.7 55.7, L651 55.7"/>
+		</svg>
+	</div>
+	<div class="pf-bg-lines__spacer"></div>
+	<div class="pf-bg-lines__left" id="pf-bg-lines__left5">
+		<svg class="brand-line" viewBox="0 0 661 111.4" preserveAspectRatio="none" >
+			<path class="pf-bg-lines--fill pf-bg-lines--fill5" d="M0 55.7, L661 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M511.4 55.7, L514.4 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M540.8 55.7, L547.4 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M569.7 55.7, L583.9 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M599.7 55.7, L617.5 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M630.7 55.7, L651 55.7"/>
+		</svg>
+	</div>
+</div>
+<div class="pf-bg-lines__container">
+	<div class="pf-bg-lines__right" id="pf-bg-lines__right1">
+		<svg class="brand-line" viewBox="0 0 661 111.4" preserveAspectRatio="none" >
+			<path class="pf-bg-lines--fill pf-bg-lines--fill1" d="M661 55.7, L0 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M149.6 55.7, L146.6 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M120.2 55.7, L113.6 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M91.3 55.7, L77.1 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M61.3 55.7, L43.5 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M30.3 55.7, L10 55.7"/>
+		</svg>
+	</div>
+	<div class="pf-bg-lines__spacer"></div>
+	<div class="pf-bg-lines__right" id="pf-bg-lines__right2">
+		<svg class="brand-line" viewBox="0 0 661 111.4" preserveAspectRatio="none" >
+			<path class="pf-bg-lines--fill pf-bg-lines--fill2" d="M661 55.7, L0 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M149.6 55.7, L146.6 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M120.2 55.7, L113.6 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M91.3 55.7, L77.1 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M61.3 55.7, L43.5 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M30.3 55.7, L10 55.7"/>
+		</svg>
+	</div>
+	<div class="pf-bg-lines__spacer"></div>
+	<div class="pf-bg-lines__right" id="pf-bg-lines__right3">
+		<svg class="brand-line" viewBox="0 0 661 111.4" preserveAspectRatio="none" >
+			<path class="pf-bg-lines--fill pf-bg-lines--fill3" d="M661 55.7, L0 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M149.6 55.7, L146.6 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M120.2 55.7, L113.6 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M91.3 55.7, L77.1 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M61.3 55.7, L43.5 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M30.3 55.7, L10 55.7"/>
+		</svg>
+	</div>
+	<div class="pf-bg-lines__spacer"></div>
+	<div class="pf-bg-lines__right" id="pf-bg-lines__right4">
+		<svg class="brand-line" viewBox="0 0 661 111.4" preserveAspectRatio="none" >
+			<path class="pf-bg-lines--fill pf-bg-lines--fill4" d="M661 55.7, L0 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M149.6 55.7, L146.6 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M120.2 55.7, L113.6 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M91.3 55.7, L77.1 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M61.3 55.7, L43.5 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M30.3 55.7, L10 55.7"/>
+		</svg>
+	</div>
+	<div class="pf-bg-lines__spacer"></div>
+	<div class="pf-bg-lines__right" id="pf-bg-lines__right5">
+		<svg class="brand-line" viewBox="0 0 661 111.4" preserveAspectRatio="none" >
+			<path class="pf-bg-lines--fill pf-bg-lines--fill5" d="M661 55.7, L0 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M149.6 55.7, L146.6 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M120.2 55.7, L113.6 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M91.3 55.7, L77.1 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M61.3 55.7, L43.5 55.7"/>
+			<path class="pf-bg-lines--whitespace" d="M30.3 55.7, L10 55.7"/>
+		</svg>
+	</div>
+</div>
+	</div>
 <div class="outer-container" id="portfolio-start">
 	<div id="scene1" class="scene-styles scene">
 	<div id="box1" class="box-styles box-not-rotated box__shadow-effect">
-  
 	  <div class="box__face box__face--front box1__front">
 	  </div>
 
@@ -768,10 +1136,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 		  <div class="box__button__container"><div class="box__button"><a href="portfolio01.html"><div class="box__button__link"><p>See Campaign</p></div></a></div></div>
 	  </div>
-
+		
   </div>
+
+
 </div>	
-	
 <div id="scene2" class="scene-styles scene">
 	<div id="box2" class="box-styles box-not-rotated box__shadow-effect">
   
@@ -809,8 +1178,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-<div id="scene5" class="scene-styles scene">
-	<div id="box5" class="box-styles box-not-rotated box__shadow-effect">
+<div id="scene4" class="scene-styles scene">
+	<div id="box4" class="box-styles box-not-rotated box__shadow-effect">
   
 	  <div class="box__face box__face--front box5__front">
 	  </div>
@@ -828,8 +1197,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-<div id="scene4" class="scene-styles scene">
-	<div id="box4" class="box-styles box-not-rotated box__shadow-effect_bottom">
+<div id="scene5" class="scene-styles scene">
+	<div id="box5" class="box-styles box-not-rotated box__shadow-effect_bottom">
   
 	  <div class="box__face box__face--front box4__front">
 	  </div>
@@ -847,7 +1216,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </div>
-</div>	
+</div>
+
+<div id="about-me">
+	<div class="about-me__glitch-overlay"></div>
+	<div class="about-me__container">
+		
+		<div class="about-me__title">
+			<h2 class="vhs" data-text="ABOUT OISIN">ABOUT OISIN</h2>
+		</div>
+		<div class="about-me__text">
+			<subtitle>
+				Oisin Beaudelot is an art director based in Dublin, Ireland.
+			</subtitle>
+			<p>
+				He is also a marketing executive at Grange Homevalue in Baldoyle, a massive movie buff, and an amateur Wear OS Watch face designer. He speaks English, French, Irish, and HTML &amp; CSS (with which he wrote this website from scratch).
+			</p>
+			<h3 class="vhs_2 vhs_2_1" data-text="BRANDS WORKED ON">BRANDS WORKED ON</h3>
+			<ul>
+				<li>Grange Homevalue</li>
+				<li>Ultrakabin</li>
+				<li>Euronics Grange</li>
+				<li>CarYard</li>
+				<li>Neutral Cycle</li>
+				<li>Radius Ireland</li>
+				<li>Universal Forklifts</li>
+			</ul>
+			<h3 class="vhs_2 vhs_2_2" data-text="EDUCATION">EDUCATION</h3>
+			<ul>
+				<li>Dublin City University (2016-2020)</li>
+				<li>University of Illinois at Urbana-Champaign (2018-2019 Study Abroad)</li>
+				<li>Pulse College (2014-2016)</li>
+			</ul>
+		</div>
+		<div class="about-me__image">
+			<img src="images/about-me-img01.jpg" alt="">
+		</div>
+	</div>
+</div>
 <!––----------------CONTACT PAGE------------------->
 <div id="contact">
 	<div id="contact-form">
@@ -980,6 +1386,190 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 })(document);
 </script>
+<script>
 
+	$(function() {
+	
+		var timer;
+		var delay = 200;
+		
+	  $('#scene1').hover(function() {
+		  timer = setTimeout(function() {
+			$('#pf-bg-lines__left1').css('visibility', 'visible');
+			$('#pf-bg-lines__right1').css('visibility', 'visible');
+			$("#pf-bg-lines__left1 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__left1 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-out");
+			$("#pf-bg-lines__left1 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__left1 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__right1 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__right1 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-out");
+			$("#pf-bg-lines__right1 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__right1 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-in");
+		}, delay);
+	  }, function() {
+			// on mouseout, reset the background colour
+			clearTimeout(timer);
+			$('#pf-bg-lines__left1').css('visibility', 'hidden');
+			$('#pf-bg-lines__right1').css('visibility', 'hidden');
+			$("#pf-bg-lines__left1 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__left1 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__left1 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__left1 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-out");
+		  	$("#pf-bg-lines__right1 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__right1 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__right1 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__right1 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-out");
+		  });
+		});
+
+</script>
+<script>
+
+	$(function() {
+	
+		var timer;
+		var delay = 200;
+		
+	  $('#scene2').hover(function() {
+		  timer = setTimeout(function() {
+			$('#pf-bg-lines__left2').css('visibility', 'visible');
+			$('#pf-bg-lines__right2').css('visibility', 'visible');
+			$("#pf-bg-lines__left2 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__left2 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-out");
+			$("#pf-bg-lines__left2 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__left2 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__right2 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__right2 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-out");
+			$("#pf-bg-lines__right2 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__right2 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-in");
+		}, delay);
+	  }, function() {
+			// on mouseout, reset the background colour
+			clearTimeout(timer);
+			$('#pf-bg-lines__left2').css('visibility', 'hidden');
+			$('#pf-bg-lines__right2').css('visibility', 'hidden');
+			$("#pf-bg-lines__left2 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__left2 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__left2 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__left2 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-out");
+		  	$("#pf-bg-lines__right2 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__right2 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__right2 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__right2 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-out");
+		  });
+		});
+
+</script>
+<script>
+
+	$(function() {
+	
+		var timer;
+		var delay = 200;
+		
+	  $('#scene3').hover(function() {
+		  timer = setTimeout(function() {
+			$('#pf-bg-lines__left3').css('visibility', 'visible');
+			$('#pf-bg-lines__right3').css('visibility', 'visible');
+			$("#pf-bg-lines__left3 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__left3 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-out");
+			$("#pf-bg-lines__left3 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__left3 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__right3 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__right3 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-out");
+			$("#pf-bg-lines__right3 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__right3 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-in");
+		}, delay);
+	  }, function() {
+			// on mouseout, reset the background colour
+			clearTimeout(timer);
+			$('#pf-bg-lines__left3').css('visibility', 'hidden');
+			$('#pf-bg-lines__right3').css('visibility', 'hidden');
+			$("#pf-bg-lines__left3 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__left3 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__left3 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__left3 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-out");
+		  	$("#pf-bg-lines__right3 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__right3 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__right3 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__right3 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-out");
+		  });
+		});
+
+</script>
+<script>
+
+	$(function() {
+	
+		var timer;
+		var delay = 200;
+		
+	  $('#scene4').hover(function() {
+		  timer = setTimeout(function() {
+			$('#pf-bg-lines__left4').css('visibility', 'visible');
+			$('#pf-bg-lines__right4').css('visibility', 'visible');
+			$("#pf-bg-lines__left4 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__left4 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-out");
+			$("#pf-bg-lines__left4 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__left4 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__right4 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__right4 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-out");
+			$("#pf-bg-lines__right4 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__right4 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-in");
+		}, delay);
+	  }, function() {
+			// on mouseout, reset the background colour
+			clearTimeout(timer);
+			$('#pf-bg-lines__left4').css('visibility', 'hidden');
+			$('#pf-bg-lines__right4').css('visibility', 'hidden');
+			$("#pf-bg-lines__left4 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__left4 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__left4 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__left4 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-out");
+		  	$("#pf-bg-lines__right4 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__right4 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__right4 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__right4 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-out");
+		  });
+		});
+
+</script>
+<script>
+
+	$(function() {
+	
+		var timer;
+		var delay = 200;
+		
+	  $('#scene5').hover(function() {
+		  timer = setTimeout(function() {
+			$('#pf-bg-lines__left5').css('visibility', 'visible');
+			$('#pf-bg-lines__right5').css('visibility', 'visible');
+			$("#pf-bg-lines__left5 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__left5 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-out");
+			$("#pf-bg-lines__left5 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__left5 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__right5 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__right5 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-out");
+			$("#pf-bg-lines__right5 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__right5 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-in");
+		}, delay);
+	  }, function() {
+			// on mouseout, reset the background colour
+			clearTimeout(timer);
+			$('#pf-bg-lines__left5').css('visibility', 'hidden');
+			$('#pf-bg-lines__right5').css('visibility', 'hidden');
+			$("#pf-bg-lines__left5 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__left5 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__left5 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__left5 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-out");
+		  	$("#pf-bg-lines__right5 .pf-bg-lines--fill").removeClass("pf-bg-lines--fill--animate-in");
+			$("#pf-bg-lines__right5 .pf-bg-lines--whitespace").removeClass("pf-bg-lines--whitespace--animate-in");
+			$("#pf-bg-lines__right5 .pf-bg-lines--fill").addClass("pf-bg-lines--fill--animate-out");
+			$("#pf-bg-lines__right5 .pf-bg-lines--whitespace").addClass("pf-bg-lines--whitespace--animate-out");
+		  });
+		});
+
+</script>
 </body>
 </html>
