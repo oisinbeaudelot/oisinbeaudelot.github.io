@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 .about-me__glitch-overlay {
+		will-change: contents;
 		display: block;
 		visibility: hidden;
 		position: absolute;
