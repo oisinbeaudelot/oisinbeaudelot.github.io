@@ -1,19 +1,11 @@
 <!doctype html>
-<html class="no-js">
-<head>
+<html class="no-js"><head>
 <!-- If Javascript is enabled this will remove the class above -->
 <script>
   document.documentElement.classList.remove("no-js");
 </script>
 <!-- Check if browser can handle WebP -->
 <script src="js/modernizr-webp.js"></script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KH7JZN2');</script>
-<!-- End Google Tag Manager -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-05GGJW81J8"></script>
 <script>
@@ -29,7 +21,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="author" content="Oisin Beaudelot">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oisin Beaudelot</title>	
-<script src="docs/jquery.min.js"></script>
+<script src="docs/jquery.min.js" defer></script>
 <script>
 	$(document).ready(function() {
 		$("a").on('click', function(event) {
@@ -761,7 +753,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-	.contact_links img {
+	.contact_links img, .contact_links picture {
 		width: 8vw;
 		max-width: 80%;
 	}
@@ -1023,7 +1015,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		margin-top: -2vh;
 		font-size: calc(3vh);
 	}
-	.contact_links img {
+	.contact_links img, .contact_links picture {
 		width: 14vh;
 	}
 	#linkedin {
@@ -1061,7 +1053,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="home">
   <div id="home__contents" > 
 	  <video id="main-video" autoplay="" loop="" muted="" playsinline=""><source src="images/tv-content.mp4" type="video/mp4" alt="showreel gif">Your browser does not support the video tag.</video>
-	  <img src="images/new-tv-shading.png" class="" id="tv" alt="tv cutout" />
+	  	<picture>
+			<source srcset="images/new-tv-shading.webp" type="image/webp">
+  			<source srcset="images/new-tv-shading.png" type="image/png">
+        	<img src="images/new-tv-shading.png" class="" id="tv" alt="tv cutout" />
+		</picture>
 		<div id="home__text">
 		  <span id="home__text__portfolio">
 			<a href="#portfolio-start">Portfolio</a>
@@ -1199,7 +1195,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	  <div class="box__face box__face--bottom box1__bottom">
 		  <div class="portfolio__project-info">
-			  <img src="images/dcuds-logo.png" class="portfolio__project-brand" alt="">
+			  <picture>
+                  <source srcset="images/dcuds-logo.webp" type="image/webp">
+                  <source srcset="images/dcuds-logo.png" type="image/png">
+                  <img src="images/dcuds-logo.png" class="portfolio__project-brand" alt="">
+              </picture>
 			  <h2 class="portfolio__project-subtitle">Marketing &amp; Advertising Officer&nbsp;&#65372; 2016-2017</h2>
 			  <h1 class="portfolio__project-title">Re-Launch Campaign</h1>
           </div>
@@ -1218,7 +1218,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	  <div class="box__face box__face--bottom box2__bottom">
 			<div class="portfolio__project-info">
-			  <img src="images/canon-logo.png" class="portfolio__project-brand" alt="">
+              <picture>
+                  <source srcset="images/canon-logo.webp" type="image/webp">
+                  <source srcset="images/canon-logo.png" type="image/png">
+                  <img src="images/canon-logo.png" class="portfolio__project-brand" alt="">
+              </picture>
 			  <h2 class="portfolio__project-subtitle">Case Study</h2>
 			  <h1 class="portfolio__project-title">"You're a Natural"</h1>
           </div>
@@ -1236,7 +1240,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	  <div class="box__face box__face--bottom box3__bottom">
 		<div class="portfolio__project-info">
-			  <img src="images/neutral-logo_black.png" class="portfolio__project-brand" alt="">
+              <picture>
+                  <source srcset="images/neutral-logo_black.webp" type="image/webp">
+                  <source srcset="images/neutral-logo_black.png" type="image/png">
+                  <img src="images/neutral-logo_black.png" class="portfolio__project-brand" alt="">
+              </picture>
 			  <h2 class="portfolio__project-subtitle">Creative Director&nbsp;&#65372; 2018-2019</h2>
 			  <h1 class="portfolio__project-title">"Map My City"</h1>
           </div>
@@ -1349,12 +1357,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="contact_links" id="linkedin">
       <a href="https://www.linkedin.com/in/oisin-beaudelot-6844b613a" target="_blank">
-        <img src="images/linkedin-sticker--85px.png" alt="LinkedIn logo">
+		<picture>
+			<source srcset="images/linkedin-sticker--85px.webp" type="image/webp">
+  			<source srcset="images/linkedin-sticker--85px.png" type="image/png">
+        	<img src="images/linkedin-sticker--85px.png" alt="LinkedIn logo">
+		</picture>
       </a>
   </div>
   <div class="contact_links" id="resume">
       <a href="docs/resume_file.pdf">
-      <img src="images/resume-sticker--85px.png" alt="Resume sticker">
+      	<picture>
+			<source srcset="images/resume-sticker--85px.webp" type="image/webp">
+  			<source srcset="images/resume-sticker--85px.png" type="image/png">
+        	<img src="images/resume-sticker--85px.png" alt="Resume sticker">
+		</picture>
       </a>
   </div>
 </div>
