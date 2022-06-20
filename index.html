@@ -1,6 +1,12 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
+<!-- If Javascript is enabled this will remove the class above -->
+<script>
+  document.documentElement.classList.remove("no-js");
+</script>
+<!-- Check if browser can handle WebP -->
+<script src="js/modernizr-webp.js"></script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -104,11 +110,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	#home {
 		width: 100%;
 		height: 130%;
-		background-image: url("images/gradient-background_deposit_8.jpg");
 		background-position: bottom;
 		background-repeat: no-repeat;
 		background-size: cover;
-	}	
+	}
+	.no-webp #home, .no-js #home {
+		background-image: url("images/gradient-background_deposit_8.jpg");
+	}
+	.webp #home {
+		background-image: url("images/gradient-background_deposit_8.webp");
+	}
 	#home__contents {
 		height: calc((100% / 130) * 100);
 		position: relative;
@@ -181,34 +192,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	.box__face {
 		position: absolute;
 	}
-	.box1__front {
+	.box1__front .webp {
+		background-image: url(images/dcuds-spine.webp);
+	}
+	.box1__front .no-webp, .box1__front .no-js {
 		background-image: url(images/dcuds-spine.png);
 	}
-	.box1__bottom {
+	.box1__bottom .webp {
+		background-image: url(images/dcuds-cover.webp);
+	}
+	.box1__bottom .no-webp, .box1__bottom .no-js {
 		background-image: url(images/dcuds-cover.png);
 	}
-	.box2__front {
+	.box2__front .webp {
+		background-image: url(images/canon-spine.webp);
+	}
+	.box2__front .no-webp, .box2__front .no-js {
 		background-image: url(images/canon-spine.png);
 	}
-	.box2__bottom {
+	.box2__bottom .webp {
+		background-image: url(images/canon-cover.webp);
+	}
+	.box2__bottom .no-webp, .box2__bottom .no-js{
 		background-image: url(images/canon-cover.png);
 	}
-	.box3__front {
+	.box3__front .webp {
+		background-image: url(images/neutral-spine_.webp);
+	}
+	.box3__front .no-webp, .box3__front .no-js{
 		background-image: url(images/neutral-spine_.png);
 	}
-	.box3__bottom {
+	.box3__bottom .webp {
+		background-image: url(images/neutral-cover_.webp);
+	}
+	.box3__bottom .no-webp, .box3__bottom .no-js{
 		background-image: url(images/neutral-cover_.png);
 	}
-	.box4__front {
+	.box4__front .webp {
+		background-image: url("images/film-and-video-spine.webp");
+	}
+	.box4__front .no-webp, .box4__front .no-js{
 		background-image: url("images/film-and-video-spine.png");
 	}
-	.box4__bottom {
+	.box4__bottom .webp {
+		background-image: url(images/film-cover.webp);
+	}
+	.box4__bottom .no-webp, .box4__bottom .no-js{
 		background-image: url(images/film-cover.png);
 	}
-	.box5__front {
+	.box5__front .webp {
+		background-image: url("images/weinerschnitzl-spine.webp");
+	}
+	.box5__front .no-webp, .box5__front .no-js{
 		background-image: url("images/weinerschnitzl-spine.png");
 	}
-	.box5__bottom {
+	.box5__bottom .webp {
+		background-image: url(images/ws-cover.webp);
+	}
+	.box5__bottom .no-webp, .box5__bottom .no-js{
 		background-image: url(images/ws-cover.png);
 	}
 	.box__face--front {
@@ -541,10 +582,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	.about-me__title {
 		grid-column: span 2;
 	}
-	.about-me__image img {
+	.about-me__image picture, .about-me__image img {
 		max-width: 100%;
-	}
-	.about-me__text , .about-me__image{
 	}
 	
 	
@@ -552,7 +591,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	#contact {
 		/* The image used */
-		background-image: url("images/contact-form-bg.jpg");
 		background-color: white;
 		/* Full height */
 		height: 100%;
@@ -561,6 +599,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
+	}
+	.no-webp #contact, .no-js #contact {
+		background-image: url("images/contact-form-bg.jpg");
+	}
+	.webp #contact {
+		background-image: url("images/contact-form-bg.webp");
 	}
 	#form-style {
 		width: 42%;
@@ -595,12 +639,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		margin-top: -2vw;
 	}
 	#form-title {
-		background-image: url("images/contact-title-texture3.png");
 		background-color: #ea4c46;
 		border: none;
 		border-bottom: solid #333;
 		border-top-left-radius: 20px;
 		border-top-right-radius: 20px;
+	}
+	.webp #form-title {
+		background-image: url("images/contact-title-texture3.webp");
+	}
+	.no-webp #form-title, .no-js #form-title {
+		background-image: url("images/contact-title-texture3.png");
 	}
 	#form-title-text {
 			color: #353535;
@@ -642,16 +691,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		box-sizing: border-box;         /* Opera/IE 8+ */
 	}
 	#name {
-		background-image: url("images/contact-name-texture3.png");
 		background-color: #eca2a1;
 	}
+	.webp #name {
+		background-image: url("images/contact-name-texture3.webp");
+	}
+	.no-webp #name, .no-js #name {
+		background-image: url("images/contact-name-texture3.png");
+	}
 	#email {
-		background-image: url("images/contact-email-texture3.png");
 		background-color: #ebc7c5;
+	}
+	.webp #email {
+		background-image: url("images/contact-email-texture3.webp");
+	}
+	.no-webp #email, .no-js #email {
+		background-image: url("images/contact-email-texture3.png");
 	}
 	#message {
 		resize: none;
-		background-image: url("images/contact-message-texture3.png");
 		background-color: #e5e2d8;
 		color: #333;
 		border: 0px;
@@ -664,15 +722,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		appearance: none;
 		-webkit-border-radius:0px;
 	}
+	.webp #message {
+		background-image: url("images/contact-message-texture3.webp");
+	}
+	.no-webp #message, .no-js #message {
+		background-image: url("images/contact-message-texture3.png");
+	}
 	#submitbutton {
 		font-family: 'Roboto', sans-serif; font-weight:normal; font-style:italic;
 		text-align: left;
 		border: none;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
-		background-image: url("images/contact-message-texture3.png");
 		background-color: #e5e2d8;
 		color: #333;
+	}
+	.webp #submitbutton {
+		background-image: url("images/contact-message-texture3.webp");
+	}
+	.no-webp #submitbutton, .no-js #submitbutton {
+		background-image: url("images/contact-message-texture3.png");
 	}
 	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 		color: #353535;
@@ -1250,7 +1319,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</ul>
 		</div>
 		<div class="about-me__image">
-			<img src="images/about-me-img01.jpg" alt="">
+			<picture>
+				<source srcset="images/about-me-img01.webp" type="image/webp">
+  				<source srcset="images/about-me-img01.jpg" type="image/jpeg">
+				<img src="images/about-me-img01.jpg" alt="About Me Image">
+			</picture>
 		</div>
 	</div>
 </div>
