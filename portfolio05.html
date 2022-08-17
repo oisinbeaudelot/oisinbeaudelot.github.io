@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<title>Oisin Beaudelot — Artwork</title>
+<link href="portfolio-styles.css" rel="stylesheet" type="text/css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+:root {
+    --primary-color: #C88A29;
+    --secondary-color: #9A3D1D;
+	--tertiary-color: #98192D;
+	--quaternary-color: #821855;
+	--quinary-color: #212F70;
+	--senary-color: #375934;
+	--background-color: black;
+	--background-color-darker: #262626;
+	--hero-color: #ffffff;
+	--text-color: #fff;
+	--footer-color: #ffffff;
+	}
+	.hero {
+		position: relative;
+	}
+.bar {
+	margin-top: -10px;
+    height: 45px;
+    width: 120%;
+}
+.color-bars {
+	margin: 200px 0 0 -10%;
+	transform: rotate(-7.5deg);
+	z-index: 1;
+	}	
+.bar1 {
+    background-color: var(--primary-color);
+}
+.bar2 {
+    background-color: var(--secondary-color);
+}
+.bar3 {
+    background-color: var(--tertiary-color);
+}
+.bar4 {
+    background-color: var(--quaternary-color);
+}
+.bar5 {
+    background-color: var(--quinary-color);
+}
+.bar6 {
+    background-color: var(--senary-color);
+	height: 35px;
+}
+.highlight {
+    color: var(--primary-color);
+}
+.text-color {
+    color: var(--text-color);
+}
+.secondary-color {
+    color: var(--secondary-color);
+}
+/*<--------------------FUNDAMENTALS--------------------------->*/		
+.row-1 {
+    grid-row: 1 / span 1;
+}
+.row-2 {
+    grid-row: 2 / span 1;
+}
+.row-1-2 {
+    grid-row: 1 / span 2;
+}
+.row-1-2-3 {
+    grid-row: 1 / span 3;
+}
+		
+/*<--------------------SECTIONS--------------------------->*/	
+#pf_title {
+		position: absolute;
+		border-radius: 0px;
+		top: -130px;
+		left: 20%;
+		transform: translate(-50%, -50%);
+		transform: rotate(-7.5deg);
+		background: transparent;
+		color: #fff;
+		line-height: 6em;
+	}
+	#pf_title1 {
+		font-family: "Helvetica Neue", Gotham, Helvetica, Arial, "sans-serif";
+		font-size: 6em;
+		font-weight: 900;
+		margin: 0px;
+	}
+	#pf_title2 {
+		font-family: 'Impact', 'Haettenschweiler', 'Oswald', 'Franklin Gothic Bold', 'Arial Black', 'sans-serif';
+		color: black;
+		text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+		font-size: 12em;
+		margin: 0px;
+	}
+  img {
+    border-radius: 0px;
+  }
+.row {
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	-ms-flex-wrap: wrap; /* IE10 */
+	flex-wrap: wrap;
+	padding: 0;
+}
+.column {
+	-ms-flex: 25%; /* IE10 */
+	flex: 25%;
+	max-width: 25%;
+	padding: 0;
+}
+.column img {
+	margin-top: 0;
+	vertical-align: middle;
+}
+.images {
+	width: 100%;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	cursor: -webkit-zoom-in;
+   cursor: zoom-in;
+}
+.images:hover {
+	border:2px solid white;
+	transition-duration: 0;
+	}
+/*<--------------------IMAGE MODAL--------------------------->*/	
+
+.modal {
+z-index:1;
+display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+overflow:auto;
+background-color:rgb(0,0,0);
+background-color:rgba(0,0,0,0.8);
+cursor: -webkit-zoom-out;
+cursor: zoom-out;
+}
+
+.modal-content{
+	width: 80vw;
+	margin: auto;
+	display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+	.modal-content img {
+		max-height: 95vh;
+		margin: auto;
+	}
+
+
+.modal-hover-opacity {
+opacity:1;
+filter:alpha(opacity=100);
+-webkit-backface-visibility:hidden;
+}
+
+.modal-hover-opacity:hover {
+opacity:0.60;
+filter:alpha(opacity=60);
+-webkit-backface-visibility:hidden;
+}
+
+
+.close {
+text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cursor: pointer;
+}
+
+  
+
+/*<--------------------PADDINGS--------------------------->*/		
+		#video-caption {
+			padding-top: 10px;
+			font-weight: 100;
+			text-align: end;
+		}
+	
+/*<--------------------------------MEDIA-QUERIES------------------------------------->*/
+  @media (max-width: 1000px) {
+    .column {
+		-ms-flex: 33.33%;
+		flex: 33.33%;
+		max-width: 33.33%;
+	}
+  }
+	@media (max-width: 840px) {
+		.color-bars {
+			margin-top: 25vw;
+		}
+		.bar {
+			height: 5.5vw;
+		}
+		.bar6 {
+			height: calc(5.5vw - 10px);
+		}
+		.column {
+		-ms-flex: 50%;
+		flex: 50%;
+		max-width: 50%;
+	}
+		#pf_title {
+		top: -15vw;
+		left: 10vw;
+		line-height: 12vw;
+	}
+	#pf_title1 {
+		font-size: 12vw;
+	}
+	#pf_title2 {
+		font-size: 23vw;
+	}
+	}
+/*<--------------------------------MEDIA-QUERIES-II------------------------------------->*/
+
+	@media (max-width: 450px) {
+		.column {
+		-ms-flex: 100%;
+		flex: 100%;
+		max-width: 100%;
+	}
+	}
+	</style>
+</head>
+	
+<body>
+<!---------------------HERO-------------------------->
+<div class="hero">
+	<div class="color-bars">
+		<div class="bar bar1"></div>
+		<div class="bar bar2"></div>
+		<div class="bar bar3"></div>
+		<div class="bar bar4"></div>
+		<div class="bar bar5"></div>
+		<div class="bar bar6"></div>
+	</div>
+	<div id="pf_title"> <span id="pf_title1">ART-<br></span><span id="pf_title2">WORK</span></div>
+</div>
+<!-------------------GALLERY---------------------------->
+<div class="gallery">
+  <div class="gallery-images row column-1-2">
+<div class="column">
+   <div class="box a">
+      <picture>
+        <source srcset="images/photography__images/01.webp" type="image/webp">
+        <source srcset="images/photography__images/01.jpg" type="image/jpeg">
+        <img src="images/photography__images/01.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box e">
+      <picture>
+        <source srcset="images/photography__images/05.webp" type="image/webp">
+        <source srcset="images/photography__images/05.jpg" type="image/jpeg">
+        <img src="images/photography__images/05.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box i">
+      <picture>
+        <source srcset="images/photography__images/09.webp" type="image/webp">
+        <source srcset="images/photography__images/09.jpg" type="image/jpeg">
+        <img src="images/photography__images/09.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box m">
+      <picture>
+        <source srcset="images/photography__images/13.webp" type="image/webp">
+        <source srcset="images/photography__images/13.jpg" type="image/jpeg">
+        <img src="images/photography__images/13.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box q">
+      <picture>
+        <source srcset="images/photography__images/17.webp" type="image/webp">
+        <source srcset="images/photography__images/17.jpg" type="image/jpeg">
+        <img src="images/photography__images/17.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box u">
+      <picture>
+        <source srcset="images/photography__images/21.webp" type="image/webp">
+        <source srcset="images/photography__images/21.jpg" type="image/jpeg">
+        <img src="images/photography__images/21.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box y">
+      <picture>
+        <source srcset="images/photography__images/25.webp" type="image/webp">
+        <source srcset="images/photography__images/25.jpg" type="image/jpeg">
+        <img src="images/photography__images/25.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box cc">
+      <picture>
+        <source srcset="images/photography__images/29.webp" type="image/webp">
+        <source srcset="images/photography__images/29.jpg" type="image/jpeg">
+        <img src="images/photography__images/29.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box gg">
+      <picture>
+        <source srcset="images/photography__images/33.webp" type="image/webp">
+        <source srcset="images/photography__images/33.jpg" type="image/jpeg">
+        <img src="images/photography__images/33.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+</div>
+<div class="column">
+   <div class="box b">
+      <picture>
+        <source srcset="images/photography__images/02.webp" type="image/webp">
+        <source srcset="images/photography__images/02.jpg" type="image/jpeg">
+        <img src="images/photography__images/02.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box f">
+      <picture>
+        <source srcset="images/photography__images/06.webp" type="image/webp">
+        <source srcset="images/photography__images/06.jpg" type="image/jpeg">
+        <img src="images/photography__images/06.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box j">
+      <picture>
+        <source srcset="images/photography__images/10.webp" type="image/webp">
+        <source srcset="images/photography__images/10.jpg" type="image/jpeg">
+        <img src="images/photography__images/10.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box n">
+      <picture>
+        <source srcset="images/photography__images/14.webp" type="image/webp">
+        <source srcset="images/photography__images/14.jpg" type="image/jpeg">
+        <img src="images/photography__images/14.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box r">
+      <picture>
+        <source srcset="images/photography__images/18.webp" type="image/webp">
+        <source srcset="images/photography__images/18.jpg" type="image/jpeg">
+        <img src="images/photography__images/18.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box v">
+      <picture>
+        <source srcset="images/photography__images/22.webp" type="image/webp">
+        <source srcset="images/photography__images/22.jpg" type="image/jpeg">
+        <img src="images/photography__images/22.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box z">
+      <picture>
+        <source srcset="images/photography__images/26.webp" type="image/webp">
+        <source srcset="images/photography__images/26.jpg" type="image/jpeg">
+        <img src="images/photography__images/26.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box dd">
+      <picture>
+        <source srcset="images/photography__images/30.webp" type="image/webp">
+        <source srcset="images/photography__images/30.jpg" type="image/jpeg">
+        <img src="images/photography__images/30.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box hh">
+      <picture>
+        <source srcset="images/photography__images/34.webp" type="image/webp">
+        <source srcset="images/photography__images/34.jpg" type="image/jpeg">
+        <img src="images/photography__images/34.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+</div>
+<div class="column">
+   <div class="box c">
+      <picture>
+        <source srcset="images/photography__images/03.webp" type="image/webp">
+        <source srcset="images/photography__images/03.jpg" type="image/jpeg">
+        <img src="images/photography__images/03.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box g">
+      <picture>
+        <source srcset="images/photography__images/07.webp" type="image/webp">
+        <source srcset="images/photography__images/07.jpg" type="image/jpeg">
+        <img src="images/photography__images/07.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box k">
+      <picture>
+        <source srcset="images/photography__images/11.webp" type="image/webp">
+        <source srcset="images/photography__images/11.jpg" type="image/jpeg">
+        <img src="images/photography__images/11.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box o">
+      <picture>
+        <source srcset="images/photography__images/15.webp" type="image/webp">
+        <source srcset="images/photography__images/15.jpg" type="image/jpeg">
+        <img src="images/photography__images/15.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box s">
+      <picture>
+        <source srcset="images/photography__images/19.webp" type="image/webp">
+        <source srcset="images/photography__images/19.jpg" type="image/jpeg">
+        <img src="images/photography__images/19.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box w">
+      <picture>
+        <source srcset="images/photography__images/23.webp" type="image/webp">
+        <source srcset="images/photography__images/23.jpg" type="image/jpeg">
+        <img src="images/photography__images/23.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box aa">
+      <picture>
+        <source srcset="images/photography__images/27.webp" type="image/webp">
+        <source srcset="images/photography__images/27.jpg" type="image/jpeg">
+        <img src="images/photography__images/27.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box ee">
+      <picture>
+        <source srcset="images/photography__images/31.webp" type="image/webp">
+        <source srcset="images/photography__images/31.jpg" type="image/jpeg">
+        <img src="images/photography__images/31.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+</div>
+<div class="column">
+   <div class="box d">
+      <picture>
+        <source srcset="images/photography__images/04.webp" type="image/webp">
+        <source srcset="images/photography__images/04.jpg" type="image/jpeg">
+        <img src="images/photography__images/04.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box h">
+      <picture>
+        <source srcset="images/photography__images/08.webp" type="image/webp">
+        <source srcset="images/photography__images/08.jpg" type="image/jpeg">
+        <img src="images/photography__images/08.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box l">
+      <picture>
+        <source srcset="images/photography__images/12.webp" type="image/webp">
+        <source srcset="images/photography__images/12.jpg" type="image/jpeg">
+        <img src="images/photography__images/12.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box p">
+      <picture>
+        <source srcset="images/photography__images/16.webp" type="image/webp">
+        <source srcset="images/photography__images/16.jpg" type="image/jpeg">
+        <img src="images/photography__images/16.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box t">
+      <picture>
+        <source srcset="images/photography__images/20.webp" type="image/webp">
+        <source srcset="images/photography__images/20.jpg" type="image/jpeg">
+        <img src="images/photography__images/20.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box x">
+      <picture>
+        <source srcset="images/photography__images/24.webp" type="image/webp">
+        <source srcset="images/photography__images/24.jpg" type="image/jpeg">
+        <img src="images/photography__images/24.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box bb">
+      <picture>
+        <source srcset="images/photography__images/28.webp" type="image/webp">
+        <source srcset="images/photography__images/28.jpg" type="image/jpeg">
+        <img src="images/photography__images/28.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div>
+   <div class="box ff">
+      <picture>
+        <source srcset="images/photography__images/32.webp" type="image/webp">
+        <source srcset="images/photography__images/32.jpg" type="image/jpeg">
+        <img src="images/photography__images/32.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
+      </picture>
+    </div> 
+</div>
+</div>
+</div>
+<div id="modal01" class="modal animate__animated animate__fadeIn animate__faster" onclick="this.style.display='none'">
+  <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <div class="modal-content">
+    <img id="img01" alt="image">
+  </div>
+</div>
+
+
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+
+
+</script>
+<!----------------------------------------------->
+
+  <footer>
+	<div class="footer-grid">
+		<div class="footer__next footer_icon footer_icon-color">
+			<a href="/#contact"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.958 164.958" style="enable-background:new 0 0 164.958 164.958;" xml:space="preserve">
+			<g id="ff"><g><path d="M82.479,11c39.414,0,71.479,32.065,71.479,71.479s-32.065,71.479-71.479,71.479S11,121.893,11,82.479S43.065,11,82.479,11 M82.479,0C36.927,0,0,36.927,0,82.479s36.927,82.479,82.479,82.479s82.479-36.927,82.479-82.479S128.031,0,82.479,0L82.479,0z"/></g>
+			<g><path d="M131.347,84.232l-44.58,25.74c-1.02,0.59-2.29-0.14-2.29-1.32v-17.97l-33.41,19.29c-1.02,0.59-2.29-0.14-2.29-1.32v-51.48 c0-1.17,1.27-1.9,2.29-1.32l33.41,19.29v-17.97c0-1.17,1.27-1.9,2.29-1.32l44.58,25.74 C132.367,82.182,132.367,83.652,131.347,84.232z"/></g></g></svg></a>
+		</div>
+		<div class="footer__home footer_icon footer_icon-color">
+			<a href="index.html"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.958 164.958" style="enable-background:new 0 0 164.958 164.958;" xml:space="preserve">
+			<g id="ej"><g><path d="M82.479,11c39.414,0,71.479,32.065,71.479,71.479s-32.065,71.479-71.479,71.479S11,121.893,11,82.479S43.065,11,82.479,11 M82.479,0C36.927,0,0,36.927,0,82.479s36.927,82.479,82.479,82.479s82.479-36.927,82.479-82.479S128.031,0,82.479,0L82.479,0z"/></g>
+			<path d="M116.397,113.647H48.102c-0.847,0-1.534-0.687-1.534-1.534v-9.988c0-0.847,0.687-1.534,1.534-1.534h68.295 c0.847,0,1.534,0.687,1.534,1.534v9.988C117.931,112.961,117.244,113.647,116.397,113.647z"/>
+			<g><path d="M80.856,41.971L46.93,86.487c-0.879,1.153-0.056,2.814,1.393,2.814h67.852c1.45,0,2.272-1.661,1.393-2.814L83.643,41.971 C82.942,41.051,81.557,41.051,80.856,41.971z"/></g></g>
+			</svg></a>
+		</div>
+		<div class="footer__contact footer_icon footer_icon-color">
+			<a href="/#contact"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 164.958 164.958" style="enable-background:new 0 0 164.958 164.958;" xml:space="preserve"><g id="ff_copy"><g><path d="M82.479,11c39.414,0,71.479,32.065,71.479,71.479s-32.065,71.479-71.479,71.479S11,121.893,11,82.479S43.065,11,82.479,11 M82.479,0C36.927,0,0,36.927,0,82.479s36.927,82.479,82.479,82.479s82.479-36.927,82.479-82.479S128.031,0,82.479,0L82.479,0z"/></g><path d="M115.248,54.952v53.69c0,0.85-0.69,1.54-1.55,1.54h-18.23c-0.85,0-1.54-0.69-1.54-1.54v-19.36l-41.59,24.01 c-1.14,0.66-2.57-0.16-2.57-1.48v-57.79c0-1.32,1.43-2.14,2.57-1.49l41.59,24.02v-21.6c0-0.86,0.69-1.55,1.54-1.55h18.23 C114.558,53.402,115.248,54.092,115.248,54.952z"/></g></svg></a>
+		</div>
+	  </div>
+</footer>
+</div>
+
+
+
+
+</body>
+</html>
