@@ -194,13 +194,11 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
 	
 /*<--------------------------------MEDIA-QUERIES------------------------------------->*/
   @media (max-width: 1000px) {
-    .column {
-		-ms-flex: 33.33%;
-		flex: 33.33%;
-		max-width: 33.33%;
-	}
     .hero {
     margin-top: 0;
+    }
+    .modal-content{
+      width: 98vw;
     }
   }
 	@media (max-width: 840px) {
@@ -213,11 +211,6 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
 		.bar6 {
 			height: calc(5.5vw - 10px);
 		}
-		.column {
-		-ms-flex: 50%;
-		flex: 50%;
-		max-width: 50%;
-	}
 		#pf_title {
 		top: -15vw;
 		left: 10vw;
@@ -233,11 +226,10 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
 /*<--------------------------------MEDIA-QUERIES-II------------------------------------->*/
 
 	@media (max-width: 450px) {
-		.column {
-		-ms-flex: 100%;
-		flex: 100%;
-		max-width: 100%;
-	}
+		.modal-content{
+      width: 100vw;
+    }
+  
 	}
 	</style>
 </head>
