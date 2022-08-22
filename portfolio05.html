@@ -14,8 +14,8 @@
 
 <style>
 :root {
-    --primary-color: #C88A29;
-    --secondary-color: #9A3D1D;
+  --primary-color: #C88A29;
+  --secondary-color: #9A3D1D;
 	--tertiary-color: #98192D;
 	--quaternary-color: #821855;
 	--quinary-color: #212F70;
@@ -27,6 +27,7 @@
 	--footer-color: #ffffff;
 	}
 	.hero {
+    margin-top: 40vh;
 		position: relative;
 	}
 .bar {
@@ -106,38 +107,33 @@
 		font-size: 12em;
 		margin: 0px;
 	}
+  
+figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   img {
     border-radius: 0px;
   }
-.row {
-	display: -ms-flexbox; /* IE10 */
-	display: flex;
-	-ms-flex-wrap: wrap; /* IE10 */
-	flex-wrap: wrap;
-	padding: 0;
-}
-.column {
-	-ms-flex: 25%; /* IE10 */
-	flex: 25%;
-	max-width: 25%;
-	padding: 0;
-}
-.column img {
-	margin-top: 0;
-	vertical-align: middle;
-}
-.images {
-	width: 100%;
-	box-sizing: border-box;
+  .ball {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-	cursor: -webkit-zoom-in;
-   cursor: zoom-in;
-}
-.images:hover {
-	border:2px solid white;
-	transition-duration: 0;
-	}
+  }
+  .ball img, .ball picture {
+    height: 100%;
+  }
+  .ball > picture:hover {
+    transition-duration: .1s;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+    border-radius: 0px;
+    outline: 3px solid white;
+    outline-offset: -3px;
+    }
 /*<--------------------IMAGE MODAL--------------------------->*/	
 
 .modal {
@@ -164,10 +160,10 @@ cursor: zoom-out;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-	.modal-content img {
-		max-height: 95vh;
-		margin: auto;
-	}
+.modal-content img {
+  max-height: 95vh;
+  margin: auto;
+}
 
 
 .modal-hover-opacity {
@@ -203,6 +199,9 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
 		flex: 33.33%;
 		max-width: 33.33%;
 	}
+    .hero {
+    margin-top: 0;
+    }
   }
 	@media (max-width: 840px) {
 		.color-bars {
@@ -243,7 +242,7 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
 	</style>
 </head>
 	
-<body>
+<body onload="imageWall()">
 <!---------------------HERO-------------------------->
 <div class="hero">
 	<div class="color-bars">
@@ -257,255 +256,7 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
 	<div id="pf_title"> <span id="pf_title1">ART-<br></span><span id="pf_title2">WORK</span></div>
 </div>
 <!-------------------GALLERY---------------------------->
-<div class="gallery">
-  <div class="gallery-images row column-1-2">
-<div class="column">
-   <div class="box a">
-      <picture>
-        <source srcset="images/photography__images/01.webp" type="image/webp">
-        <source srcset="images/photography__images/01.jpg" type="image/jpeg">
-        <img src="images/photography__images/01.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box e">
-      <picture>
-        <source srcset="images/photography__images/05.webp" type="image/webp">
-        <source srcset="images/photography__images/05.jpg" type="image/jpeg">
-        <img src="images/photography__images/05.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box i">
-      <picture>
-        <source srcset="images/photography__images/09.webp" type="image/webp">
-        <source srcset="images/photography__images/09.jpg" type="image/jpeg">
-        <img src="images/photography__images/09.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box m">
-      <picture>
-        <source srcset="images/photography__images/13.webp" type="image/webp">
-        <source srcset="images/photography__images/13.jpg" type="image/jpeg">
-        <img src="images/photography__images/13.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box q">
-      <picture>
-        <source srcset="images/photography__images/17.webp" type="image/webp">
-        <source srcset="images/photography__images/17.jpg" type="image/jpeg">
-        <img src="images/photography__images/17.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box u">
-      <picture>
-        <source srcset="images/photography__images/21.webp" type="image/webp">
-        <source srcset="images/photography__images/21.jpg" type="image/jpeg">
-        <img src="images/photography__images/21.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box y">
-      <picture>
-        <source srcset="images/photography__images/25.webp" type="image/webp">
-        <source srcset="images/photography__images/25.jpg" type="image/jpeg">
-        <img src="images/photography__images/25.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box cc">
-      <picture>
-        <source srcset="images/photography__images/29.webp" type="image/webp">
-        <source srcset="images/photography__images/29.jpg" type="image/jpeg">
-        <img src="images/photography__images/29.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box gg">
-      <picture>
-        <source srcset="images/photography__images/33.webp" type="image/webp">
-        <source srcset="images/photography__images/33.jpg" type="image/jpeg">
-        <img src="images/photography__images/33.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-</div>
-<div class="column">
-   <div class="box b">
-      <picture>
-        <source srcset="images/photography__images/02.webp" type="image/webp">
-        <source srcset="images/photography__images/02.jpg" type="image/jpeg">
-        <img src="images/photography__images/02.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box f">
-      <picture>
-        <source srcset="images/photography__images/06.webp" type="image/webp">
-        <source srcset="images/photography__images/06.jpg" type="image/jpeg">
-        <img src="images/photography__images/06.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box j">
-      <picture>
-        <source srcset="images/photography__images/10.webp" type="image/webp">
-        <source srcset="images/photography__images/10.jpg" type="image/jpeg">
-        <img src="images/photography__images/10.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box n">
-      <picture>
-        <source srcset="images/photography__images/14.webp" type="image/webp">
-        <source srcset="images/photography__images/14.jpg" type="image/jpeg">
-        <img src="images/photography__images/14.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box r">
-      <picture>
-        <source srcset="images/photography__images/18.webp" type="image/webp">
-        <source srcset="images/photography__images/18.jpg" type="image/jpeg">
-        <img src="images/photography__images/18.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box v">
-      <picture>
-        <source srcset="images/photography__images/22.webp" type="image/webp">
-        <source srcset="images/photography__images/22.jpg" type="image/jpeg">
-        <img src="images/photography__images/22.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box z">
-      <picture>
-        <source srcset="images/photography__images/26.webp" type="image/webp">
-        <source srcset="images/photography__images/26.jpg" type="image/jpeg">
-        <img src="images/photography__images/26.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box dd">
-      <picture>
-        <source srcset="images/photography__images/30.webp" type="image/webp">
-        <source srcset="images/photography__images/30.jpg" type="image/jpeg">
-        <img src="images/photography__images/30.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box hh">
-      <picture>
-        <source srcset="images/photography__images/34.webp" type="image/webp">
-        <source srcset="images/photography__images/34.jpg" type="image/jpeg">
-        <img src="images/photography__images/34.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-</div>
-<div class="column">
-   <div class="box c">
-      <picture>
-        <source srcset="images/photography__images/03.webp" type="image/webp">
-        <source srcset="images/photography__images/03.jpg" type="image/jpeg">
-        <img src="images/photography__images/03.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box g">
-      <picture>
-        <source srcset="images/photography__images/07.webp" type="image/webp">
-        <source srcset="images/photography__images/07.jpg" type="image/jpeg">
-        <img src="images/photography__images/07.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box k">
-      <picture>
-        <source srcset="images/photography__images/11.webp" type="image/webp">
-        <source srcset="images/photography__images/11.jpg" type="image/jpeg">
-        <img src="images/photography__images/11.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box o">
-      <picture>
-        <source srcset="images/photography__images/15.webp" type="image/webp">
-        <source srcset="images/photography__images/15.jpg" type="image/jpeg">
-        <img src="images/photography__images/15.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box s">
-      <picture>
-        <source srcset="images/photography__images/19.webp" type="image/webp">
-        <source srcset="images/photography__images/19.jpg" type="image/jpeg">
-        <img src="images/photography__images/19.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box w">
-      <picture>
-        <source srcset="images/photography__images/23.webp" type="image/webp">
-        <source srcset="images/photography__images/23.jpg" type="image/jpeg">
-        <img src="images/photography__images/23.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box aa">
-      <picture>
-        <source srcset="images/photography__images/27.webp" type="image/webp">
-        <source srcset="images/photography__images/27.jpg" type="image/jpeg">
-        <img src="images/photography__images/27.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box ee">
-      <picture>
-        <source srcset="images/photography__images/31.webp" type="image/webp">
-        <source srcset="images/photography__images/31.jpg" type="image/jpeg">
-        <img src="images/photography__images/31.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-</div>
-<div class="column">
-   <div class="box d">
-      <picture>
-        <source srcset="images/photography__images/04.webp" type="image/webp">
-        <source srcset="images/photography__images/04.jpg" type="image/jpeg">
-        <img src="images/photography__images/04.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box h">
-      <picture>
-        <source srcset="images/photography__images/08.webp" type="image/webp">
-        <source srcset="images/photography__images/08.jpg" type="image/jpeg">
-        <img src="images/photography__images/08.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box l">
-      <picture>
-        <source srcset="images/photography__images/12.webp" type="image/webp">
-        <source srcset="images/photography__images/12.jpg" type="image/jpeg">
-        <img src="images/photography__images/12.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box p">
-      <picture>
-        <source srcset="images/photography__images/16.webp" type="image/webp">
-        <source srcset="images/photography__images/16.jpg" type="image/jpeg">
-        <img src="images/photography__images/16.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box t">
-      <picture>
-        <source srcset="images/photography__images/20.webp" type="image/webp">
-        <source srcset="images/photography__images/20.jpg" type="image/jpeg">
-        <img src="images/photography__images/20.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box x">
-      <picture>
-        <source srcset="images/photography__images/24.webp" type="image/webp">
-        <source srcset="images/photography__images/24.jpg" type="image/jpeg">
-        <img src="images/photography__images/24.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box bb">
-      <picture>
-        <source srcset="images/photography__images/28.webp" type="image/webp">
-        <source srcset="images/photography__images/28.jpg" type="image/jpeg">
-        <img src="images/photography__images/28.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div>
-   <div class="box ff">
-      <picture>
-        <source srcset="images/photography__images/32.webp" type="image/webp">
-        <source srcset="images/photography__images/32.jpg" type="image/jpeg">
-        <img src="images/photography__images/32.jpg" class="images" loading="lazy" alt="" onclick="onClick(this)">
-      </picture>
-    </div> 
-</div>
-</div>
+<div id="gallery">
 </div>
 <div id="modal01" class="modal animate__animated animate__fadeIn animate__faster" onclick="this.style.display='none'">
   <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -514,7 +265,75 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
   </div>
 </div>
 
+<script>  
+  var imageData = [{filename: '01', aspectRatio: 1.661},
+{filename: '02', aspectRatio: 1.0},
+{filename: '03', aspectRatio: 1.482},
+{filename: '04', aspectRatio: 0.734},
+{filename: '05', aspectRatio: 1.0},
+{filename: '06', aspectRatio: 1.506},
+{filename: '07', aspectRatio: 1.5},
+{filename: '08', aspectRatio: 1.414},
+{filename: '09', aspectRatio: 0.658},
+{filename: '11', aspectRatio: 1.642},
+{filename: '14', aspectRatio: 0.929},
+{filename: '15', aspectRatio: 1.5}]
+  
+let i = 1
+let j = 0
+var totalCount =  imageData.length + 1;
+var imageNames = imageData.map(function(el, i) { return el.filename; });
+var imageAR = imageData.map(function(el, i) { return el.aspectRatio; });
+var maxHeight = 350;
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 
+function imageWall() {
+for (i = i; i < totalCount;) {
+  var calcHeight = 100000;
+  var calcARadd = 0;
+  // Create new figure to pop images inside
+  var generatedFigure = document.createElement("figure");
+  generatedFigure.classList.add('ball');
+  generatedFigure.setAttribute("id", "figure"+j)
+  var block = document.getElementById("gallery");
+  block.appendChild(generatedFigure);
+  var figureId = "figure"+j
+  
+  // Create new images individually
+  // k is counter for this for loop, j is image number, 
+  // i is total iterations relative to total number of images available
+  do {
+    var calcARadd = calcARadd + imageAR[j];
+    var calcHeight = vw / calcARadd;
+    if (isNaN(calcHeight) === true) {
+      calcHeight = maxHeight;
+      break
+    }
+    var pcr = document.createElement("picture");
+    var block = document.getElementById(figureId);
+    block.appendChild(pcr);
+    var sc1 = document.createElement("source");
+    var sc2 = document.createElement("source");
+    var img = document.createElement("img");
+    sc1.srcset= "images/photography__images/"+imageNames[j]+".webp";
+    sc1.type="image/webp";
+    sc2.srcset= "images/photography__images/"+imageNames[j]+".jpg";
+    sc2.type="image/jpeg";
+    img.src = "images/photography__images/"+imageNames[j]+".jpg";
+    img.alt="Alt Text!";
+    img.setAttribute("onclick","onClick(this)");
+    img.loading="lazy";
+    pcr.appendChild(sc1);
+    pcr.appendChild(sc2);
+    pcr.appendChild(img);
+    j++;
+    i++;
+  }
+  while (calcHeight > maxHeight);
+  generatedFigure.style.height = calcHeight+"px";
+}
+}
+</script>
 <script>
 function onClick(element) {
   document.getElementById("img01").src = element.src;
@@ -544,9 +363,6 @@ function onClick(element) {
 		</div>
 	  </div>
 </footer>
-</div>
-
-
 
 
 </body>
